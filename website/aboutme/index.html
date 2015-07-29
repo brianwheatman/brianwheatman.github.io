@@ -21,31 +21,23 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
-  <link rel="stylesheet" href="css/custom.css">
+  <link rel="stylesheet" href="css/header.css">
 
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon.png">
 
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+<script> 
+$(function(){
+  $("#header").load("http://brianwheatman.com/website/header.html"); 
+});
+</script>
 </head>
+
 <body>
-
-<ul class='dd_menu'>
-<li><a href='.'>Home</a>
-</li>
-<li><a href='./aboutme'>About Me</a>
-</li>
-<li><a href='./projects'>Projects</a>
-	<ul>
-	<li><a href='./projects/project1'>Project 1</a></li>
-	<li><a href='./projects/project2'>Project 2</a></li>
-	<li><a href='./projects/project3'>Project 3</a></li>
-	<li><a href='./projects/project4'>Project 4</a></li>
-	</ul>
-</li>
-</ul>
-
-
+<div id="header"></div>
+<br>
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
