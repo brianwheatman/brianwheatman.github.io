@@ -358,7 +358,7 @@ form {
 
 
 /* Utilities
-–––––––––––––––––––––––––––––––––––––––––––––––––– 
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
 .u-full-width {
   width: 100%;
   box-sizing: border-box; }
@@ -370,9 +370,9 @@ form {
 .u-pull-left {
   float: left; }
 
-
+/*
  Misc
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
+–––––––––––––––––––––––––––––––––––––––––––––––––– 
 hr {
   margin-top: 3rem;
   margin-bottom: 3.5rem;
@@ -380,7 +380,7 @@ hr {
   border-top: 1px solid #E1E1E1; }
 
 
-/* Clearing
+ Clearing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 /* Self Clearing Goodness */
