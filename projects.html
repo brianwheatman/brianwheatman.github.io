@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Brian Wheatman</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/grayscale.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+</head>
+
+<body id="page-top">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-custom" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand page-scroll" href="./index.html">
+                    <i class="fa fa-user animated"></i>  <span class="light">Brian</span> Wheatman
+                </a>
+            </div>
+        </div>
+        <!-- /.container -->
+    </nav>
+
+    <!-- Intro Header -->
+    <header class="intro">
+        <div class="intro-body">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <h1 class="brand-heading">Projects</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Post Section -->
+    <section id="post" class="container text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Packed Compressed Sparse Row: A Dynamic Graph Representation</h2>
+                <p>Perhaps the most popular sparse graph storage format is Compressed Sparse Row (CSR). CSR excels at storing graphs compactly with minimal overhead, allowing for fast traversals, lookups, and basic graph computations such as PageRank. Since elements in CSR format are packed together, additions and deletions often require time linear in the size of the graph. We introduce a new dynamic sparse graph representation called Packed Compressed Sparse Row (PCSR), based on an array-based dynamic data structure called the Packed Memory Array. PCSR is similar to CSR, but leaves spaces between elements, allowing for asymptotically faster insertions and deletions in exchange for a constant factor slowdown in traversals and a constant factor increase in space overhead. Our contributions are twofold. We describe PCSR and review the theoretical guarantees for update, insert, and search for PCSR. We also implemented PCSR as well as other basic graph storage formats and report our findings on a variety of benchmarks. PCSR supports inserts orders of magnitude faster than CSR and is only a factor of two slower on graph traversals. Our results suggest that PCSR is a lightweight dynamic graph representation that supports fast inserts and competitive searches.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Post Section -->
+    <section id="post" class="container text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Electricity Demand and Population Dynamics Prediction from Mobile Phone Metadata</h2>
+                <p>Energy efficiency is a key challenge for building modern sustainable societies. World’s energy consumption is expected to grow annually by 1.6 %, increasing pressure for utilities and governments to fulfill demand and raising significant challenges in generation, distribution, and storage of electricity. In this context, accurate predictions and understanding of population dynamics and their relation to electricity demand dynamics is of high relevance.
+
+We introduce a simple machine learning (ML) method for day-ahead predictions of hourly energy consumption, based on population and electricity demand dynamics. We use anonymized mobile phone records (CDRs) and historical energy records from a small European country. CDRs are large-scale data that is collected passively and on a regular basis by mobile phone carriers, including time and location of calls and text messages, as well as phones’ countries of origin. We show that simple support vector machine (SVM) autoregressive models are capable of baseline energy demand predictions with accuracies below 3 % percentage error and active population predictions below 10 % percentage error. Moreover, we show that population dynamics from mobile phone records contain information additional to that of electricity demand records, which can be exploited to improve prediction performance. Finally, we illustrate how the joint analysis of population and electricity dynamics elicits insights into the relation between population and electricity demand segments, allowing for potential demand management interventions and policies beyond reactive supply-side operations.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Post Section -->
+    <section id="blogNav" class="container content-section text-center">
+        <!-- <div class="row"> -->
+                <button type="button" class="btn-default text-left">Next</button>
+                <button type="button" class="btn-default text-right">Previous</button>
+        <!-- </div> -->
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p>Copyright &copy; Brian Wheatman 2019</p>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/grayscale.js"></script>
+
+</body>
+
+</html>
