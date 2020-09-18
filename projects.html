@@ -50,21 +50,65 @@
         </div>
     </header>
 
-    <!-- Post Section -->
-    <section id="post" class="container text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Packed Compressed Sparse Row: A Dynamic Graph Representation</h2>
-                <p>Perhaps the most popular sparse graph storage format is Compressed Sparse Row (CSR). CSR excels at storing graphs compactly with minimal overhead, allowing for fast traversals, lookups, and basic graph computations such as PageRank. Since elements in CSR format are packed together, additions and deletions often require time linear in the size of the graph. We introduce a new dynamic sparse graph representation called Packed Compressed Sparse Row (PCSR), based on an array-based dynamic data structure called the Packed Memory Array. PCSR is similar to CSR, but leaves spaces between elements, allowing for asymptotically faster insertions and deletions in exchange for a constant factor slowdown in traversals and a constant factor increase in space overhead. Our contributions are twofold. We describe PCSR and review the theoretical guarantees for update, insert, and search for PCSR. We also implemented PCSR as well as other basic graph storage formats and report our findings on a variety of benchmarks. PCSR supports inserts orders of magnitude faster than CSR and is only a factor of two slower on graph traversals. Our results suggest that PCSR is a lightweight dynamic graph representation that supports fast inserts and competitive searches.</p>
+    <section id="post" class="container text-center"><div class="row"><div class="col-lg-8 col-lg-offset-2">
+        <h1>Publications</h1>
+    </div></div></section>
+
+        <!-- Post Section -->
+        <section id="post" class="container text-center">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>High-Throughput Image Alignment for
+                        Connectomics using Frugal Snap Judgments</h2>
+                    <p>The accuracy and computational efficiency of image alignment directly affects
+                        the advancement of connectomics, a field which seeks to understand the
+                        structure of the brain through electron microscopy.
+                        
+                        
+                        We introduce the algorithms Quilter and Stacker that are designed to perform 2D
+                        and 3D alignment respectively on petabyte-scale data sets from connectomics.
+                        Quilter and Stacker are efficient, scalable, and simple to deploy on hardware
+                        ranging from a researcher's laptop to a large computing cluster. On a single
+                        18-core cloud machine each algorithm achieves throughputs of more than 1
+                        TB/hr; when combined the algorithms produce an end-to-end alignment pipeline
+                        that processes data at a rate of 0.82 TB/hr - an over 10x improvement
+                        from previous systems. This efficiency comes from both traditional
+                        optimizations and from the use of ``Frugal Snap Judgments'' to judiciously
+                        exploit performance--accuracy trade offs. 
+                        
+                        A high-throughput image-alignment pipeline was implemented using the Quilter
+                        and Stacker algorithms and its performance was evaluated using three datasets
+                        whose size ranged from 550GB to 38TB.  The full alignment pipeline achieved
+                        a throughput of 0.6-0.8 TB/hr and 1.4-1.5 TB/hr on an 18-core and
+                        112-core shared-memory multicore, respectively. On a supercomputing cluster
+                        with 200 nodes and 1600 total cores, the pipeline achieved a throughput of
+                        21.4 TB/hr.</p>
+    
+                    <p>This work won Best Student Paper at <a href="http://www.ieee-hpec.org/">HPEC 2020</a>.</p>
+                    <p>This work was presented as a <a href"https://dl.acm.org/doi/abs/10.1145/3293883.3301495">Poster</a> at PPOPP 2019.</p>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Post Section -->
+        <section id="post" class="container text-center">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2><a href="https://ieeexplore.ieee.org/abstract/document/8547566">Packed Compressed Sparse Row: A Dynamic Graph Representation </a></h2>
+                    <p>Perhaps the most popular sparse graph storage format is Compressed Sparse Row (CSR). CSR excels at storing graphs compactly with minimal overhead, allowing for fast traversals, lookups, and basic graph computations such as PageRank. Since elements in CSR format are packed together, additions and deletions often require time linear in the size of the graph. We introduce a new dynamic sparse graph representation called Packed Compressed Sparse Row (PCSR), based on an array-based dynamic data structure called the Packed Memory Array. PCSR is similar to CSR, but leaves spaces between elements, allowing for asymptotically faster insertions and deletions in exchange for a constant factor slowdown in traversals and a constant factor increase in space overhead. Our contributions are twofold. We describe PCSR and review the theoretical guarantees for update, insert, and search for PCSR. We also implemented PCSR as well as other basic graph storage formats and report our findings on a variety of benchmarks. PCSR supports inserts orders of magnitude faster than CSR and is only a factor of two slower on graph traversals. Our results suggest that PCSR is a lightweight dynamic graph representation that supports fast inserts and competitive searches.</p>
+    
+                    <p>This work has continued in parallelizing PCSR to improve the performance.</p>
+                </div>
+            </div>
+        </section>
+
+
     
     <!-- Post Section -->
     <section id="post" class="container text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2>Electricity Demand and Population Dynamics Prediction from Mobile Phone Metadata</h2>
+                <h2><a href="https://link.springer.com/chapter/10.1007/978-3-319-39931-7_19">Electricity Demand and Population Dynamics Prediction from Mobile Phone Metadata </a></h2>
                 <p>Energy efficiency is a key challenge for building modern sustainable societies. World’s energy consumption is expected to grow annually by 1.6 %, increasing pressure for utilities and governments to fulfill demand and raising significant challenges in generation, distribution, and storage of electricity. In this context, accurate predictions and understanding of population dynamics and their relation to electricity demand dynamics is of high relevance.
 
 We introduce a simple machine learning (ML) method for day-ahead predictions of hourly energy consumption, based on population and electricity demand dynamics. We use anonymized mobile phone records (CDRs) and historical energy records from a small European country. CDRs are large-scale data that is collected passively and on a regular basis by mobile phone carriers, including time and location of calls and text messages, as well as phones’ countries of origin. We show that simple support vector machine (SVM) autoregressive models are capable of baseline energy demand predictions with accuracies below 3 % percentage error and active population predictions below 10 % percentage error. Moreover, we show that population dynamics from mobile phone records contain information additional to that of electricity demand records, which can be exploited to improve prediction performance. Finally, we illustrate how the joint analysis of population and electricity dynamics elicits insights into the relation between population and electricity demand segments, allowing for potential demand management interventions and policies beyond reactive supply-side operations.</p>
@@ -73,10 +117,56 @@ We introduce a simple machine learning (ML) method for day-ahead predictions of 
     </section>
 
 
+    <section id="post" class="container text-center"><div class="row"><div class="col-lg-8 col-lg-offset-2">
+        <h1>Projects</h1>
+    </div></div></section>
+
+        <!-- Post Section -->
+        <section id="post" class="container text-center">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2><a href="https://iaa.jhu.edu/projects/radics-runtime-assurance-of-distributed-intelligent-control-systems/">RADICS: Runtime Assurance of Distributed Intelligent Control Systems</a></h2>
+                    <p>The goal of the research is to combine information from a Simplex-based system monitor with a Reinforcement Learning (RL) competence estimator to assure the safety of RL-controlled, city-scale critical infrastructure systems.
+                    The research explores the two issues above by producing (i) an easy-to-understand Black box monitor that avoids system failures by detecting possible breach of system’s correctness invariants, ignoring the details of the autonomic controller, and (ii) a Decision Module that takes input from the monitor to predict decisions that could result in the system entering a high-risk state and switching between the optimal RL-based autonomic controller and a sub-optimal safe controller.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Post Section -->
+        <section id="post" class="container text-center">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>Dynamic Graph Analytics</h2>
+                    <p>Since the publication of PCSR above, I have continued working on more efficient data structures and systems to improve the performance of dynamic graph analytics by using techniques including parallelization, data hierarchy, and compression.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Post Section -->
+        <section id="post" class="container text-center">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2><a href="http://brianwheatman.com/Tourist_Path_Optimization_Problem.pdf">Tourist Path Optimization Problem</a></h2>
+                    <p>For my senior research paper in Computer Science, I studied a variant of the Traveling Salesman Problem.</p>
+                </div>
+            </div>
+        </section>
+
+                        <!-- Post Section -->
+        <section id="post" class="container text-center">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2><a href="http://brianwheatman.com/Anti_magic.pdf">Anti-magic and Edge Graceful Graphs</a></h2>
+                    <p>For my senior seminar paper in Discrete Math, I studied Anti-magic graphs.</p>
+                </div>
+            </div>
+        </section>
+
+
     <!-- Footer -->
     <footer>
         <div class="container text-center">
-            <p>Copyright &copy; Brian Wheatman 2019</p>
+            <p>Copyright &copy; Brian Wheatman 2020</p>
         </div>
     </footer>
 
