@@ -3,16 +3,6 @@
 
 <head>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2HJB06VQ04"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'G-2HJB06VQ04');
-    </script>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,6 +19,46 @@
     <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet"
         type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2HJB06VQ04"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-2HJB06VQ04');
+    </script>
+
+    <script>
+        /**
+        * Function that captures a click on an outbound link in Analytics.
+        * This function takes a valid URL string as an argument, and uses that URL string
+        * as the event label. Setting the transport method to 'beacon' lets the hit be sent
+        * using 'navigator.sendBeacon' in browser that support it.
+        */
+        var captureOutboundLink = function (url) {
+            ga('send', 'event', 'outbound', 'click', url, {
+                'transport': 'beacon',
+                'hitCallback': function () { document.location = url; }
+            });
+        }
+    </script>
+
+    <script>
+        /**
+        * Function that captures a click on an internal link in Analytics.
+        * This function takes a valid URL string as an argument, and uses that URL string
+        * as the event label. Setting the transport method to 'beacon' lets the hit be sent
+        * using 'navigator.sendBeacon' in browser that support it.
+        */
+        var captureLink = function (url) {
+            ga('send', 'event', 'internal', 'click', url, {
+                'transport': 'beacon',
+                'hitCallback': function () { document.location = url; }
+            });
+        }
+    </script>
 
 </head>
 
@@ -74,7 +104,9 @@
     <section id="post" class="container text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2><a href="https://epubs.siam.org/doi/abs/10.1137/1.9781611976472.3">A Parallel Packed Memory Array to
+                <h2><a href="https://epubs.siam.org/doi/abs/10.1137/1.9781611976472.3"
+                        onclick="captureOutboundLink('https://epubs.siam.org/doi/abs/10.1137/1.9781611976472.3'); return false;">A
+                        Parallel Packed Memory Array to
                         Store Dynamic Graphs</a></h2>
                 <ul class="text-left" style="display:inline-block;vertical-align:middle;">
                     <p>The ideal data structure for storing dynamic graphs would support fast updates as well as fast
@@ -113,7 +145,9 @@
     <section id="post" class="container text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2><a href="https://ieeexplore.ieee.org/abstract/document/9286243">High-Throughput Image Alignment for
+                <h2><a href="https://ieeexplore.ieee.org/abstract/document/9286243"
+                        onclick="captureOutboundLink('https://ieeexplore.ieee.org/abstract/document/9286243'); return false;">High-Throughput
+                        Image Alignment for
                         Connectomics using Frugal Snap Judgments</a></h2>
                 <ul class="text-left" style="display:inline-block;vertical-align:middle;">
                     <p>The accuracy and computational efficiency of image alignment directly affects
@@ -140,9 +174,10 @@
                         21.4 TB/hr.
                     </p>
 
-                    <p>This work won Best Student Paper at <a href="http://www.ieee-hpec.org/">HPEC 2020</a>.</p>
-                    <p>This work was presented as a <a
-                            href="https://dl.acm.org/doi/abs/10.1145/3293883.3301495">Poster</a>
+                    <p>This work won Best Student Paper at <a href="http://www.ieee-hpec.org/"
+                            onclick="captureOutboundLink('http://www.ieee-hpec.org/'); return false;">HPEC 2020</a>.</p>
+                    <p>This work was presented as a <a href="https://dl.acm.org/doi/abs/10.1145/3293883.3301495"
+                            onclick="captureOutboundLink('https://dl.acm.org/doi/abs/10.1145/3293883.3301495'); return false;">Poster</a>
                         at PPOPP 2019.</p>
                 </ul>
             </div>
@@ -153,7 +188,9 @@
     <section id="post" class="container text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2><a href="https://ieeexplore.ieee.org/abstract/document/8547566">Packed Compressed Sparse Row: A
+                <h2><a href="https://ieeexplore.ieee.org/abstract/document/8547566"
+                        onclick="captureOutboundLink('https://ieeexplore.ieee.org/abstract/document/8547566'); return false;">Packed
+                        Compressed Sparse Row: A
                         Dynamic Graph Representation </a></h2>
                 <ul class="text-left" style="display:inline-block;vertical-align:middle;">
                     <p>Perhaps the most popular sparse graph storage format is Compressed Sparse Row (CSR). CSR excels
@@ -191,7 +228,9 @@
     <section id="post" class="container text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2><a href="https://link.springer.com/chapter/10.1007/978-3-319-39931-7_19">Electricity Demand and
+                <h2><a href="https://link.springer.com/chapter/10.1007/978-3-319-39931-7_19"
+                        onclick="captureOutboundLink('https://link.springer.com/chapter/10.1007/978-3-319-39931-7_19'); return false;">Electricity
+                        Demand and
                         Population Dynamics Prediction from Mobile Phone Metadata </a></h2>
                 <ul class="text-left" style="display:inline-block;vertical-align:middle;">
                     <p>Energy efficiency is a key challenge for building modern sustainable societies. World’s energy
@@ -237,8 +276,8 @@
     <section id="post" class="container text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2><a
-                        href="https://iaa.jhu.edu/projects/radics-runtime-assurance-of-distributed-intelligent-control-systems/">RADICS:
+                <h2><a href="https://iaa.jhu.edu/projects/radics-runtime-assurance-of-distributed-intelligent-control-systems/"
+                        onclick="captureOutboundLink('https://iaa.jhu.edu/projects/radics-runtime-assurance-of-distributed-intelligent-control-systems/'); return false;">RADICS:
                         Runtime Assurance of Distributed Intelligent Control Systems</a></h2>
                 <ul class="text-left" style="display:inline-block;vertical-align:middle;">
                     <p>The goal of the research is to combine information from a Simplex-based system monitor with a
@@ -277,7 +316,9 @@
     <section id="post" class="container text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2><a href="http://brianwheatman.com/papers/Tourist_Path_Optimization_Problem.pdf">Tourist Path
+                <h2><a href="http://brianwheatman.com/papers/Tourist_Path_Optimization_Problem.pdf"
+                        onclick="captureLink('http://brianwheatman.com/papers/Tourist_Path_Optimization_Problem.pdf'); return false;">Tourist
+                        Path
                         Optimization
                         Problem</a></h2>
                 <ul class="text-left" style="display:inline-block;vertical-align:middle;">
@@ -292,7 +333,9 @@
     <section id="post" class="container text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2><a href="http://brianwheatman.com/papers/Anti_magic.pdf">Anti-magic and Edge Graceful Graphs</a>
+                <h2><a href="http://brianwheatman.com/papers/Anti_magic.pdf"
+                        onclick="captureLink('http://brianwheatman.com/papers/Anti_magic.pdf'); return false;">Anti-magic
+                        and Edge Graceful Graphs</a>
                 </h2>
                 <ul class="text-left" style="display:inline-block;vertical-align:middle;">
                     <p>For my senior seminar paper in Discrete Math, I studied Anti-magic graphs.</p>
