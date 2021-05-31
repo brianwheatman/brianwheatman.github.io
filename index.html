@@ -23,6 +23,8 @@
         type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-2HJB06VQ04"></script>
     <script>
@@ -40,7 +42,7 @@
         * as the event label. Setting the transport method to 'beacon' lets the hit be sent
         * using 'navigator.sendBeacon' in browser that support it.
         */
-        var captureOutboundLink = function (url) {
+        var captureLink = function (url) {
             gtag('event', 'click', {
                 'event_category': 'link',
                 'event_label': url,
@@ -53,7 +55,7 @@
     <script>
         jQuery(document).ready(function ($) {
             $('a[href^="http"]:not([href*="//' + location.host + '"])').on('click', function (e) {
-                captureOutboundLink($(this).attr("href")); return true;
+                captureLink($(this).attr("href")); return true;
             });
         });
     </script>
