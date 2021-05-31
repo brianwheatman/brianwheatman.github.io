@@ -37,31 +37,22 @@
         * as the event label. Setting the transport method to 'beacon' lets the hit be sent
         * using 'navigator.sendBeacon' in browser that support it.
         */
-        var captureOutboundLink = function (url) {
+        var captureLink = function (url) {
             gtag('event', 'click', {
-                'event_category': 'outbound',
+                'event_category': 'link',
                 'event_label': url,
                 'transport_type': 'beacon',
-                'event_callback': function () { window.open(url); }
+                'event_callback': function () { document.location = url; }
             });
         }
     </script>
 
     <script>
-        /**
-        * Function that captures a click on an internal link in Analytics.
-        * This function takes a valid URL string as an argument, and uses that URL string
-        * as the event label. Setting the transport method to 'beacon' lets the hit be sent
-        * using 'navigator.sendBeacon' in browser that support it.
-        */
-        var captureLink = function (url) {
-            gtag('event', 'click', {
-                'event_category': 'internal',
-                'event_label': url,
-                'transport_type': 'beacon',
-                'event_callback': function () { window.open(url); }
+        jQuery(document).ready(function ($) {
+            $('a[href^="http"]:not([href*="//' + location.host + '"])').on('click', function (e) {
+                captureLink($(this).attr("href")); return true;
             });
-        }
+        });
     </script>
 
 </head>
@@ -108,8 +99,7 @@
     <section id="post" class="container text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2><a href="https://epubs.siam.org/doi/abs/10.1137/1.9781611976472.3"
-                        onclick="captureOutboundLink('https://epubs.siam.org/doi/abs/10.1137/1.9781611976472.3'); return false;">A
+                <h2><a href="https://epubs.siam.org/doi/abs/10.1137/1.9781611976472.3">A
                         Parallel Packed Memory Array to
                         Store Dynamic Graphs</a></h2>
                 <ul class="text-left" style="display:inline-block;vertical-align:middle;">
@@ -149,8 +139,7 @@
     <section id="post" class="container text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2><a href="https://ieeexplore.ieee.org/abstract/document/9286243"
-                        onclick="captureOutboundLink('https://ieeexplore.ieee.org/abstract/document/9286243'); return false;">High-Throughput
+                <h2><a href="https://ieeexplore.ieee.org/abstract/document/9286243">High-Throughput
                         Image Alignment for
                         Connectomics using Frugal Snap Judgments</a></h2>
                 <ul class="text-left" style="display:inline-block;vertical-align:middle;">
@@ -178,10 +167,9 @@
                         21.4 TB/hr.
                     </p>
 
-                    <p>This work won Best Student Paper at <a href="http://www.ieee-hpec.org/"
-                            onclick="captureOutboundLink('http://www.ieee-hpec.org/'); return false;">HPEC 2020</a>.</p>
-                    <p>This work was presented as a <a href="https://dl.acm.org/doi/abs/10.1145/3293883.3301495"
-                            onclick="captureOutboundLink('https://dl.acm.org/doi/abs/10.1145/3293883.3301495'); return false;">Poster</a>
+                    <p>This work won Best Student Paper at <a href="http://www.ieee-hpec.org/">HPEC 2020</a>.</p>
+                    <p>This work was presented as a <a
+                            href="https://dl.acm.org/doi/abs/10.1145/3293883.3301495">Poster</a>
                         at PPOPP 2019.</p>
                 </ul>
             </div>
@@ -192,8 +180,7 @@
     <section id="post" class="container text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2><a href="https://ieeexplore.ieee.org/abstract/document/8547566"
-                        onclick="captureOutboundLink('https://ieeexplore.ieee.org/abstract/document/8547566'); return false;">Packed
+                <h2><a href="https://ieeexplore.ieee.org/abstract/document/8547566">Packed
                         Compressed Sparse Row: A
                         Dynamic Graph Representation </a></h2>
                 <ul class="text-left" style="display:inline-block;vertical-align:middle;">
@@ -232,8 +219,7 @@
     <section id="post" class="container text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2><a href="https://link.springer.com/chapter/10.1007/978-3-319-39931-7_19"
-                        onclick="captureOutboundLink('https://link.springer.com/chapter/10.1007/978-3-319-39931-7_19'); return false;">Electricity
+                <h2><a href="https://link.springer.com/chapter/10.1007/978-3-319-39931-7_19">Electricity
                         Demand and
                         Population Dynamics Prediction from Mobile Phone Metadata </a></h2>
                 <ul class="text-left" style="display:inline-block;vertical-align:middle;">
@@ -280,8 +266,8 @@
     <section id="post" class="container text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2><a href="https://iaa.jhu.edu/projects/radics-runtime-assurance-of-distributed-intelligent-control-systems/"
-                        onclick="captureOutboundLink('https://iaa.jhu.edu/projects/radics-runtime-assurance-of-distributed-intelligent-control-systems/'); return false;">RADICS:
+                <h2><a
+                        href="https://iaa.jhu.edu/projects/radics-runtime-assurance-of-distributed-intelligent-control-systems/">RADICS:
                         Runtime Assurance of Distributed Intelligent Control Systems</a></h2>
                 <ul class="text-left" style="display:inline-block;vertical-align:middle;">
                     <p>The goal of the research is to combine information from a Simplex-based system monitor with a
@@ -320,8 +306,7 @@
     <section id="post" class="container text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2><a href="https://brianwheatman.com/papers/Tourist_Path_Optimization_Problem.pdf"
-                        onclick="captureLink('https://brianwheatman.com/papers/Tourist_Path_Optimization_Problem.pdf'); return false;">Tourist
+                <h2><a href="https://brianwheatman.com/papers/Tourist_Path_Optimization_Problem.pdf">Tourist
                         Path
                         Optimization
                         Problem</a></h2>
@@ -337,8 +322,7 @@
     <section id="post" class="container text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2><a href="https://brianwheatman.com/papers/Anti_magic.pdf"
-                        onclick="captureLink('https://brianwheatman.com/papers/Anti_magic.pdf'); return false;">Anti-magic
+                <h2><a href="https://brianwheatman.com/papers/Anti_magic.pdf">Anti-magic
                         and Edge Graceful Graphs</a>
                 </h2>
                 <ul class="text-left" style="display:inline-block;vertical-align:middle;">
