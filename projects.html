@@ -72,7 +72,78 @@
         </div>
     </section>
 
+    <section id="post" class="container text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>Terrace: A Hierarchical Graph Container for SkewedDynamic Graphs</h2>
+                <ul class="text-left" style="display:inline-block;vertical-align:middle;">
+                    <p> Various applications model problems as streaming graphs, which need to quickly
+                        apply a stream of updates and run algorithms on the updated graph. Furthermore,
+                        many dynamic real-world graphs, such as social networks, follow a skewed
+                        distribution of vertex degrees, where there are a few high-degree vertices and
+                        many low-degree vertices.
+                        <br /><br />
+                        Existing static graph-processing systems optimized for graph skewness achieve
+                        high performance and low space usage by preprocessing a cache-efficient graph
+                        partitioning based on vertex degree. In the streaming setting, the whole graph
+                        is not available upfront, however, so finding an optimal partitioning is not
+                        feasible in the presence of updates. As a result, existing streaming
+                        graph-processing systems take a "one-size-fits-all" approach, leaving
+                        performance on the table.
+                        <br /><br />
+                        We present Terrace, a system for streaming graphs that uses a hierarchical data
+                        structure design to store a vertex's neighbors in different data structures
+                        depending on the degree of the vertex. This multi-level structure enables
+                        Terrace to dynamically partition vertices based on their degrees and adapt to
+                        skewness in the underlying graph.
+                        <br /><br />
+                        Our experiments show that Terrace supports faster batch insertions for batch
+                        sizes up to 1M when compared to Aspen, a state-of-the-art graph streaming
+                        system.
+
+                        On graph query algorithms, Terrace is between 1.7x--2.6x faster
+                        than Aspen and between 0.5x--1.3x as fast as Ligra, a
+                        state-of-the-art static graph-processing system.
+                    </p>
+                    <p>Presented at <a href="https://2021.sigmod.org/index.shtml">SIGMOD 2021</a></p>
+                    <p>
+                        For a video of the talk see <a
+                            href="https://www.youtube.com/watch?v=O_affhnP_5Q&list=PL3xUNnH4TdbsfndCMn02BqAAgGB0z7cwq">here</a>
+                    <p>The code can be found on github <a
+                            href="https://github.com/PASSIONLab/terrace">https://github.com/PASSIONLab/terrace</a></p>
+                    </p>
+                </ul>
+            </div>
+        </div>
+    </section>
+
     <!-- Post Section -->
+    <section id="post" class="container text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
+                <h2>RADICS: Runtime Assurance of Distributed Intelligent Control Systems</h2>
+                <ul class="text-left" style="display:inline-block;vertical-align:middle;">
+                    <p> We describe RADICS: Runtime Assurance of Distributed Intelligent Control Systems, which combines
+                        a Simplex-based, black-box monitor with a white-box monitor to ensure correct behavior and good
+                        performance of AI systems. The black-box monitor allows the system to detect when the AI
+                        controller is on a failing trajectory and use a provably safe, but less performant algorithm, to
+                        right the system. The white-box monitor predicts when the AI controller will be put on such a
+                        trajectory before it happens and helps maximize the performance of the overall system. We
+                        describe the overall approach in detail and implement a simple version of it on a case study
+                        into controlling the lights in a small traffic grid.
+                    </p>
+                    <p>Presented at <a href="https://dependablesecureml.github.io/index.html">DSML 2021</a></p>
+                    <p>
+                        For more information see <a
+                            href="http://www.dsn.jhu.edu/radics/">http://www.dsn.jhu.edu/radics/</a>
+                    <p>
+                        For a video of the talk see <a href="https://www.youtube.com/watch?v=Tc44H6ryxqc">here</a>
+                    </p>
+                </ul>
+            </div>
+        </div>
+    </section>
+
     <section id="post" class="container text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
@@ -106,6 +177,9 @@
                         Aspen on most batch sizes. Finally, PPCSR is competitive with Ligra and Ligra+, two
                         state-of-the-art
                         static graph-processing frameworks.
+                    <p>
+                        For a video of the talk see <a href="https://youtu.be/LJ2B7w-UyLw">here</a>
+                    </p>
                     </p>
                 </ul>
             </div>
@@ -239,30 +313,6 @@
         </div>
     </section>
 
-    <!-- Post Section -->
-    <section id="post" class="container text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2><a
-                        href="https://iaa.jhu.edu/projects/radics-runtime-assurance-of-distributed-intelligent-control-systems/">RADICS:
-                        Runtime Assurance of Distributed Intelligent Control Systems</a></h2>
-                <ul class="text-left" style="display:inline-block;vertical-align:middle;">
-                    <p>The goal of the research is to combine information from a Simplex-based system monitor with a
-                        Reinforcement Learning (RL) competence estimator to assure the safety of RL-controlled,
-                        city-scale
-                        critical infrastructure systems.
-                        The research explores the two issues above by producing (i) an easy-to-understand Black box
-                        monitor
-                        that avoids system failures by detecting possible breach of system’s correctness invariants,
-                        ignoring the details of the autonomic controller, and (ii) a Decision Module that takes input
-                        from
-                        the monitor to predict decisions that could result in the system entering a high-risk state and
-                        switching between the optimal RL-based autonomic controller and a sub-optimal safe controller.
-                    </p>
-                </ul>
-            </div>
-        </div>
-    </section>
 
     <!-- Post Section -->
     <section id="post" class="container text-center">
