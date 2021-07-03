@@ -35,6 +35,23 @@
         gtag('config', 'G-2HJB06VQ04');
     </script>
 
+    <script>
+        /**
+        * Function that registers a click on an outbound link in Analytics.
+        * This function takes a valid URL string as an argument, and uses that URL string
+        * as the event label. Setting the transport method to 'beacon' lets the hit be sent
+        * using 'navigator.sendBeacon' in browser that support it.
+        */
+        var getLink = function (url) {
+            gtag('event', 'click', {
+                'event_category': 'link',
+                'event_label': url,
+                'transport_type': 'beacon',
+                'event_callback': function () { document.location = url; }
+            });
+        }
+    </script>
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -84,7 +101,7 @@
                         <a class="page-scroll" href="#CV">CV</a>
                     </li>
                     <li>
-                        <a href="./projects">Projects</a>
+                        <a href="./projects" onclick="getOutboundLink('./projects'); return false;">Projects</a>
                     </li>
                 </ul>
             </div>
