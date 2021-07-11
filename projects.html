@@ -96,45 +96,54 @@
                         onclick="getLink('https://dl.acm.org/doi/10.1145/3448016.3457313'); return false;">Terrace: A
                         Hierarchical Graph Container for
                         Skewed Dynamic Graphs</a></h2>
-                <ul class="text-left" style="display:inline-block;vertical-align:middle;">
-                    <p> Various applications model problems as streaming graphs, which need to quickly
-                        apply a stream of updates and run algorithms on the updated graph. Furthermore,
-                        many dynamic real-world graphs, such as social networks, follow a skewed
-                        distribution of vertex degrees, where there are a few high-degree vertices and
-                        many low-degree vertices.
-                        <br /><br />
-                        Existing static graph-processing systems optimized for graph skewness achieve
-                        high performance and low space usage by preprocessing a cache-efficient graph
-                        partitioning based on vertex degree. In the streaming setting, the whole graph
-                        is not available upfront, however, so finding an optimal partitioning is not
-                        feasible in the presence of updates. As a result, existing streaming
-                        graph-processing systems take a "one-size-fits-all" approach, leaving
-                        performance on the table.
-                        <br /><br />
-                        We present Terrace, a system for streaming graphs that uses a hierarchical data
-                        structure design to store a vertex's neighbors in different data structures
-                        depending on the degree of the vertex. This multi-level structure enables
-                        Terrace to dynamically partition vertices based on their degrees and adapt to
-                        skewness in the underlying graph.
-                        <br /><br />
-                        Our experiments show that Terrace supports faster batch insertions for batch
-                        sizes up to 1M when compared to Aspen, a state-of-the-art graph streaming
-                        system.
+                <ul class="text-left">
+                    <details>
+                        <summary style="text-align:center;">
+                            <strong>Abstract</strong>
+                        </summary>
+                        <p> Various applications model problems as streaming graphs, which need to quickly
+                            apply a stream of updates and run algorithms on the updated graph. Furthermore,
+                            many dynamic real-world graphs, such as social networks, follow a skewed
+                            distribution of vertex degrees, where there are a few high-degree vertices and
+                            many low-degree vertices.
+                            <br /><br />
+                            Existing static graph-processing systems optimized for graph skewness achieve
+                            high performance and low space usage by preprocessing a cache-efficient graph
+                            partitioning based on vertex degree. In the streaming setting, the whole graph
+                            is not available upfront, however, so finding an optimal partitioning is not
+                            feasible in the presence of updates. As a result, existing streaming
+                            graph-processing systems take a "one-size-fits-all" approach, leaving
+                            performance on the table.
+                            <br /><br />
+                            We present Terrace, a system for streaming graphs that uses a hierarchical data
+                            structure design to store a vertex's neighbors in different data structures
+                            depending on the degree of the vertex. This multi-level structure enables
+                            Terrace to dynamically partition vertices based on their degrees and adapt to
+                            skewness in the underlying graph.
+                            <br /><br />
+                            Our experiments show that Terrace supports faster batch insertions for batch
+                            sizes up to 1M when compared to Aspen, a state-of-the-art graph streaming
+                            system.
 
-                        On graph query algorithms, Terrace is between 1.7x--2.6x faster
-                        than Aspen and between 0.5x--1.3x as fast as Ligra, a
-                        state-of-the-art static graph-processing system.
-                    </p>
+                            On graph query algorithms, Terrace is between 1.7x--2.6x faster
+                            than Aspen and between 0.5x--1.3x as fast as Ligra, a
+                            state-of-the-art static graph-processing system.
+                        </p>
+                    </details>
+                    <br>
+
                     <p>Presented at <a href="https://2021.sigmod.org/index.shtml"
-                            onclick="getLink('https://2021.sigmod.org/index.shtml'); return false;">SIGMOD 2021</a></p>
+                            onclick="getLink('https://2021.sigmod.org/index.shtml'); return false;">SIGMOD 2021</a>
+                    </p>
                     <p>
                         For a video of the talk see <a
                             href="https://www.youtube.com/watch?v=O_affhnP_5Q&list=PL3xUNnH4TdbsfndCMn02BqAAgGB0z7cwq"
                             onclick="getLink('https://www.youtube.com/watch?v=O_affhnP_5Q&list=PL3xUNnH4TdbsfndCMn02BqAAgGB0z7cwq'); return false;">here</a>
+                    </p>
                     <p>The code can be found on github <a href="https://github.com/PASSIONLab/terrace"
                             onclick="getLink('https://github.com/PASSIONLab/terrace'); return false;">https://github.com/PASSIONLab/terrace</a>
                     </p>
-                    </p>
+
                 </ul>
             </div>
         </div>
@@ -145,16 +154,26 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>RADICS: Runtime Assurance of Distributed Intelligent Control Systems</h2>
-                <ul class="text-left" style="display:inline-block;vertical-align:middle;">
-                    <p> We describe RADICS: Runtime Assurance of Distributed Intelligent Control Systems, which combines
-                        a Simplex-based, black-box monitor with a white-box monitor to ensure correct behavior and good
-                        performance of AI systems. The black-box monitor allows the system to detect when the AI
-                        controller is on a failing trajectory and use a provably safe, but less performant algorithm, to
-                        right the system. The white-box monitor predicts when the AI controller will be put on such a
-                        trajectory before it happens and helps maximize the performance of the overall system. We
-                        describe the overall approach in detail and implement a simple version of it on a case study
-                        into controlling the lights in a small traffic grid.
-                    </p>
+                <ul class="text-left">
+                    <details>
+                        <summary style="text-align:center;">
+                            <strong>Abstract</strong>
+                        </summary>
+                        <p> We describe RADICS: Runtime Assurance of Distributed Intelligent Control Systems, which
+                            combines
+                            a Simplex-based, black-box monitor with a white-box monitor to ensure correct behavior and
+                            good
+                            performance of AI systems. The black-box monitor allows the system to detect when the AI
+                            controller is on a failing trajectory and use a provably safe, but less performant
+                            algorithm, to
+                            right the system. The white-box monitor predicts when the AI controller will be put on such
+                            a
+                            trajectory before it happens and helps maximize the performance of the overall system. We
+                            describe the overall approach in detail and implement a simple version of it on a case study
+                            into controlling the lights in a small traffic grid.
+                        </p>
+                    </details>
+                    <br>
                     <p>Presented at <a href="https://dependablesecureml.github.io/index.html"
                             onclick="getLink('https://dependablesecureml.github.io/index.html'); return false;">DSML
                             2021</a></p>
@@ -165,6 +184,7 @@
                     <p>
                         For more information see <a href="http://www.dsn.jhu.edu/radics/"
                             onclick="getLink('http://www.dsn.jhu.edu/radics/'); return false;">http://www.dsn.jhu.edu/radics/</a>
+                    </p>
 
                 </ul>
             </div>
@@ -178,33 +198,47 @@
                         onclick="getLink('https://epubs.siam.org/doi/abs/10.1137/1.9781611976472.3'); return false;">A
                         Parallel Packed Memory Array to
                         Store Dynamic Graphs</a></h2>
-                <ul class="text-left" style="display:inline-block;vertical-align:middle;">
-                    <p>The ideal data structure for storing dynamic graphs would support fast updates as well as fast
-                        range
-                        queries which underlie graph traversals such as breadth-first search. The Packed Memory Array
-                        (PMA)
-                        seems like a good candidate for this setting because it supports fast updates as well as
-                        cache-efficient range queries. Concurrently updating a PMA raises challenges, however, because
-                        an
-                        update may require rewriting the entire structure.
-                        <br /><br />
-                        This paper introduces a parallel PMA with intra- and inter-operation parallelism and
-                        deadlock-free
-                        polylogarithmicspan operations. Our main observation is that the PMA is well-suited to
-                        concurrent
-                        updates despite occasionally requiring a rewrite of the entire structure because 1) most of the
-                        updates only write to a small part of the structure and 2) the worst case is highly parallel and
-                        cache-efficient.
-                        <br /><br />
-                        To evaluate our data structure, we implemented Parallel Packed Compressed Sparse Row (PPCSR), a
-                        dynamic-graph processing framework that extends the Ligra interface with graph updates. We show
-                        that
-                        PPCSR is on average about 1.6x faster on graph kernels than Aspen, a state-of-the-art
-                        graph-streaming system. PPCSR achieves up to 80 million updates per second and is 2 – 5x faster
-                        than
-                        Aspen on most batch sizes. Finally, PPCSR is competitive with Ligra and Ligra+, two
-                        state-of-the-art
-                        static graph-processing frameworks.
+                <ul class="text-left">
+                    <details>
+                        <summary style="text-align:center;">
+                            <strong>Abstract</strong>
+                        </summary>
+                        <p>The ideal data structure for storing dynamic graphs would support fast updates as well as
+                            fast
+                            range
+                            queries which underlie graph traversals such as breadth-first search. The Packed Memory
+                            Array
+                            (PMA)
+                            seems like a good candidate for this setting because it supports fast updates as well as
+                            cache-efficient range queries. Concurrently updating a PMA raises challenges, however,
+                            because
+                            an
+                            update may require rewriting the entire structure.
+                            <br /><br />
+                            This paper introduces a parallel PMA with intra- and inter-operation parallelism and
+                            deadlock-free
+                            polylogarithmicspan operations. Our main observation is that the PMA is well-suited to
+                            concurrent
+                            updates despite occasionally requiring a rewrite of the entire structure because 1) most of
+                            the
+                            updates only write to a small part of the structure and 2) the worst case is highly parallel
+                            and
+                            cache-efficient.
+                            <br /><br />
+                            To evaluate our data structure, we implemented Parallel Packed Compressed Sparse Row
+                            (PPCSR), a
+                            dynamic-graph processing framework that extends the Ligra interface with graph updates. We
+                            show
+                            that
+                            PPCSR is on average about 1.6x faster on graph kernels than Aspen, a state-of-the-art
+                            graph-streaming system. PPCSR achieves up to 80 million updates per second and is 2 – 5x
+                            faster
+                            than
+                            Aspen on most batch sizes. Finally, PPCSR is competitive with Ligra and Ligra+, two
+                            state-of-the-art
+                            static graph-processing frameworks.
+                    </details>
+                    <br>
 
                     <p>Presented at <a href="https://www.siam.org/conferences/cm/conference/alenex21"
                             onclick="getLink('https://www.siam.org/conferences/cm/conference/alenex21'); return false;">ALENEX
@@ -228,30 +262,36 @@
                         onclick="getLink('https://ieeexplore.ieee.org/abstract/document/9286243'); return false;">High-Throughput
                         Image Alignment for
                         Connectomics using Frugal Snap Judgments</a></h2>
-                <ul class="text-left" style="display:inline-block;vertical-align:middle;">
-                    <p>The accuracy and computational efficiency of image alignment directly affects
-                        the advancement of connectomics, a field which seeks to understand the
-                        structure of the brain through electron microscopy.
-                        <br /><br />
-                        We introduce the algorithms Quilter and Stacker that are designed to perform 2D
-                        and 3D alignment respectively on petabyte-scale data sets from connectomics.
-                        Quilter and Stacker are efficient, scalable, and simple to deploy on hardware
-                        ranging from a researcher's laptop to a large computing cluster. On a single
-                        18-core cloud machine each algorithm achieves throughputs of more than 1
-                        TB/hr; when combined the algorithms produce an end-to-end alignment pipeline
-                        that processes data at a rate of 0.82 TB/hr - an over 10x improvement
-                        from previous systems. This efficiency comes from both traditional
-                        optimizations and from the use of ``Frugal Snap Judgments'' to judiciously
-                        exploit performance--accuracy trade offs.
-                        <br /><br />
-                        A high-throughput image-alignment pipeline was implemented using the Quilter
-                        and Stacker algorithms and its performance was evaluated using three datasets
-                        whose size ranged from 550GB to 38TB. The full alignment pipeline achieved
-                        a throughput of 0.6-0.8 TB/hr and 1.4-1.5 TB/hr on an 18-core and
-                        112-core shared-memory multicore, respectively. On a supercomputing cluster
-                        with 200 nodes and 1600 total cores, the pipeline achieved a throughput of
-                        21.4 TB/hr.
-                    </p>
+                <ul class="text-left">
+                    <details>
+                        <summary style="text-align:center;">
+                            <strong>Abstract</strong>
+                        </summary>
+                        <p>The accuracy and computational efficiency of image alignment directly affects
+                            the advancement of connectomics, a field which seeks to understand the
+                            structure of the brain through electron microscopy.
+                            <br /><br />
+                            We introduce the algorithms Quilter and Stacker that are designed to perform 2D
+                            and 3D alignment respectively on petabyte-scale data sets from connectomics.
+                            Quilter and Stacker are efficient, scalable, and simple to deploy on hardware
+                            ranging from a researcher's laptop to a large computing cluster. On a single
+                            18-core cloud machine each algorithm achieves throughputs of more than 1
+                            TB/hr; when combined the algorithms produce an end-to-end alignment pipeline
+                            that processes data at a rate of 0.82 TB/hr - an over 10x improvement
+                            from previous systems. This efficiency comes from both traditional
+                            optimizations and from the use of ``Frugal Snap Judgments'' to judiciously
+                            exploit performance--accuracy trade offs.
+                            <br /><br />
+                            A high-throughput image-alignment pipeline was implemented using the Quilter
+                            and Stacker algorithms and its performance was evaluated using three datasets
+                            whose size ranged from 550GB to 38TB. The full alignment pipeline achieved
+                            a throughput of 0.6-0.8 TB/hr and 1.4-1.5 TB/hr on an 18-core and
+                            112-core shared-memory multicore, respectively. On a supercomputing cluster
+                            with 200 nodes and 1600 total cores, the pipeline achieved a throughput of
+                            21.4 TB/hr.
+                        </p>
+                    </details>
+                    <br>
 
                     <p>This work was presented as a <a href="https://dl.acm.org/doi/abs/10.1145/3293883.3301495"
                             onclick="getLink('https://dl.acm.org/doi/abs/10.1145/3293883.3301495'); return false;">Poster</a>
@@ -274,30 +314,44 @@
                         onclick="getLink('https://ieeexplore.ieee.org/abstract/document/8547566'); return false;">Packed
                         Compressed Sparse Row: A
                         Dynamic Graph Representation </a></h2>
-                <ul class="text-left" style="display:inline-block;vertical-align:middle;">
-                    <p>Perhaps the most popular sparse graph storage format is Compressed Sparse Row (CSR). CSR excels
-                        at
-                        storing graphs compactly with minimal overhead, allowing for fast traversals, lookups, and basic
-                        graph computations such as PageRank. Since elements in CSR format are packed together, additions
-                        and
-                        deletions often require time linear in the size of the graph.
-                        <br /><br />
-                        We introduce a new dynamic sparse
-                        graph representation called Packed Compressed Sparse Row (PCSR), based on an array-based dynamic
-                        data structure called the Packed Memory Array. PCSR is similar to CSR, but leaves spaces between
-                        elements, allowing for asymptotically faster insertions and deletions in exchange for a constant
-                        factor slowdown in traversals and a constant factor increase in space overhead.
-                        <br /><br />
-                        Our contributions
-                        are twofold. We describe PCSR and review the theoretical guarantees for update, insert, and
-                        search
-                        for PCSR. We also implemented PCSR as well as other basic graph storage formats and report our
-                        findings on a variety of benchmarks. PCSR supports inserts orders of magnitude faster than CSR
-                        and
-                        is only a factor of two slower on graph traversals. Our results suggest that PCSR is a
-                        lightweight
-                        dynamic graph representation that supports fast inserts and competitive searches.
-                    </p>
+                <ul class="text-left">
+                    <details>
+                        <summary style="text-align:center;">
+                            <strong>Abstract</strong>
+                        </summary>
+                        <p>Perhaps the most popular sparse graph storage format is Compressed Sparse Row (CSR). CSR
+                            excels
+                            at
+                            storing graphs compactly with minimal overhead, allowing for fast traversals, lookups, and
+                            basic
+                            graph computations such as PageRank. Since elements in CSR format are packed together,
+                            additions
+                            and
+                            deletions often require time linear in the size of the graph.
+                            <br /><br />
+                            We introduce a new dynamic sparse
+                            graph representation called Packed Compressed Sparse Row (PCSR), based on an array-based
+                            dynamic
+                            data structure called the Packed Memory Array. PCSR is similar to CSR, but leaves spaces
+                            between
+                            elements, allowing for asymptotically faster insertions and deletions in exchange for a
+                            constant
+                            factor slowdown in traversals and a constant factor increase in space overhead.
+                            <br /><br />
+                            Our contributions
+                            are twofold. We describe PCSR and review the theoretical guarantees for update, insert, and
+                            search
+                            for PCSR. We also implemented PCSR as well as other basic graph storage formats and report
+                            our
+                            findings on a variety of benchmarks. PCSR supports inserts orders of magnitude faster than
+                            CSR
+                            and
+                            is only a factor of two slower on graph traversals. Our results suggest that PCSR is a
+                            lightweight
+                            dynamic graph representation that supports fast inserts and competitive searches.
+                        </p>
+                    </details>
+                    <br>
 
                     <p>Presented at <a href="http://www.ieee-hpec.org/2018/"
                             onclick="getLink('http://www.ieee-hpec.org/2018/'); return false;">HPEC
@@ -319,32 +373,50 @@
                         onclick="getLink('https://link.springer.com/chapter/10.1007/978-3-319-39931-7_19'); return false;">Electricity
                         Demand and
                         Population Dynamics Prediction from Mobile Phone Metadata </a></h2>
-                <ul class="text-left" style="display:inline-block;vertical-align:middle;">
-                    <p>Energy efficiency is a key challenge for building modern sustainable societies. World’s energy
-                        consumption is expected to grow annually by 1.6 %, increasing pressure for utilities and
-                        governments
-                        to fulfill demand and raising significant challenges in generation, distribution, and storage of
-                        electricity. In this context, accurate predictions and understanding of population dynamics and
-                        their relation to electricity demand dynamics is of high relevance.
-                        <br /><br />
-                        We introduce a simple machine learning (ML) method for day-ahead predictions of hourly energy
-                        consumption, based on population and electricity demand dynamics. We use anonymized mobile phone
-                        records (CDRs) and historical energy records from a small European country. CDRs are large-scale
-                        data that is collected passively and on a regular basis by mobile phone carriers, including time
-                        and
-                        location of calls and text messages, as well as phones’ countries of origin. We show that simple
-                        support vector machine (SVM) autoregressive models are capable of baseline energy demand
-                        predictions
-                        with accuracies below 3 % percentage error and active population predictions below 10 %
-                        percentage
-                        error. Moreover, we show that population dynamics from mobile phone records contain information
-                        additional to that of electricity demand records, which can be exploited to improve prediction
-                        performance. Finally, we illustrate how the joint analysis of population and electricity
-                        dynamics
-                        elicits insights into the relation between population and electricity demand segments, allowing
-                        for
-                        potential demand management interventions and policies beyond reactive supply-side operations.
-                    </p>
+                <ul class="text-left">
+                    <details>
+                        <summary style="text-align:center;">
+                            <strong>Abstract</strong>
+                        </summary>
+                        <p>Energy efficiency is a key challenge for building modern sustainable societies. World’s
+                            energy
+                            consumption is expected to grow annually by 1.6 %, increasing pressure for utilities and
+                            governments
+                            to fulfill demand and raising significant challenges in generation, distribution, and
+                            storage of
+                            electricity. In this context, accurate predictions and understanding of population dynamics
+                            and
+                            their relation to electricity demand dynamics is of high relevance.
+                            <br /><br />
+                            We introduce a simple machine learning (ML) method for day-ahead predictions of hourly
+                            energy
+                            consumption, based on population and electricity demand dynamics. We use anonymized mobile
+                            phone
+                            records (CDRs) and historical energy records from a small European country. CDRs are
+                            large-scale
+                            data that is collected passively and on a regular basis by mobile phone carriers, including
+                            time
+                            and
+                            location of calls and text messages, as well as phones’ countries of origin. We show that
+                            simple
+                            support vector machine (SVM) autoregressive models are capable of baseline energy demand
+                            predictions
+                            with accuracies below 3 % percentage error and active population predictions below 10 %
+                            percentage
+                            error. Moreover, we show that population dynamics from mobile phone records contain
+                            information
+                            additional to that of electricity demand records, which can be exploited to improve
+                            prediction
+                            performance. Finally, we illustrate how the joint analysis of population and electricity
+                            dynamics
+                            elicits insights into the relation between population and electricity demand segments,
+                            allowing
+                            for
+                            potential demand management interventions and policies beyond reactive supply-side
+                            operations.
+                        </p>
+                    </details>
+                    <br>
 
                     <p>Presented at <a href="http://sbp-brims.org/2016/"
                             onclick="getLink('http://sbp-brims.org/2016/'); return false;">SBP-BRiMS 2016</a>
@@ -369,7 +441,7 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Dynamic Graph Analytics</h2>
-                <ul class="text-left" style="display:inline-block;vertical-align:middle;">
+                <ul class="text-left">
                     <p>Since the publication of PPCSR and Terrace above, I have continued working on more efficient data
                         structures
                         and
@@ -389,7 +461,7 @@
                         Path
                         Optimization
                         Problem</a></h2>
-                <ul class="text-left" style="display:inline-block;vertical-align:middle;">
+                <ul class="text-left">
                     <p>For my senior research paper in Computer Science, I studied a variant of the Traveling Salesman
                         Problem.</p>
                 </ul>
@@ -405,7 +477,7 @@
                         onclick="getLink('https://brianwheatman.com/papers/Anti_magic.pdf'); return false;">Anti-magic
                         and Edge Graceful Graphs</a>
                 </h2>
-                <ul class="text-left" style="display:inline-block;vertical-align:middle;">
+                <ul class="text-left">
                     <p>For my senior seminar paper in Discrete Math, I studied Anti-magic graphs.</p>
                 </ul>
             </div>

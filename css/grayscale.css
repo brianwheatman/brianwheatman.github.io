@@ -361,3 +361,15 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: rgba(255,255,255,.2);
 }
+
+details summary::before { 
+    content:"▶"; 
+    color: white; 
+    /* you can style it however you want, use background-image for example */
+  }
+  
+  /* By using [open] we can define different styles when the disclosure widget is open */
+  details[open] summary::before { 
+    content:"▼"; 
+    color: white 
+  }
