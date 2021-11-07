@@ -491,42 +491,6 @@
     <section id="post" class="container text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
-                <h2>Streaming Sparse Graphs
-                    using Efficient Dynamic Sets</h2>
-                <ul class="text-left">
-                    <details>
-                        <summary>
-                            <strong>Abstract</strong>
-                        </summary>
-                        <p>We present the SSTGraph framework for the storage
-                            and analysis of dynamic graphs. Its performance matches
-                            or exceeds state-of-the-art static graph engines and supports
-                            streaming updates. SSTGraph builds on top of the tinyset
-                            parallel, dynamic set data structure. Tinyset implements set
-                            membership in a shallow hierarchy of sorted packed memory
-                            arrays to achieve logarithmic time access and updates, and it
-                            scans in optimal linear time. Tinyset uses space comparable
-                            to that of systems that use data compression while avoiding
-                            compression’s computation and serialization overhead.
-                        </p>
-                        <p>
-                            SSTGraph outperforms other streaming, dynamic graph engines
-                            on a suite of four graph algorithms. Our evaluation includes
-                            a comparison with the Aspen streaming graph system. SSTGraph
-                            reduces runtime by 40% on average, updates are 2x-5x faster
-                            on batch sizes up to 10 million, and graph are smaller. The
-                            partitioned data structure scales well and runs on billion edge
-                            graphs in just 15 GB of memory.
-                        </p>
-                    </details>
-                </ul>
-            </div>
-        </div>
-    </section>
-    <br>
-    <section id="post" class="container text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
                 <h2>Small Ordered Dynamic Sets Using
                     Compressed Packed Memory Arrays</h2>
                 <ul class="text-left">
