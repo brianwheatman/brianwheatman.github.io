@@ -92,6 +92,46 @@
     <section id="post" class="container text-center">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
+                <h2>Streaming Sparse Graphs using Efficient Dynamic Sets</h2>
+                <ul class="text-left">
+                    <details>
+                        <summary>
+                            <strong>Abstract</strong>
+                        </summary>
+                        We present the SSTGraph framework for the storage and analysis of dynamic graphs.
+                        Its performance matches or exceeds state-of-the-art static graph engines and supports streaming
+                        updates. SSTGraph builds on top of the tinyset parallel, dynamic set data structure.
+                        Tinyset implements set membership in a shallow hierarchy of sorted packed memory arrays to
+                        achieve logarithmic time access and updates, and it scans in optimal linear time.
+                        Tinyset uses space comparable to that of systems that use data compression while
+                        avoiding compression's computation and serialization overhead.
+                        <br /><br />
+                        SSTGraph outperforms other streaming, dynamic graph engines on a suite of four graph algorithms.
+                        Our evaluation includes a comparison with the Aspen streaming graph system. SSTGraph reduces
+                        runtime by 40% on average, updates are 2x-5x faster on batch sizes up to 10 million, and graphs
+                        are smaller.
+                        The partitioned data structure scales well and runs on billion edge graphs in just 15 GB of
+                        memory.
+                        </p>
+                    </details>
+                    <br>
+                    <ul class="text-left" style="display:inline-block;vertical-align:middle;padding-left:0">
+
+                        <li>To be presented at <a href="https://bigdataieee.org/BigData2021/index.html"
+                                onclick="getLink('https://bigdataieee.org/BigData2021/index.html'); return false;">IEEE
+                                BigData 2021</a>
+                        </li>
+
+                    </ul>
+                </ul>
+            </div>
+        </div>
+        <hr>
+    </section>
+
+    <section id="post" class="container text-center">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2">
                 <h2><a href="https://dl.acm.org/doi/10.1145/3448016.3457313"
                         onclick="getLink('https://dl.acm.org/doi/10.1145/3448016.3457313'); return false;">Terrace: A
                         Hierarchical Graph Container for
