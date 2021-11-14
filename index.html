@@ -70,7 +70,8 @@
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    data-bs-target="#navbar" aria-expanded="false" aria-controls="navbar">
                     <em class="fa fa-bars"></em>
                 </button>
                 <a class="navbar-brand page-scroll" href="#page-top">
@@ -79,14 +80,17 @@
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav">
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right">
                     <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a href="#page-top" title='Go to top of page'></a>
-                    </li>
                     <li>
                         <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#Publications">Publications</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#Projects">Projects</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#education">Education</a>
@@ -98,11 +102,9 @@
                         <a class="page-scroll" href="#professional">Professional Experience</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#CV">CV</a>
+                        <a href="./cv.pdf" onclick="getLink('./cv.pdf'); return false;">CV</a>
                     </li>
-                    <li>
-                        <a href="./projects" onclick="getLink('./projects'); return false;">Projects</a>
-                    </li>
+
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -131,171 +133,642 @@
 
     <!-- About Section -->
     <section id="about" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>About Brian</h2>
-                <ul class="text-left" style="display:inline-block;vertical-align:middle;">
-                    <p>I am PhD Student in Computer Science at Johns Hopkins University. I enjoy
-                        devoting my time and
-                        attention to a variety of activities and intellectual pursuits.
-                        I am fortunate to be advised by <a href="https://www.cs.jhu.edu/faculty/randal-burns/"
-                            onclick="getLink('https://www.cs.jhu.edu/faculty/randal-burns/'); return false;">Randal
-                            Burns</a>.
-                    <p>My research interests include:
-                    <ul class="text-left" style="display:inline-block;vertical-align:middle;">
-                        <li> Graph Analytics</li>
-                        <li> Parallel Data Structures and Algorithms</li>
-                        <li> Big Data and Distributed Systems </li>
-                        <li> Assured Machine Learning </li>
-                        <li> Performance Engineering</li>
+        <h2>About Brian</h2>
+        <ul class="text-left" style="display:inline-block;vertical-align:middle;">
+            <p>I am PhD Student in Computer Science at Johns Hopkins University. I enjoy
+                devoting my time and
+                attention to a variety of activities and intellectual pursuits.
+                I am fortunate to be advised by <a href="https://www.cs.jhu.edu/faculty/randal-burns/"
+                    onclick="getLink('https://www.cs.jhu.edu/faculty/randal-burns/'); return false;">Randal
+                    Burns</a>.
+            <p>My research interests include:
+            <ul class="text-left" style="display:inline-block;vertical-align:middle;">
+                <li> Graph Analytics</li>
+                <li> Parallel Data Structures and Algorithms</li>
+                <li> Big Data and Distributed Systems </li>
+                <li> Assured Machine Learning </li>
+                <li> Performance Engineering</li>
+
+            </ul>
+            </p>
+
+
+            <p>For more information on my work, go to <a class="page-scroll" href="#Publications">Publications</a> or <a
+                    class="page-scroll" href="#Projects">Projects</a>.
+            </p>
+
+            <p>For a list of papers and presentations, see <a
+                    href="https://scholar.google.com/citations?user=vP2to0MAAAAJ&hl=en&oi=ao"
+                    onclick="getLink('https://scholar.google.com/citations?user=vP2to0MAAAAJ&hl=en&oi=ao'); return false;">
+                    Google
+                    Scholar</a>.
+            </p>
+            <p>I also enjoy traveling and rock climbing.</p>
+        </ul>
+    </section>
+
+    <section id="Publications" class="container content-section text-center">
+        <h1><u>Publications</u></h1>
+
+        <section id="post" class="container text-center">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>Streaming Sparse Graphs using Efficient Dynamic Sets</h2>
+                    <ul class="text-left">
+                        <details>
+                            <summary>
+                                <strong>Abstract</strong>
+                            </summary>
+                            We present the SSTGraph framework for the storage and analysis of dynamic graphs.
+                            Its performance matches or exceeds state-of-the-art static graph engines and supports
+                            streaming
+                            updates. SSTGraph builds on top of the tinyset parallel, dynamic set data structure.
+                            Tinyset implements set membership in a shallow hierarchy of sorted packed memory arrays to
+                            achieve logarithmic time access and updates, and it scans in optimal linear time.
+                            Tinyset uses space comparable to that of systems that use data compression while
+                            avoiding compression's computation and serialization overhead.
+                            <br /><br />
+                            SSTGraph outperforms other streaming, dynamic graph engines on a suite of four graph
+                            algorithms.
+                            Our evaluation includes a comparison with the Aspen streaming graph system. SSTGraph reduces
+                            runtime by 40% on average, updates are 2x-5x faster on batch sizes up to 10 million, and
+                            graphs
+                            are smaller.
+                            The partitioned data structure scales well and runs on billion edge graphs in just 15 GB of
+                            memory.
+                            </p>
+                        </details>
+                        <br>
+                        <ul class="text-left" style="display:inline-block;vertical-align:middle;padding-left:0">
+
+                            <li>To be presented at <a href="https://bigdataieee.org/BigData2021/index.html"
+                                    onclick="getLink('https://bigdataieee.org/BigData2021/index.html'); return false;">IEEE
+                                    BigData 2021</a>
+                            </li>
+
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+        </section>
+
+        <section id="post" class="container text-center">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2><a href="https://dl.acm.org/doi/10.1145/3448016.3457313"
+                            onclick="getLink('https://dl.acm.org/doi/10.1145/3448016.3457313'); return false;">Terrace:
+                            A
+                            Hierarchical Graph Container for
+                            Skewed Dynamic Graphs</a></h2>
+                    <ul class="text-left">
+                        <details>
+                            <summary>
+                                <strong>Abstract</strong>
+                            </summary>
+                            <p> Various applications model problems as streaming graphs, which need to quickly
+                                apply a stream of updates and run algorithms on the updated graph. Furthermore,
+                                many dynamic real-world graphs, such as social networks, follow a skewed
+                                distribution of vertex degrees, where there are a few high-degree vertices and
+                                many low-degree vertices.
+                                <br /><br />
+                                Existing static graph-processing systems optimized for graph skewness achieve
+                                high performance and low space usage by preprocessing a cache-efficient graph
+                                partitioning based on vertex degree. In the streaming setting, the whole graph
+                                is not available upfront, however, so finding an optimal partitioning is not
+                                feasible in the presence of updates. As a result, existing streaming
+                                graph-processing systems take a "one-size-fits-all" approach, leaving
+                                performance on the table.
+                                <br /><br />
+                                We present Terrace, a system for streaming graphs that uses a hierarchical data
+                                structure design to store a vertex's neighbors in different data structures
+                                depending on the degree of the vertex. This multi-level structure enables
+                                Terrace to dynamically partition vertices based on their degrees and adapt to
+                                skewness in the underlying graph.
+                                <br /><br />
+                                Our experiments show that Terrace supports faster batch insertions for batch
+                                sizes up to 1M when compared to Aspen, a state-of-the-art graph streaming
+                                system.
+
+                                On graph query algorithms, Terrace is between 1.7x--2.6x faster
+                                than Aspen and between 0.5x--1.3x as fast as Ligra, a
+                                state-of-the-art static graph-processing system.
+                            </p>
+                        </details>
+                        <br>
+                        <ul class="text-left" style="display:inline-block;vertical-align:middle;padding-left:0">
+
+                            <li>Presented at <a href="https://2021.sigmod.org/index.shtml"
+                                    onclick="getLink('https://2021.sigmod.org/index.shtml'); return false;">SIGMOD
+                                    2021</a>
+                            </li>
+                            <li>For a video of the talk, see <a
+                                    href="https://www.youtube.com/watch?v=O_affhnP_5Q&list=PL3xUNnH4TdbsfndCMn02BqAAgGB0z7cwq"
+                                    onclick="getLink('https://www.youtube.com/watch?v=O_affhnP_5Q&list=PL3xUNnH4TdbsfndCMn02BqAAgGB0z7cwq'); return false;">here</a>
+                            </li>
+                            <li>The code can be found on github <a href="https://github.com/PASSIONLab/terrace"
+                                    onclick="getLink('https://github.com/PASSIONLab/terrace'); return false;">https://github.com/PASSIONLab/terrace</a>
+                            </li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+        </section>
+
+
+        <!-- Post Section -->
+        <section id="post" class="container text-center">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2><a href="https://ieeexplore.ieee.org/abstract/document/9502465"
+                            onclick="getLink('https://ieeexplore.ieee.org/abstract/document/9502465'); return false;">RADICS:
+                            Runtime Assurance of Distributed Intelligent Control Systems</a></h2>
+                    <ul class="text-left">
+                        <details>
+                            <summary>
+                                <strong>Abstract</strong>
+                            </summary>
+                            <p> We describe RADICS: Runtime Assurance of Distributed Intelligent Control Systems, which
+                                combines
+                                a Simplex-based, black-box monitor with a white-box monitor to ensure correct behavior
+                                and
+                                good
+                                performance of AI systems. The black-box monitor allows the system to detect when the AI
+                                controller is on a failing trajectory and use a provably safe, but less performant
+                                algorithm, to
+                                right the system. The white-box monitor predicts when the AI controller will be put on
+                                such
+                                a
+                                trajectory before it happens and helps maximize the performance of the overall system.
+                                We
+                                describe the overall approach in detail and implement a simple version of it on a case
+                                study
+                                into controlling the lights in a small traffic grid.
+                            </p>
+                        </details>
+                        <br>
+                        <ul class="text-left" style="display:inline-block;vertical-align:middle;padding-left:0">
+                            <li>Presented at <a href="https://dependablesecureml.github.io/index.html"
+                                    onclick="getLink('https://dependablesecureml.github.io/index.html'); return false;">DSML
+                                    2021</a></li>
+                            <li>For a video of the talk, see <a href="https://www.youtube.com/watch?v=Tc44H6ryxqc"
+                                    onclick="getLink('https://www.youtube.com/watch?v=Tc44H6ryxqc'); return false;">here</a>
+                            </li>
+                            <li>For more information see <a href="http://www.dsn.jhu.edu/radics/"
+                                    onclick="getLink('http://www.dsn.jhu.edu/radics/'); return false;">http://www.dsn.jhu.edu/radics/</a>
+                            </li>
+                        </ul>
 
                     </ul>
-                    </p>
-
-
-                    <p>For more information on my projects, see <a href="./projects"
-                            onclick="getLink('./projects'); return false;">projects</a>
-                        page.
-                    </p>
-
-                    <p>For a list of papers and presentations, see <a
-                            href="https://scholar.google.com/citations?user=vP2to0MAAAAJ&hl=en&oi=ao"
-                            onclick="getLink('https://scholar.google.com/citations?user=vP2to0MAAAAJ&hl=en&oi=ao'); return false;">
-                            Google
-                            Scholar</a>.
-                    </p>
-                    <p>I also enjoy traveling and rock climbing.</p>
-                </ul>
+                </div>
             </div>
-        </div>
+            <hr>
+        </section>
+
+        <section id="post" class="container text-center">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2><a href="https://epubs.siam.org/doi/abs/10.1137/1.9781611976472.3"
+                            onclick="getLink('https://epubs.siam.org/doi/abs/10.1137/1.9781611976472.3'); return false;">A
+                            Parallel Packed Memory Array to
+                            Store Dynamic Graphs</a></h2>
+                    <ul class="text-left">
+                        <details>
+                            <summary>
+                                <strong>Abstract</strong>
+                            </summary>
+                            <p>The ideal data structure for storing dynamic graphs would support fast updates as well as
+                                fast
+                                range
+                                queries which underlie graph traversals such as breadth-first search. The Packed Memory
+                                Array
+                                (PMA)
+                                seems like a good candidate for this setting because it supports fast updates as well as
+                                cache-efficient range queries. Concurrently updating a PMA raises challenges, however,
+                                because
+                                an
+                                update may require rewriting the entire structure.
+                                <br /><br />
+                                This paper introduces a parallel PMA with intra- and inter-operation parallelism and
+                                deadlock-free
+                                polylogarithmicspan operations. Our main observation is that the PMA is well-suited to
+                                concurrent
+                                updates despite occasionally requiring a rewrite of the entire structure because 1) most
+                                of
+                                the
+                                updates only write to a small part of the structure and 2) the worst case is highly
+                                parallel
+                                and
+                                cache-efficient.
+                                <br /><br />
+                                To evaluate our data structure, we implemented Parallel Packed Compressed Sparse Row
+                                (PPCSR), a
+                                dynamic-graph processing framework that extends the Ligra interface with graph updates.
+                                We
+                                show
+                                that
+                                PPCSR is on average about 1.6x faster on graph kernels than Aspen, a state-of-the-art
+                                graph-streaming system. PPCSR achieves up to 80 million updates per second and is 2 – 5x
+                                faster
+                                than
+                                Aspen on most batch sizes. Finally, PPCSR is competitive with Ligra and Ligra+, two
+                                state-of-the-art
+                                static graph-processing frameworks.
+                        </details>
+                        <br>
+                        <ul class="text-left" style="display:inline-block;vertical-align:middle;padding-left:0">
+
+                            <li>Presented at <a href="https://www.siam.org/conferences/cm/conference/alenex21"
+                                    onclick="getLink('https://www.siam.org/conferences/cm/conference/alenex21'); return false;">ALENEX
+                                    2021</a></li>
+                            <li>For a video of the talk, see <a href="https://youtu.be/LJ2B7w-UyLw"
+                                    onclick="getLink('https://youtu.be/LJ2B7w-UyLw'); return false;">here</a></li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+        </section>
+
+        <!-- Post Section -->
+        <section id="post" class="container text-center">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2><a href="https://ieeexplore.ieee.org/abstract/document/9286243"
+                            onclick="getLink('https://ieeexplore.ieee.org/abstract/document/9286243'); return false;">High-Throughput
+                            Image Alignment for
+                            Connectomics using Frugal Snap Judgments</a></h2>
+                    <ul class="text-left">
+                        <details>
+                            <summary>
+                                <strong>Abstract</strong>
+                            </summary>
+                            <p>The accuracy and computational efficiency of image alignment directly affects
+                                the advancement of connectomics, a field which seeks to understand the
+                                structure of the brain through electron microscopy.
+                                <br /><br />
+                                We introduce the algorithms Quilter and Stacker that are designed to perform 2D
+                                and 3D alignment respectively on petabyte-scale data sets from connectomics.
+                                Quilter and Stacker are efficient, scalable, and simple to deploy on hardware
+                                ranging from a researcher's laptop to a large computing cluster. On a single
+                                18-core cloud machine each algorithm achieves throughputs of more than 1
+                                TB/hr; when combined the algorithms produce an end-to-end alignment pipeline
+                                that processes data at a rate of 0.82 TB/hr - an over 10x improvement
+                                from previous systems. This efficiency comes from both traditional
+                                optimizations and from the use of ``Frugal Snap Judgments'' to judiciously
+                                exploit performance--accuracy trade offs.
+                                <br /><br />
+                                A high-throughput image-alignment pipeline was implemented using the Quilter
+                                and Stacker algorithms and its performance was evaluated using three datasets
+                                whose size ranged from 550GB to 38TB. The full alignment pipeline achieved
+                                a throughput of 0.6-0.8 TB/hr and 1.4-1.5 TB/hr on an 18-core and
+                                112-core shared-memory multicore, respectively. On a supercomputing cluster
+                                with 200 nodes and 1600 total cores, the pipeline achieved a throughput of
+                                21.4 TB/hr.
+                            </p>
+                        </details>
+                        <br>
+                        <ul class="text-left" style="display:inline-block;vertical-align:middle;padding-left:0">
+                            <li> Presented as a <a href="https://dl.acm.org/doi/abs/10.1145/3293883.3301495"
+                                    onclick="getLink('https://dl.acm.org/doi/abs/10.1145/3293883.3301495'); return false;">Poster</a>
+                                at PPOPP 2019.</li>
+                            <li>Presented as a paper at <a href="http://www.ieee-hpec.org/"
+                                    onclick="getLink('http://www.ieee-hpec.org/'); return false;">HPEC 2020</a>, where
+                                it
+                                won
+                                the
+                                best student paper award.</li>
+                        </ul>
+
+                    </ul>
+                </div>
+            </div>
+            <hr>
+        </section>
+
+        <!-- Post Section -->
+        <section id="post" class="container text-center">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2><a href="https://ieeexplore.ieee.org/abstract/document/8547566"
+                            onclick="getLink('https://ieeexplore.ieee.org/abstract/document/8547566'); return false;">Packed
+                            Compressed Sparse Row: A
+                            Dynamic Graph Representation </a></h2>
+                    <ul class="text-left">
+                        <details>
+                            <summary>
+                                <strong>Abstract</strong>
+                            </summary>
+                            <p>Perhaps the most popular sparse graph storage format is Compressed Sparse Row (CSR). CSR
+                                excels
+                                at
+                                storing graphs compactly with minimal overhead, allowing for fast traversals, lookups,
+                                and
+                                basic
+                                graph computations such as PageRank. Since elements in CSR format are packed together,
+                                additions
+                                and
+                                deletions often require time linear in the size of the graph.
+                                <br /><br />
+                                We introduce a new dynamic sparse
+                                graph representation called Packed Compressed Sparse Row (PCSR), based on an array-based
+                                dynamic
+                                data structure called the Packed Memory Array. PCSR is similar to CSR, but leaves spaces
+                                between
+                                elements, allowing for asymptotically faster insertions and deletions in exchange for a
+                                constant
+                                factor slowdown in traversals and a constant factor increase in space overhead.
+                                <br /><br />
+                                Our contributions
+                                are twofold. We describe PCSR and review the theoretical guarantees for update, insert,
+                                and
+                                search
+                                for PCSR. We also implemented PCSR as well as other basic graph storage formats and
+                                report
+                                our
+                                findings on a variety of benchmarks. PCSR supports inserts orders of magnitude faster
+                                than
+                                CSR
+                                and
+                                is only a factor of two slower on graph traversals. Our results suggest that PCSR is a
+                                lightweight
+                                dynamic graph representation that supports fast inserts and competitive searches.
+                            </p>
+                        </details>
+                        <br>
+                        <ul class="text-left" style="display:inline-block;vertical-align:middle;padding-left:0">
+                            <li>Presented at <a href="http://www.ieee-hpec.org/2018/"
+                                    onclick="getLink('http://www.ieee-hpec.org/2018/'); return false;">HPEC
+                                    2018</a></li>
+                        </ul>
+                    </ul>
+
+                </div>
+            </div>
+            <hr>
+        </section>
+
+
+
+        <!-- Post Section -->
+        <section id="post" class="container text-center">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2><a href="https://link.springer.com/chapter/10.1007/978-3-319-39931-7_19"
+                            onclick="getLink('https://link.springer.com/chapter/10.1007/978-3-319-39931-7_19'); return false;">Electricity
+                            Demand and
+                            Population Dynamics Prediction from Mobile Phone Metadata </a></h2>
+                    <ul class="text-left">
+                        <details>
+                            <summary>
+                                <strong>Abstract</strong>
+                            </summary>
+                            <p>Energy efficiency is a key challenge for building modern sustainable societies. World’s
+                                energy
+                                consumption is expected to grow annually by 1.6 %, increasing pressure for utilities and
+                                governments
+                                to fulfill demand and raising significant challenges in generation, distribution, and
+                                storage of
+                                electricity. In this context, accurate predictions and understanding of population
+                                dynamics
+                                and
+                                their relation to electricity demand dynamics is of high relevance.
+                                <br /><br />
+                                We introduce a simple machine learning (ML) method for day-ahead predictions of hourly
+                                energy
+                                consumption, based on population and electricity demand dynamics. We use anonymized
+                                mobile
+                                phone
+                                records (CDRs) and historical energy records from a small European country. CDRs are
+                                large-scale
+                                data that is collected passively and on a regular basis by mobile phone carriers,
+                                including
+                                time
+                                and
+                                location of calls and text messages, as well as phones’ countries of origin. We show
+                                that
+                                simple
+                                support vector machine (SVM) autoregressive models are capable of baseline energy demand
+                                predictions
+                                with accuracies below 3 % percentage error and active population predictions below 10 %
+                                percentage
+                                error. Moreover, we show that population dynamics from mobile phone records contain
+                                information
+                                additional to that of electricity demand records, which can be exploited to improve
+                                prediction
+                                performance. Finally, we illustrate how the joint analysis of population and electricity
+                                dynamics
+                                elicits insights into the relation between population and electricity demand segments,
+                                allowing
+                                for
+                                potential demand management interventions and policies beyond reactive supply-side
+                                operations.
+                            </p>
+                        </details>
+                        <br>
+                        <ul class="text-left" style="display:inline-block;vertical-align:middle;padding-left:0">
+                            <li>
+                                Presented at <a href="http://sbp-brims.org/2016/"
+                                    onclick="getLink('http://sbp-brims.org/2016/'); return false;">SBP-BRiMS 2016</a>
+                            </li>
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+        </section>
     </section>
+
+    <section id="Projects" class="container content-section text-center">
+        <h1><u>Projects</u></h1>
+
+        <section id="post" class="container text-center">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>Small Ordered Dynamic Sets Using
+                        Compressed Packed Memory Arrays</h2>
+                    <ul class="text-left">
+                        <details>
+                            <summary>
+                                <strong>Abstract</strong>
+                            </summary>
+                            <p>The Packed Memory Array (PMA) data structure maintains a dynamic
+                                set of 𝑛 elements in sorted order in a Θ(𝑛)-sized array by
+                                interspersing Θ(𝑛) empty spaces among elements. In practice, the
+                                PMA supports scans much faster than pointer-based structures such
+                                as trees because it stores elements contiguously in sorted order.
+                            </p>
+                            <p>
+                                This paper improves PMAs by 1) increasing update throughput
+                                with batch updates and 2) reducing space usage with data compression.
+                                Beyond fast search, insert, and deletions, efficient advanced
+                                operations such as batch updates and maps are a critical part of
+                                large-scale data-processing frameworks. Furthermore, the PMA’s
+                                asymptotics depend on a constant factor of extra space, which in
+                                practice may be infeasible on large datasets.
+                            </p>
+                            <p>
+                                Specifically, this paper introduces 1) a batch-update algorithm for
+                                PMAs and 2) a compressed PMA, which improve update throughput
+                                and space usage, respectively. Our experiments show that the PMA
+                                with batch updates supports up to 122 million updates per second. It
+                                achieves 1.6× and 1.3× faster update throughput compared toAspen
+                                and PAM, two state-of-the-art dynamic set data structures. ThePMA
+                                supports scans, which underlie maps, at over 10 billion elements per
+                                second and achieves 2.2× and 63× speedup over Aspen and PAM,
+                                respectively, on scans. Finally, the compressed PMA reduces the
+                                space usage of the PMA by about 3× while maintaining competitive
+                                update and scan throughputs.
+                            </p>
+                        </details>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+        </section>
+        <br>
+        <!-- Post Section -->
+        <section id="post" class="container text-center">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2><a href="https://brianwheatman.com/papers/Tourist_Path_Optimization_Problem.pdf"
+                            onclick="getLink('https://brianwheatman.com/papers/Tourist_Path_Optimization_Problem.pdf'); return false;">Tourist
+                            Path
+                            Optimization
+                            Problem</a></h2>
+                    <ul class="text-left">
+                        <p>For my senior research paper in Computer Science, I studied a variant of the Traveling
+                            Salesman
+                            Problem.</p>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+        </section>
+
+        <!-- Post Section -->
+        <section id="post" class="container text-center">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2><a href="https://brianwheatman.com/papers/Anti_magic.pdf"
+                            onclick="getLink('https://brianwheatman.com/papers/Anti_magic.pdf'); return false;">Anti-magic
+                            and Edge Graceful Graphs</a>
+                    </h2>
+                    <ul class="text-left">
+                        <p>For my senior seminar paper in Discrete Math, I studied Anti-magic graphs.</p>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+        </section>
+
+
+    </section>
+
 
     <!-- Education Section -->
     <section id="education" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Education</h2>
-                <ul class="text-left" style="display:inline-block;vertical-align:middle;">
-                    <p>I am currently a PhD Student in Computer Science at Johns Hopkins
-                        University advised by <a href="https://www.cs.jhu.edu/faculty/randal-burns/"
-                            onclick="getLink('https://www.cs.jhu.edu/faculty/randal-burns/'); return false;">Randal
-                            Burns</a>. I received the Gordon
-                        Croft Fellowship.
-                    <p>I earned my Masters of Engineering from Massachusetts Institute of
-                        Technology (MIT) in 2019,
-                        working
-                        with <a href="https://www.csail.mit.edu/person/charles-e-leiserson"
-                            onclick="getLink('https://www.csail.mit.edu/person/charles-e-leiserson'); return false;">
-                            Charles E. Leiserson</a>.
-                        My
-                        thesis can be found <a href="https://dspace.mit.edu/handle/1721.1/123023"
-                            onclick="getLink('https://dspace.mit.edu/handle/1721.1/123023'); return false;">
-                            here</a>.
-                    <p>I earned my Bachelors of Science from Massachusetts Institute of
-                        Technology in 2017, completing a
-                        double major in Computer Science and Mathematics and a double minor in
-                        Economics and Management
-                        Science. I am a member of both the Engineering Honor Society (TBP) and
-                        the Computer Science
-                        Honor
-                        Society (HKN). I was the Lockheed Martin Undergraduate Research and
-                        Innovation Scholar, under
-                        the
-                        supervision of <a href="https://www.csail.mit.edu/person/daniela-rus"
-                            onclick="getLink('https://www.csail.mit.edu/person/daniela-rus'); return false;">Daniela
-                            Rus</a> and <a href="https://aeroastro.mit.edu/sertac-karaman"
-                            onclick="getLink('https://aeroastro.mit.edu/sertac-karaman'); return false;">Sertac
-                            Karaman</a>.
+        <h2>Education</h2>
+        <ul class="text-left" style="display:inline-block;vertical-align:middle;">
+            <p>I am currently a PhD Student in Computer Science at Johns Hopkins
+                University advised by <a href="https://www.cs.jhu.edu/faculty/randal-burns/"
+                    onclick="getLink('https://www.cs.jhu.edu/faculty/randal-burns/'); return false;">Randal
+                    Burns</a>. I received the Gordon
+                Croft Fellowship.
+            <p>I earned my Masters of Engineering from Massachusetts Institute of
+                Technology (MIT) in 2019,
+                working
+                with <a href="https://www.csail.mit.edu/person/charles-e-leiserson"
+                    onclick="getLink('https://www.csail.mit.edu/person/charles-e-leiserson'); return false;">
+                    Charles E. Leiserson</a>.
+                My
+                thesis can be found <a href="https://dspace.mit.edu/handle/1721.1/123023"
+                    onclick="getLink('https://dspace.mit.edu/handle/1721.1/123023'); return false;">
+                    here</a>.
+            <p>I earned my Bachelors of Science from Massachusetts Institute of
+                Technology in 2017, completing a
+                double major in Computer Science and Mathematics and a double minor in
+                Economics and Management
+                Science. I am a member of both the Engineering Honor Society (TBP) and
+                the Computer Science
+                Honor
+                Society (HKN). I was the Lockheed Martin Undergraduate Research and
+                Innovation Scholar, under
+                the
+                supervision of <a href="https://www.csail.mit.edu/person/daniela-rus"
+                    onclick="getLink('https://www.csail.mit.edu/person/daniela-rus'); return false;">Daniela
+                    Rus</a> and <a href="https://aeroastro.mit.edu/sertac-karaman"
+                    onclick="getLink('https://aeroastro.mit.edu/sertac-karaman'); return false;">Sertac
+                    Karaman</a>.
 
-                </ul>
-
-            </div>
-        </div>
+        </ul>
     </section>
 
     <!-- Teaching Section -->
     <section id="teaching" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Teaching</h2>
-                <ul class="text-left" style="display:inline-block;vertical-align:middle;">
+        <h2>Teaching</h2>
+        <ul class="text-left" style="display:inline-block;vertical-align:middle;">
 
 
-                    <p>I have worked with a variety of classes from my undergrad through my PhD:
-                    </p>
-                    <ul class="text-left" style="display:inline-block;vertical-align:middle;">
-                        <li>Parallel Programming (JHU <a href="https://parallel.cs.jhu.edu/"
-                                onclick="getLink('https://parallel.cs.jhu.edu/'); return false;">CS320/620</a>):
-                            Teaching
-                            Assistant (TA) Fall 2021</li>
-                        <li>Intermediate Programming (JHU <a href="http://www.dsn.jhu.edu/courses/cs220/"
-                                onclick="getLink('http://www.dsn.jhu.edu/courses/cs220/'); return false;">CS220</a>):
-                            TA Fall 2020</li>
-                        <li>Computation Structures (MIT <a href="https://6004.mit.edu/web/spring21/"
-                                onclick="getLink('https://6004.mit.edu/web/spring21/'); return false;">
-                                6.004</a>): Head TA
-                            Spring
-                            2019, TA Spring 2018, Fall 2018</li>
-                        <li>Advanced Undergraduate Research (MIT <a href="https://superurop.mit.edu/"
-                                onclick="getLink('https://superurop.mit.edu/'); return false;">
-                                6.UAR</a>):
-                            TA
-                            Fall
-                            2017
-                        </li>
-                        <li>Digital Communication Systems (MIT <a href="https://visor.mit.edu/6.02/f2020"
-                                onclick="getLink('https://visor.mit.edu/6.02/f2020'); return false;">6.02</a>):
-                            Lab
-                            Assistant Fall 2016</li>
-                        <li>Algorithms (MIT 6.006 and 6.046): Tutoring and Grading 2015-2016
-                        </li>
-                    </ul>
+            <p>I have worked with a variety of classes from my undergrad through my PhD:
+            </p>
+            <ul class="text-left" style="display:inline-block;vertical-align:middle;">
+                <li>Parallel Programming (JHU <a href="https://parallel.cs.jhu.edu/"
+                        onclick="getLink('https://parallel.cs.jhu.edu/'); return false;">CS320/620</a>):
+                    Teaching
+                    Assistant (TA) Fall 2021</li>
+                <li>Intermediate Programming (JHU <a href="http://www.dsn.jhu.edu/courses/cs220/"
+                        onclick="getLink('http://www.dsn.jhu.edu/courses/cs220/'); return false;">CS220</a>):
+                    TA Fall 2020</li>
+                <li>Computation Structures (MIT <a href="https://6004.mit.edu/web/spring21/"
+                        onclick="getLink('https://6004.mit.edu/web/spring21/'); return false;">
+                        6.004</a>): Head TA
+                    Spring
+                    2019, TA Spring 2018, Fall 2018</li>
+                <li>Advanced Undergraduate Research (MIT <a href="https://superurop.mit.edu/"
+                        onclick="getLink('https://superurop.mit.edu/'); return false;">
+                        6.UAR</a>):
+                    TA
+                    Fall
+                    2017
+                </li>
+                <li>Digital Communication Systems (MIT <a href="https://visor.mit.edu/6.02/f2020"
+                        onclick="getLink('https://visor.mit.edu/6.02/f2020'); return false;">6.02</a>):
+                    Lab
+                    Assistant Fall 2016</li>
+                <li>Algorithms (MIT 6.006 and 6.046): Tutoring and Grading 2015-2016
+                </li>
+            </ul>
 
-                </ul>
-
-
-
-            </div>
-        </div>
+        </ul>
     </section>
 
     <!-- Profession Experience  Section -->
     <section id="professional" class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2">
-                <h2>Professional Experience</h2>
-                <ul class="text-left" style="display:inline-block;vertical-align:middle;">
-                    <p>I have completed multiple Software and Data Engineering internships:</p>
-                    <ul class="text-left" style="display:inline-block;vertical-align:middle;">
-                        <li> Google: Summers 2017, 2018, 2019, 2020, 2021</li>
-                        <li> Five Rings Capital: Winter 2017</li>
-                        <li> Facebook: Summer 2016</li>
-                        <li> JP Morgan Chase & Co. Summer 2015</li>
-                    </ul>
-                </ul>
-
-
-
-
-
-            </div>
-        </div>
+        <h2>Professional Experience</h2>
+        <ul class="text-left" style="display:inline-block;vertical-align:middle;">
+            <p>I have completed multiple Software and Data Engineering internships:</p>
+            <ul class="text-left" style="display:inline-block;vertical-align:middle;">
+                <li> Google: Summers 2017, 2018, 2019, 2020, 2021</li>
+                <li> Five Rings Capital: Winter 2017</li>
+                <li> Facebook: Summer 2016</li>
+                <li> JP Morgan Chase & Co. Summer 2015</li>
+            </ul>
+        </ul>
     </section>
+
 
     <!-- CV Section -->
     <section id="CV" class="content-section text-center">
-        <div class="resume-section">
-            <div class="container">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2>View My CV</h2>
-                    <ul class="text-left" style="display:inline-block;vertical-align:middle;">
-                        <p>You can see my academic and professional experiences via the linked
-                            CV.</p>
-                    </ul>
-                    <a href="cv.pdf" class="btn btn-default btn-lg" onclick="getLink('cv.pdf'); return false;">CV</a>
+        <div class="container">
+            <h2>View My CV</h2>
+            <ul class="text-left" style="display:inline-block;vertical-align:middle;">
+                <p>You can see my academic and professional experiences via the linked
+                    CV.</p>
+            </ul>
+            <a href="cv.pdf" class="btn btn-default btn-lg" onclick="getLink('cv.pdf'); return false;">CV</a>
 
-                </div>
-            </div>
         </div>
     </section>
 
