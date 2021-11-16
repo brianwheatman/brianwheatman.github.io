@@ -135,13 +135,15 @@
     <section id="about" class="container content-section text-center">
         <h2>About Brian</h2>
         <ul class="text-left" style="display:inline-block;vertical-align:middle;">
-            <p>I am PhD Student in Computer Science at Johns Hopkins University. I enjoy
+            <p>
+                I am PhD Student in Computer Science at Johns Hopkins University. I enjoy
                 devoting my time and
                 attention to a variety of activities and intellectual pursuits.
                 I am fortunate to be advised by <a href="https://www.cs.jhu.edu/faculty/randal-burns/"
                     onclick="getLink('https://www.cs.jhu.edu/faculty/randal-burns/'); return false;">Randal
                     Burns</a>.
-            <p>My research interests include:
+            <p>
+                My research interests include:
             <ul class="text-left" style="display:inline-block;vertical-align:middle;">
                 <li> Graph Analytics</li>
                 <li> Parallel Data Structures and Algorithms</li>
@@ -153,17 +155,21 @@
             </p>
 
 
-            <p>For more information on my work, go to <a class="page-scroll" href="#Publications">Publications</a> or <a
-                    class="page-scroll" href="#Projects">Projects</a>.
+            <p>
+                For more information on my work, go to <a class="page-scroll" href="#Publications">Publications</a> or
+                <a class="page-scroll" href="#Projects">Projects</a>.
             </p>
 
-            <p>For a list of papers and presentations, see <a
+            <p>
+                For a list of papers and presentations, see <a
                     href="https://scholar.google.com/citations?user=vP2to0MAAAAJ&hl=en&oi=ao"
                     onclick="getLink('https://scholar.google.com/citations?user=vP2to0MAAAAJ&hl=en&oi=ao'); return false;">
                     Google
                     Scholar</a>.
             </p>
-            <p>I also enjoy traveling and rock climbing.</p>
+            <p>
+                I also enjoy traveling and rock climbing.
+            </p>
         </ul>
     </section>
 
@@ -179,23 +185,28 @@
                             <summary>
                                 <strong>Abstract</strong>
                             </summary>
-                            We present the SSTGraph framework for the storage and analysis of dynamic graphs.
-                            Its performance matches or exceeds state-of-the-art static graph engines and supports
-                            streaming
-                            updates. SSTGraph builds on top of the tinyset parallel, dynamic set data structure.
-                            Tinyset implements set membership in a shallow hierarchy of sorted packed memory arrays to
-                            achieve logarithmic time access and updates, and it scans in optimal linear time.
-                            Tinyset uses space comparable to that of systems that use data compression while
-                            avoiding compression's computation and serialization overhead.
-                            <br /><br />
-                            SSTGraph outperforms other streaming, dynamic graph engines on a suite of four graph
-                            algorithms.
-                            Our evaluation includes a comparison with the Aspen streaming graph system. SSTGraph reduces
-                            runtime by 40% on average, updates are 2x-5x faster on batch sizes up to 10 million, and
-                            graphs
-                            are smaller.
-                            The partitioned data structure scales well and runs on billion edge graphs in just 15 GB of
-                            memory.
+                            <p>
+                                We present the SSTGraph framework for the storage and analysis of dynamic graphs.
+                                Its performance matches or exceeds state-of-the-art static graph engines and supports
+                                streaming
+                                updates. SSTGraph builds on top of the tinyset parallel, dynamic set data structure.
+                                Tinyset implements set membership in a shallow hierarchy of sorted packed memory arrays
+                                to
+                                achieve logarithmic time access and updates, and it scans in optimal linear time.
+                                Tinyset uses space comparable to that of systems that use data compression while
+                                avoiding compression's computation and serialization overhead.
+                            </p>
+                            <p>
+                                SSTGraph outperforms other streaming, dynamic graph engines on a suite of four graph
+                                algorithms.
+                                Our evaluation includes a comparison with the Aspen streaming graph system. SSTGraph
+                                reduces
+                                runtime by 40% on average, updates are 2x-5x faster on batch sizes up to 10 million, and
+                                graphs
+                                are smaller.
+                                The partitioned data structure scales well and runs on billion edge graphs in just 15 GB
+                                of
+                                memory.
                             </p>
                         </details>
                         <br>
@@ -231,7 +242,8 @@
                                 many dynamic real-world graphs, such as social networks, follow a skewed
                                 distribution of vertex degrees, where there are a few high-degree vertices and
                                 many low-degree vertices.
-                                <br /><br />
+                            </p>
+                            <p>
                                 Existing static graph-processing systems optimized for graph skewness achieve
                                 high performance and low space usage by preprocessing a cache-efficient graph
                                 partitioning based on vertex degree. In the streaming setting, the whole graph
@@ -239,13 +251,15 @@
                                 feasible in the presence of updates. As a result, existing streaming
                                 graph-processing systems take a "one-size-fits-all" approach, leaving
                                 performance on the table.
-                                <br /><br />
+                            </p>
+                            <p>
                                 We present Terrace, a system for streaming graphs that uses a hierarchical data
                                 structure design to store a vertex's neighbors in different data structures
                                 depending on the degree of the vertex. This multi-level structure enables
                                 Terrace to dynamically partition vertices based on their degrees and adapt to
                                 skewness in the underlying graph.
-                                <br /><br />
+                            </p>
+                            <p>
                                 Our experiments show that Terrace supports faster batch insertions for batch
                                 sizes up to 1M when compared to Aspen, a state-of-the-art graph streaming
                                 system.
@@ -258,15 +272,18 @@
                         <br>
                         <ul class="text-left" style="display:inline-block;vertical-align:middle;padding-left:0">
 
-                            <li>Presented at <a href="https://2021.sigmod.org/index.shtml"
+                            <li>
+                                Presented at <a href="https://2021.sigmod.org/index.shtml"
                                     onclick="getLink('https://2021.sigmod.org/index.shtml'); return false;">SIGMOD
                                     2021</a>
                             </li>
-                            <li>For a video of the talk, see <a
+                            <li>
+                                For a video of the talk, see <a
                                     href="https://www.youtube.com/watch?v=O_affhnP_5Q&list=PL3xUNnH4TdbsfndCMn02BqAAgGB0z7cwq"
                                     onclick="getLink('https://www.youtube.com/watch?v=O_affhnP_5Q&list=PL3xUNnH4TdbsfndCMn02BqAAgGB0z7cwq'); return false;">here</a>
                             </li>
-                            <li>The code can be found on github <a href="https://github.com/PASSIONLab/terrace"
+                            <li>
+                                The code can be found on github <a href="https://github.com/PASSIONLab/terrace"
                                     onclick="getLink('https://github.com/PASSIONLab/terrace'); return false;">https://github.com/PASSIONLab/terrace</a>
                             </li>
                         </ul>
@@ -338,7 +355,9 @@
                             <summary>
                                 <strong>Abstract</strong>
                             </summary>
-                            <p>The ideal data structure for storing dynamic graphs would support fast updates as well as
+                            <p>
+                                The ideal data structure for storing dynamic graphs would support fast updates as well
+                                as
                                 fast
                                 range
                                 queries which underlie graph traversals such as breadth-first search. The Packed Memory
@@ -349,7 +368,8 @@
                                 because
                                 an
                                 update may require rewriting the entire structure.
-                                <br /><br />
+                            </p>
+                            <p>
                                 This paper introduces a parallel PMA with intra- and inter-operation parallelism and
                                 deadlock-free
                                 polylogarithmicspan operations. Our main observation is that the PMA is well-suited to
@@ -361,7 +381,8 @@
                                 parallel
                                 and
                                 cache-efficient.
-                                <br /><br />
+                            </p>
+                            <p>
                                 To evaluate our data structure, we implemented Parallel Packed Compressed Sparse Row
                                 (PPCSR), a
                                 dynamic-graph processing framework that extends the Ligra interface with graph updates.
@@ -375,6 +396,7 @@
                                 Aspen on most batch sizes. Finally, PPCSR is competitive with Ligra and Ligra+, two
                                 state-of-the-art
                                 static graph-processing frameworks.
+                            </p>
                         </details>
                         <br>
                         <ul class="text-left" style="display:inline-block;vertical-align:middle;padding-left:0">
@@ -404,10 +426,12 @@
                             <summary>
                                 <strong>Abstract</strong>
                             </summary>
-                            <p>The accuracy and computational efficiency of image alignment directly affects
+                            <p>
+                                The accuracy and computational efficiency of image alignment directly affects
                                 the advancement of connectomics, a field which seeks to understand the
                                 structure of the brain through electron microscopy.
-                                <br /><br />
+                            </p>
+                            <p>
                                 We introduce the algorithms Quilter and Stacker that are designed to perform 2D
                                 and 3D alignment respectively on petabyte-scale data sets from connectomics.
                                 Quilter and Stacker are efficient, scalable, and simple to deploy on hardware
@@ -418,7 +442,8 @@
                                 from previous systems. This efficiency comes from both traditional
                                 optimizations and from the use of ``Frugal Snap Judgments'' to judiciously
                                 exploit performance--accuracy trade offs.
-                                <br /><br />
+                            </p>
+                            <p>
                                 A high-throughput image-alignment pipeline was implemented using the Quilter
                                 and Stacker algorithms and its performance was evaluated using three datasets
                                 whose size ranged from 550GB to 38TB. The full alignment pipeline achieved
@@ -470,7 +495,8 @@
                                 additions
                                 and
                                 deletions often require time linear in the size of the graph.
-                                <br /><br />
+                            </p>
+                            <p>
                                 We introduce a new dynamic sparse
                                 graph representation called Packed Compressed Sparse Row (PCSR), based on an array-based
                                 dynamic
@@ -479,7 +505,8 @@
                                 elements, allowing for asymptotically faster insertions and deletions in exchange for a
                                 constant
                                 factor slowdown in traversals and a constant factor increase in space overhead.
-                                <br /><br />
+                            </p>
+                            <p>
                                 Our contributions
                                 are twofold. We describe PCSR and review the theoretical guarantees for update, insert,
                                 and
@@ -576,7 +603,6 @@
                     </ul>
                 </div>
             </div>
-            <hr>
         </section>
     </section>
 
@@ -628,40 +654,35 @@
             <hr>
         </section>
         <br>
-        <!-- Post Section -->
         <section id="post" class="container text-center">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <h2><a href="https://brianwheatman.com/papers/Tourist_Path_Optimization_Problem.pdf"
-                            onclick="getLink('https://brianwheatman.com/papers/Tourist_Path_Optimization_Problem.pdf'); return false;">Tourist
-                            Path
-                            Optimization
-                            Problem</a></h2>
+                    <h2>General Purpose Memory-Efficient Data Structures</h2>
                     <ul class="text-left">
-                        <p>For my senior research paper in Computer Science, I studied a variant of the Traveling
-                            Salesman
-                            Problem.</p>
+                        <p>
+                            My vision is to create a suite of data structures, which implement memory-efficient versions
+                            of common operations, so users can reap these benefits across many problems and scales
+                            without needing the technical expertise to understand and tune for the memory hierarchy.
+
+                            The next steps are to continue to develop techniques for adapting structures dynamically to
+                            best suit the data pattern and problem structure, as well as move from dynamic graphs to
+                            more general structures, such as sets and matrices.
+                        </p>
+                        <p>
+                            My plan is to continue to work on a Dynamic Sparse Matrix Library called Concord, which will
+                            build off of the SSTGraph and adapt to efficiently store matrices of many different forms
+                            and enable both standard computation with separate output and inplace updates. Concord will
+                            take advantage of its dynamic structure, without having to perform rewrites or pre-calculate
+                            the matrix’s pattern. </p>
                     </ul>
+
                 </div>
             </div>
             <hr>
         </section>
 
-        <!-- Post Section -->
-        <section id="post" class="container text-center">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2><a href="https://brianwheatman.com/papers/Anti_magic.pdf"
-                            onclick="getLink('https://brianwheatman.com/papers/Anti_magic.pdf'); return false;">Anti-magic
-                            and Edge Graceful Graphs</a>
-                    </h2>
-                    <ul class="text-left">
-                        <p>For my senior seminar paper in Discrete Math, I studied Anti-magic graphs.</p>
-                    </ul>
-                </div>
-            </div>
-            <hr>
-        </section>
+
+
 
 
     </section>
@@ -676,16 +697,48 @@
                     onclick="getLink('https://www.cs.jhu.edu/faculty/randal-burns/'); return false;">Randal
                     Burns</a>. I received the Gordon
                 Croft Fellowship.
+            </p>
             <p>I earned my Masters of Engineering from Massachusetts Institute of
                 Technology (MIT) in 2019,
                 working
                 with <a href="https://www.csail.mit.edu/person/charles-e-leiserson"
                     onclick="getLink('https://www.csail.mit.edu/person/charles-e-leiserson'); return false;">
                     Charles E. Leiserson</a>.
-                My
-                thesis can be found <a href="https://dspace.mit.edu/handle/1721.1/123023"
-                    onclick="getLink('https://dspace.mit.edu/handle/1721.1/123023'); return false;">
-                    here</a>.
+
+            </p>
+            <hr>
+            <h3><a href="https://dspace.mit.edu/handle/1721.1/123023"
+                    onclick="getLink('https://dspace.mit.edu/handle/1721.1/123023'); return false;">Image
+                    alignment and dynamic graph analytics : two case studies of how managing data movement
+                    can make (parallel) code run fast</a></h3>
+            <ul class="text-left">
+                <details>
+                    <summary>
+                        <strong>Abstract</strong>
+                    </summary>
+                    High performance applications are becoming increasingly resource hungry. We want to
+                    solve more complex problems and use more data to get higher quality results. However,
+                    the more data we store, the slower it is to access any piece. This effect is seen
+                    directly in the memory hierarchy. We can access our caches faster than our memory, which
+                    is faster than reading our disk, which is still faster than going across the network.
+                    This means that when processing large data sets, we can spend a large portion of our
+                    time simply in data movement. However, there is much we can do to optimize our programs
+                    to exploit our memory systems, so that we do not incur performance degradation as our
+                    datasets grow. I show how the careful design of data structures and algorithms allow us
+                    to scale to much larger datasets without impacting performance due to the cost of data
+                    movement. I demonstrate the impact of these designs with two case studies. The first
+                    examines large-scale image alignment, where I describe how to align a petabyte scale set
+                    of images in memory on a single machine and match the performance of current cluster
+                    solutions. I achieve .6 - .8 TB/hr on a medium-sized multicore and linear scalability on
+                    hundreds of nodes in a shared supercomputing cluster. The second case study explores
+                    dynamic graph analytics, where I describe the design of a new data structure for storing
+                    dynamic graphs that matches the performance of standard, static formats and enables high
+                    performance, dynamic operations achieving millions of updates per second.
+                    </p>
+                </details>
+
+            </ul>
+            <hr>
             <p>I earned my Bachelors of Science from Massachusetts Institute of
                 Technology in 2017, completing a
                 double major in Computer Science and Mathematics and a double minor in
@@ -700,7 +753,24 @@
                     onclick="getLink('https://www.csail.mit.edu/person/daniela-rus'); return false;">Daniela
                     Rus</a> and <a href="https://aeroastro.mit.edu/sertac-karaman"
                     onclick="getLink('https://aeroastro.mit.edu/sertac-karaman'); return false;">Sertac
-                    Karaman</a>.
+                    Karaman</a>.</p>
+            <hr>
+
+            <h3><a href="https://brianwheatman.com/papers/Anti_magic.pdf"
+                    onclick="getLink('https://brianwheatman.com/papers/Anti_magic.pdf'); return false;">Anti-magic
+                    and Edge Graceful Graphs</a>
+            </h3>
+            <p>For my senior seminar paper in Discrete Math, I studied Anti-magic graphs.</p>
+            <hr>
+
+            <h3><a href="https://brianwheatman.com/papers/Tourist_Path_Optimization_Problem.pdf"
+                    onclick="getLink('https://brianwheatman.com/papers/Tourist_Path_Optimization_Problem.pdf'); return false;">Tourist
+                    Path
+                    Optimization
+                    Problem</a></h3>
+            <p>For my senior research paper in Computer Science, I studied a variant of the Traveling
+                Salesman
+                Problem.</p>
 
         </ul>
     </section>
