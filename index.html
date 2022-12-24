@@ -148,7 +148,6 @@
                 <li> Graph Analytics</li>
                 <li> Parallel Data Structures and Algorithms</li>
                 <li> Big Data and Distributed Systems </li>
-                <li> Assured Machine Learning </li>
                 <li> Performance Engineering</li>
 
             </ul>
@@ -175,6 +174,52 @@
 
     <section id="Publications" class="container content-section text-center">
         <h1><u>Publications</u></h1>
+
+        <section id="post" class="container text-center">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>Optimizing Search Layouts in Packed Memory Arrays</h2>
+                    <ul class="text-left">
+                        <details>
+                            <summary>
+                                <strong>Abstract</strong>
+                            </summary>
+                            <p>
+                                This paper introduces Search-optimized Packed Memory Arrays (SPMAs), a collection of
+                                data structures based on Packed Memory Arrays (PMAs) that address suboptimal search via
+                                cache-optimized search layouts. Traditionally, PMAs and B-trees have tradeoffs between
+                                searches/inserts and scans: B-trees were faster for searches and inserts, while PMAs
+                                were faster for scans.
+                            </p>
+                            <p>
+                                Our empirical evaluation shows that SPMAs overcome this tradeoff for unsorted input
+                                distributions: on average, SPMAs are faster than B+-trees (a variant of B-trees
+                                optimized for scans) on all major operations. We generated datasets and search/insert
+                                workloads from the Yahoo! Cloud Serving Benchmark (YCSB) and found that SPMAs are about
+                                2× faster than B+-trees regardless of the ratio of searches to inserts. On uni form
+                                random inputs, SPMAs are on average between 1.3 × −2.3× faster than B+-trees on all
+                                operations. Finally, we vary the amount of sortedness in the inputs to stress the
+                                worst-case insert distribution in the PMA. We find that the worst-case B+-tree insertion
+                                throughput is about 1.5× faster than the worst-case PMA insertion throughput. However,
+                                the worst-case input for the PMA is sorted and highly unlikely to appear naturally in
+                                practice. The SPMAs maintain higher insertion throughput than the B+-tree when the input
+                                is up to 25% sorted.
+                            </p>
+                        </details>
+                        <br>
+                        <ul class="text-left" style="display:inline-block;vertical-align:middle;padding-left:0">
+
+                            <li>Presented at <a href="https://www.siam.org/conferences/cm/conference/alenex23"
+                                    onclick="getLink('https://www.siam.org/conferences/cm/conference/alenex23'); return false;">SIAM
+                                    ALENEX 2023</a>
+                            </li>
+
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+        </section>
 
         <section id="post" class="container text-center">
             <div class="row">
@@ -623,40 +668,30 @@
         <section id="post" class="container text-center">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2">
-                    <h2>Small Ordered Dynamic Sets Using
-                        Compressed Packed Memory Arrays</h2>
+                    <h2>A Compressed Packed Memory Array with
+                        Fast Parallel Batch Updates</h2>
                     <ul class="text-left">
                         <details>
                             <summary>
                                 <strong>Abstract</strong>
                             </summary>
-                            <p>The Packed Memory Array (PMA) data structure maintains a dynamic
-                                set of 𝑛 elements in sorted order in a Θ(𝑛)-sized array by
-                                interspersing Θ(𝑛) empty spaces among elements. In practice, the
-                                PMA supports scans much faster than pointer-based structures such
-                                as trees because it stores elements contiguously in sorted order.
+                            <p>This paper introduces the batch-parallel Compressed Packed Memory Array (CPMA), a
+                                compressed dynamic ordered set data structure based on the Packed Memory Array (PMA)
+                                that supports parallel batch updates. Traditionally, batch-parallel sets are built on
+                                pointer-based data structures such as trees because they enable fast parallel unions via
+                                pointer manipulation. When compared to cache optimized trees, PMAs were slower to update
+                                but faster to scan.
                             </p>
                             <p>
-                                This paper improves PMAs by 1) increasing update throughput
-                                with batch updates and 2) reducing space usage with data compression.
-                                Beyond fast search, insert, and deletions, efficient advanced
-                                operations such as batch updates and maps are a critical part of
-                                large-scale data-processing frameworks. Furthermore, the PMA’s
-                                asymptotics depend on a constant factor of extra space, which in
-                                practice may be infeasible on large datasets.
+                                The batch-parallel CPMA overcomes this tradeoff between updates and scans by optimizing
+                                for cache-friendliness. On average, the CPMA is faster than compressed PaC-trees, a
+                                state-of-the-art batch-parallel set library based on cache-optimized trees, by 3× on
+                                batch updates and 1.2× on range queries.
                             </p>
                             <p>
-                                Specifically, this paper introduces 1) a batch-update algorithm for
-                                PMAs and 2) a compressed PMA, which improve update throughput
-                                and space usage, respectively. Our experiments show that the PMA
-                                with batch updates supports up to 122 million updates per second. It
-                                achieves 1.6× and 1.3× faster update throughput compared toAspen
-                                and PAM, two state-of-the-art dynamic set data structures. ThePMA
-                                supports scans, which underlie maps, at over 10 billion elements per
-                                second and achieves 2.2× and 63× speedup over Aspen and PAM,
-                                respectively, on scans. Finally, the compressed PMA reduces the
-                                space usage of the PMA by about 3× while maintaining competitive
-                                update and scan throughputs.
+                                We further evaluate the CPMA compared to compressed PaC-trees on a real-world
+                                application of dynamic graph processing. The CPMA is on average 1.5× faster than
+                                compressed PaC-trees on a suite of graph algorithms.
                             </p>
                         </details>
                     </ul>
@@ -664,6 +699,57 @@
             </div>
             <hr>
         </section>
+
+        <section id="post" class="container text-center">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>BP-tree: Overcoming the Point-Range Operation Tradeoff for In-Memory B-trees</h2>
+                    <ul class="text-left">
+                        <details>
+                            <summary>
+                                <strong>Abstract</strong>
+                            </summary>
+                            <p>
+                                B-trees are the go-to data structure for implementing in-memory indexes in databases and
+                                storage systems. B-trees support both point operations (i.e., inserts and finds) and
+                                range operations (i.e., iterators and maps). However, there is an inherent tradeoff
+                                between point and range operations since the optimal node size for point operations is
+                                much smaller than the optimal node size for range operations. Existing implementations
+                                use a relatively small node size in all nodes of the tree to achieve fast point
+                                operation throughput at the cost of range operation throughput.
+                            </p>
+                            This paper argues that not all nodes in a B-tree need to be of the same size. Leaf nodes
+                            contain all the data records and making them large results in higher locality and faster
+                            range scans. Internal nodes only store pivots and keeping them small results in faster
+                            updates.
+                            <p>
+                                We present the BP-tree, a variant of the B-tree, where leaf nodes are much larger in
+                                size than the internal nodes to support faster range scans. Furthermore, to avoid any
+                                slowdown in point operations due to large leaf nodes, we introduce a novel
+                                insert-optimized array called the buffered partitioned array (BPA) to efficiently
+                                organize data in leaf nodes. The BPA supports fast insertions by delaying ordering the
+                                keys in the array. This results in much faster range operations and faster point
+                                operations at the same time. Using the buffered partitioned array, the BP-tree overcomes
+                                the decades-old point-range operation tradeoff in B-trees
+                            </p>
+                            <p>
+                                Our experiments show that on 48 hyperthreads, the BP-tree supports slightly faster (by
+                                about 1.1×) point operations (inserts and finds) than the best-case configuration for
+                                B-trees for point operations while supporting between 1.4×-1.7× faster range operations.
+                                On workloads generated from the Yahoo! Cloud Serving Benchmark (YCSB), the BP-tree is
+                                faster (by about 1.1×) on all point operation workloads compared to the B-tree, and
+                                slower (by about 1.15×) on the short range operation workload compared to the B-tree.
+                                Furthermore, we extend the YCSB to add large scan and map workloads, commonly found in
+                                database applications, and show that the BP-tree is between 1.2×-1.4× faster than the
+                                B-tree.
+                            </p>
+                        </details>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+        </section>
+
         <br>
         <section id="post" class="container text-center">
             <div class="row">
@@ -677,10 +763,18 @@
 
                             The next steps are to continue to develop techniques for adapting structures dynamically to
                             best suit the data pattern and problem structure, as well as move from dynamic graphs to
-                            more general structures, such as sets and matrices.
+                            more general structures, such as sets and matrices. Some specific examples are as follows:
                         </p>
                         <p>
-                            My plan is to continue to work on a Dynamic Sparse Matrix Library called Concord, which will
+                            A graph library for storing the time history of a graph, where instead of being able to
+                            update a
+                            graph to store the current version in respect to changes over time, would instead store the
+                            complete history of the graph, so that any point in time can be efficiently queried.
+                            Furthermore, multiple different points in time will be able to be analyzed at the same time,
+                            sharing work and I/O between the different queries.
+                        </p>
+                        <p>
+                            A Dynamic Sparse Matrix Library called Concord, which will
                             build off of the SSTGraph and adapt to efficiently store matrices of many different forms
                             and enable both standard computation with separate output and inplace updates. Concord will
                             take advantage of its dynamic structure, without having to perform rewrites or pre-calculate
@@ -800,7 +894,7 @@
                 <li>Parallel Programming (JHU <a href="https://parallel.cs.jhu.edu/"
                         onclick="getLink('https://parallel.cs.jhu.edu/'); return false;">CS320/620</a>):
                     Teaching
-                    Assistant (TA) Fall 2021</li>
+                    Assistant (TA) Fall 2021, Course Assistant Fall 2022</li>
                 <li>Intermediate Programming (JHU <a href="http://www.dsn.jhu.edu/courses/cs220/"
                         onclick="getLink('http://www.dsn.jhu.edu/courses/cs220/'); return false;">CS220</a>):
                     TA Fall 2020</li>
@@ -833,6 +927,7 @@
         <ul class="text-left" style="display:inline-block;vertical-align:middle;">
             <p>I have completed multiple Software and Data Engineering internships:</p>
             <ul class="text-left" style="display:inline-block;vertical-align:middle;">
+                <li> Lawrence Berkeley National Laboratory: Summer 2022</li>
                 <li> Google: Summers 2017, 2018, 2019, 2020, 2021</li>
                 <li> Five Rings Capital: Winter 2017</li>
                 <li> Facebook: Summer 2016</li>
