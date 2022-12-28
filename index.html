@@ -718,10 +718,12 @@
                                 use a relatively small node size in all nodes of the tree to achieve fast point
                                 operation throughput at the cost of range operation throughput.
                             </p>
-                            This paper argues that not all nodes in a B-tree need to be of the same size. Leaf nodes
-                            contain all the data records and making them large results in higher locality and faster
-                            range scans. Internal nodes only store pivots and keeping them small results in faster
-                            updates.
+                            <p>
+                                This paper argues that not all nodes in a B-tree need to be of the same size. Leaf nodes
+                                contain all the data records and making them large results in higher locality and faster
+                                range scans. Internal nodes only store pivots and keeping them small results in faster
+                                updates.
+                            </p>
                             <p>
                                 We present the BP-tree, a variant of the B-tree, where leaf nodes are much larger in
                                 size than the internal nodes to support faster range scans. Furthermore, to avoid any
