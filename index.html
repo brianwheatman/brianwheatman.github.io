@@ -11,6 +11,8 @@
 
     <title>Brian Wheatman</title>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -23,7 +25,7 @@
         type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-2HJB06VQ04"></script>
@@ -65,6 +67,7 @@
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <script src="js/bootstrap.js"></script>
 
     <!-- Navigation -->
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
@@ -174,6 +177,78 @@
 
     <section id="Publications" class="container content-section text-center">
         <h1><u>Publications and Presentations</u></h1>
+
+        <section id="post" class="container text-center">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+                    <h2>BP-tree: Overcoming the Point-Range Operation Tradeoff for In-Memory B-trees</h2>
+                    <ul class="text-left">
+                        <details>
+                            <summary>
+                                <strong>Abstract</strong>
+                            </summary>
+                            <p>
+                                B-trees are the go-to data structure for in-memory indexes in
+                                databases and storage systems. B-trees support both point operations (i.e., inserts and
+                                finds) and range operations (i.e., iterators and
+                                maps). However, there is an inherent tradeoff between point and
+                                range operations since the optimal node size for point operations
+                                is much smaller than the optimal node size for range operations.
+                                Existing implementations use a relatively small node size to achieve
+                                fast point operations at the cost of range operation throughput.
+                            </p>
+                            <p>
+                                We present the BP-tree, a variant of the B-tree, that overcomes
+                                the decades-old point-range operation tradeoff in traditional B-trees.
+                                In the BP-tree, the leaf nodes are much larger in size than the internal nodes to
+                                support faster range scans. To avoid any slowdown in
+                                point operations due to large leaf nodes, we introduce a new insertoptimized array
+                                called the buffered partitioned array (BPA) to
+                                efficiently organize data in leaf nodes. The BPA supports fast insertions by delaying
+                                ordering the keys in the array. This results in much
+                                faster range operations and faster point operations at the same time
+                                in the BP-tree.
+
+                            </p>
+                            <p>
+                                Our experiments show that on 48 hyperthreads, on workloads
+                                generated from the Yahoo! Cloud Serving Benchmark (YCSB), the
+                                BP-tree supports similar or faster point operation throughput (between .94×−1.2× faster)
+                                compared to Masstree and OpenBw-tree,
+                                two state-of-the-art in-memory key-value (KV) stores. On a YCSB
+                                workload with short scans, the BP-tree is about 7.4× faster than
+                                Masstree and 1.6× faster than OpenBw-tree. Furthermore, we extend the YCSB to add large
+                                range workloads, commonly found in
+                                database applications, and show that the BP-tree is 30× faster than
+                                Masstree and 2.5× faster than OpenBw-tree.
+                            </p>
+                            <p>
+                                We also provide a reference implementation for a concurrent B+
+                                -
+                                tree and find that the BP-tree supports faster (between 1.03×−1.2×
+                                faster) point operations when compared to the best-case configuration for B+
+                                -trees for point operations while supporting similar
+                                performance (about .95×as fast) on short range operations and faster
+                                (about 1.3× faster) long range operations
+                            </p>
+                        </details>
+                        <br>
+                        <ul class="text-left" style="display:inline-block;vertical-align:middle;padding-left:0">
+
+                            <li>Presented at <a href="https://vldb.org/2023/"
+                                    onclick="getLink('https://vldb.org/2023/'); return false;">VLDB 2023</a>
+                            </li>
+                            <li>
+                                The code can be found on github <a href="https://github.com/wheatman/SSTGraph"
+                                    onclick="getLink('https://github.com/wheatman/concurrent-btrees'); return false;">https://github.com/wheatman/concurrent-btrees</a>
+                            </li>
+
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+        </section>
 
         <section id="post" class="container text-center">
             <div class="row">
@@ -739,57 +814,7 @@
             <hr>
         </section>
 
-        <section id="post" class="container text-center">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2>BP-tree: Overcoming the Point-Range Operation Tradeoff for In-Memory B-trees</h2>
-                    <ul class="text-left">
-                        <details>
-                            <summary>
-                                <strong>Abstract</strong>
-                            </summary>
-                            <p>
-                                B-trees are the go-to data structure for implementing in-memory indexes in databases and
-                                storage systems. B-trees support both point operations (i.e., inserts and finds) and
-                                range operations (i.e., iterators and maps). However, there is an inherent tradeoff
-                                between point and range operations since the optimal node size for point operations is
-                                much smaller than the optimal node size for range operations. Existing implementations
-                                use a relatively small node size in all nodes of the tree to achieve fast point
-                                operation throughput at the cost of range operation throughput.
-                            </p>
-                            <p>
-                                This paper argues that not all nodes in a B-tree need to be of the same size. Leaf nodes
-                                contain all the data records and making them large results in higher locality and faster
-                                range scans. Internal nodes only store pivots and keeping them small results in faster
-                                updates.
-                            </p>
-                            <p>
-                                We present the BP-tree, a variant of the B-tree, where leaf nodes are much larger in
-                                size than the internal nodes to support faster range scans. Furthermore, to avoid any
-                                slowdown in point operations due to large leaf nodes, we introduce a novel
-                                insert-optimized array called the buffered partitioned array (BPA) to efficiently
-                                organize data in leaf nodes. The BPA supports fast insertions by delaying ordering the
-                                keys in the array. This results in much faster range operations and faster point
-                                operations at the same time. Using the buffered partitioned array, the BP-tree overcomes
-                                the decades-old point-range operation tradeoff in B-trees
-                            </p>
-                            <p>
-                                Our experiments show that on 48 hyperthreads, the BP-tree supports slightly faster (by
-                                about 1.1×) point operations (inserts and finds) than the best-case configuration for
-                                B-trees for point operations while supporting between 1.4×-1.7× faster range operations.
-                                On workloads generated from the Yahoo! Cloud Serving Benchmark (YCSB), the BP-tree is
-                                faster (by about 1.1×) on all point operation workloads compared to the B-tree, and
-                                slower (by about 1.15×) on the short range operation workload compared to the B-tree.
-                                Furthermore, we extend the YCSB to add large scan and map workloads, commonly found in
-                                database applications, and show that the BP-tree is between 1.2×-1.4× faster than the
-                                B-tree.
-                            </p>
-                        </details>
-                    </ul>
-                </div>
-            </div>
-            <hr>
-        </section>
+
 
         <br>
         <section id="post" class="container text-center">
