@@ -37,23 +37,6 @@
         gtag('config', 'G-2HJB06VQ04');
     </script>
 
-    <script>
-        /**
-        * Function that registers a click on an outbound link in Analytics.
-        * This function takes a valid URL string as an argument, and uses that URL string
-        * as the event label. Setting the transport method to 'beacon' lets the hit be sent
-        * using 'navigator.sendBeacon' in browser that support it.
-        */
-        var getLink = function (url) {
-            gtag('event', 'click', {
-                'event_category': 'link',
-                'event_label': url,
-                'transport_type': 'beacon',
-                'event_callback': function () { document.location = url; }
-            });
-        }
-    </script>
-
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -105,7 +88,7 @@
                         <a class="page-scroll" href="#professional">Professional Experience</a>
                     </li>
                     <li>
-                        <a href="./cv.pdf" onclick="getLink(./cv.pdf); return false;">CV</a>
+                        <a href="./cv.pdf">CV</a>
                     </li>
 
                 </ul>
@@ -122,9 +105,7 @@
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
                         <h1 class="brand-heading">Brian Wheatman</h1>
-                        <p class="intro-text">A Computer Scientist with a variety of interests
-                            intellectual and
-                            otherwise.</p>
+                        <p class="intro-text">A PhD student in Computer Scientist.</p>
                         <a href="#about" class="btn btn-circle page-scroll">
                             <em class="fa fa-angle-double-down animated"></em>
                         </a>
@@ -142,8 +123,7 @@
                 I am PhD Student in Computer Science at Johns Hopkins University. I enjoy
                 devoting my time and
                 attention to a variety of activities and intellectual pursuits.
-                I am fortunate to be advised by <a href="https://www.cs.jhu.edu/faculty/randal-burns/"
-                    onclick="getLink(https://www.cs.jhu.edu/faculty/randal-burns/); return false;">Randal
+                I am fortunate to be advised by <a href="https://www.cs.jhu.edu/faculty/randal-burns/">Randal
                     Burns</a>.
             <p>
                 My research interests include:
@@ -164,8 +144,7 @@
 
             <p>
                 For a list of papers and presentations, see <a
-                    href="https://scholar.google.com/citations?user=vP2to0MAAAAJ&hl=en&oi=ao"
-                    onclick="getLink(https://scholar.google.com/citations?user=vP2to0MAAAAJ&hl=en&oi=ao); return false;">
+                    href="https://scholar.google.com/citations?user=vP2to0MAAAAJ&hl=en&oi=ao">
                     Google
                     Scholar</a>.
             </p>
@@ -180,9 +159,11 @@
 
         <section id="post" class="container text-center">
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
+                <div class="col-lg-12 col-lg-offset-0">
                     <h2>CPMA: An Efficient
                         Batch-Parallel Compressed Set Without Pointers</h2>
+                    <p><b>Brian Wheatman</b>, <a href="https://randalburns.github.io/">Randal Burns</a>, Aydın Buluç,
+                        and <a href="https://itshelenxu.github.io/">Helen Xu</a></p>
                     <ul class="text-left">
                         <details>
                             <summary>
@@ -215,14 +196,12 @@
                         <br>
                         <ul class="text-left" style="display:inline-block;vertical-align:middle;padding-left:0">
 
-                            <li>To be presented at <a href="https://conf.researchr.org/home/PPoPP-2024"
-                                    onclick="getLink(https://conf.researchr.org/home/PPoPP-2024); return false;">PPoPP
+                            <li>To be presented at <a href="https://conf.researchr.org/home/PPoPP-2024">PPoPP
                                     2024</a>
                             </li>
                             <li>
                                 The code can be found on github <a
-                                    href="https://github.com/wheatman/Packed-Memory-Array/tree/main"
-                                    onclick="getLink(https://github.com/wheatman/Packed-Memory-Array/tree/main); return false;">https://github.com/wheatman/Packed-Memory-Array/tree/main</a>
+                                    href="https://github.com/wheatman/Packed-Memory-Array">https://github.com/wheatman/Packed-Memory-Array</a>
                             </li>
 
                         </ul>
@@ -234,10 +213,11 @@
 
         <section id="post" class="container text-center">
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2><a href="https://dl.acm.org/doi/10.14778/3611479.3611502"
-                            onclick="getLink(https://dl.acm.org/doi/10.14778/3611479.3611502); return false;">BP-tree:
+                <div class="col-lg-12 col-lg-offset-0">
+                    <h2><a href="https://dl.acm.org/doi/10.14778/3611479.3611502">BP-tree:
                             Overcoming the Point-Range Operation Tradeoff for In-Memory B-trees</a></h2>
+                    <p><a href="https://itshelenxu.github.io/">Helen Xu</a>, Amanda Li, <b>Brian Wheatman</b>, Manoj
+                        Marneni, and <a href="https://prashantpandey.github.io/">Prashant Pandey</a></p>
                     <ul class="text-left">
                         <details>
                             <summary>
@@ -291,16 +271,14 @@
                         <br>
                         <ul class="text-left" style="display:inline-block;vertical-align:middle;padding-left:0">
 
-                            <li>Presented at <a href="https://vldb.org/2023/"
-                                    onclick="getLink(https://vldb.org/2023/); return false;">VLDB 2023</a>
+                            <li>Presented at <a href="https://vldb.org/2023/">VLDB 2023</a>
                             </li>
                             <li>
-                                For a video of the talk, see <a href="https://youtu.be/d5lcKfhdiHY"
-                                    onclick="getLink(https://youtu.be/d5lcKfhdiHY); return false;">here</a>
+                                For a video of the talk, see <a href="https://youtu.be/d5lcKfhdiHY">here</a>
                             </li>
                             <li>
-                                The code can be found on github <a href="https://github.com/wheatman/SSTGraph"
-                                    onclick="getLink(https://github.com/wheatman/concurrent-btrees); return false;">https://github.com/wheatman/concurrent-btrees</a>
+                                The code can be found on github <a
+                                    href="https://github.com/wheatman/SSTGraph">https://github.com/wheatman/concurrent-btrees</a>
                             </li>
 
                         </ul>
@@ -312,10 +290,11 @@
 
         <section id="post" class="container text-center">
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2><a href="https://epubs.siam.org/doi/abs/10.1137/1.9781611977561.ch13"
-                            onclick="getLink(https://epubs.siam.org/doi/abs/10.1137/1.9781611977561.ch13); return false;">Optimizing
+                <div class="col-lg-12 col-lg-offset-0">
+                    <h2><a href="https://epubs.siam.org/doi/abs/10.1137/1.9781611977561.ch13">Optimizing
                             Search Layouts in Packed Memory Arrays</a></h2>
+                    <p><b>Brian Wheatman</b>, <a href="https://randalburns.github.io/">Randal Burns</a>, Aydın Buluç,
+                        and <a href="https://itshelenxu.github.io/">Helen Xu</a></p>
                     <ul class="text-left">
                         <details>
                             <summary>
@@ -346,8 +325,7 @@
                         <br>
                         <ul class="text-left" style="display:inline-block;vertical-align:middle;padding-left:0">
 
-                            <li>Presented at <a href="https://www.siam.org/conferences/cm/conference/alenex23"
-                                    onclick="getLink(https://www.siam.org/conferences/cm/conference/alenex23); return false;">SIAM
+                            <li>Presented at <a href="https://www.siam.org/conferences/cm/conference/alenex23">SIAM
                                     ALENEX 2023</a>
                             </li>
 
@@ -360,8 +338,9 @@
 
         <section id="post" class="container text-center">
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
+                <div class="col-lg-12 col-lg-offset-0">
                     <h2>So You Want to Make a Dynamic Graph Data Structure</h2>
+                    <p><b>Brian Wheatman</b></p>
                     <ul class="text-left">
                         <details>
                             <summary>
@@ -379,8 +358,7 @@
                         <br>
                         <ul class="text-left" style="display:inline-block;vertical-align:middle;padding-left:0">
 
-                            <li>Invited talk at <a href="https://paralg.github.io/largescalegraphs/"
-                                    onclick="getLink(https://paralg.github.io/largescalegraphs/); return false;">Workshop
+                            <li>Invited talk at <a href="https://paralg.github.io/largescalegraphs/">Workshop
                                     on Large-Scale Graph Processing (SPAA 2022)</a>
                             </li>
 
@@ -393,10 +371,10 @@
 
         <section id="post" class="container text-center">
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2><a href="https://ieeexplore.ieee.org/abstract/document/9671836"
-                            onclick="getLink(https://ieeexplore.ieee.org/abstract/document/9671836); return false;">Streaming
+                <div class="col-lg-12 col-lg-offset-0">
+                    <h2><a href="https://ieeexplore.ieee.org/abstract/document/9671836">Streaming
                             Sparse Graphs using Efficient Dynamic Sets</a></h2>
+                    <p><b>Brian Wheatman</b>, <a href="https://randalburns.github.io/">Randal Burns</a></p>
                     <ul class="text-left">
                         <details>
                             <summary>
@@ -429,21 +407,18 @@
                         <br>
                         <ul class="text-left" style="display:inline-block;vertical-align:middle;padding-left:0">
 
-                            <li>Presented at <a href="https://bigdataieee.org/BigData2021/index.html"
-                                    onclick="getLink(https://bigdataieee.org/BigData2021/index.html); return false;">IEEE
+                            <li>Presented at <a href="https://bigdataieee.org/BigData2021/index.html">IEEE
                                     BigData 2021</a>
                             </li>
-                            <li>Presented as a Poster at <a href="https://ucrparlay.github.io/hopc23/cfp/"
-                                    onclick="getLink(https://ucrparlay.github.io/hopc23/cfp/); return false;">Highlights
+                            <li>Presented as a Poster at <a href="https://ucrparlay.github.io/hopc23/cfp/">Highlights
                                     of Parallel Computing 2023</a>
                             </li>
                             <li>
-                                For a video of the talk, see <a href="https://youtu.be/02kgqE8T0qQ"
-                                    onclick="getLink(https://youtu.be/02kgqE8T0qQ); return false;">here</a>
+                                For a video of the talk, see <a href="https://youtu.be/02kgqE8T0qQ">here</a>
                             </li>
                             <li>
-                                The code can be found on github <a href="https://github.com/wheatman/SSTGraph"
-                                    onclick="getLink(https://github.com/wheatman/SSTGraph); return false;">https://github.com/wheatman/SSTGraph</a>
+                                The code can be found on github <a
+                                    href="https://github.com/wheatman/SSTGraph">https://github.com/wheatman/SSTGraph</a>
                             </li>
 
                         </ul>
@@ -455,12 +430,13 @@
 
         <section id="post" class="container text-center">
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2><a href="https://dl.acm.org/doi/10.1145/3448016.3457313"
-                            onclick="getLink(https://dl.acm.org/doi/10.1145/3448016.3457313); return false;">Terrace:
+                <div class="col-lg-12 col-lg-offset-0">
+                    <h2><a href="https://dl.acm.org/doi/10.1145/3448016.3457313">Terrace:
                             A
                             Hierarchical Graph Container for
                             Skewed Dynamic Graphs</a></h2>
+                    <p><a href="https://prashantpandey.github.io/">Prashant Pandey</a>, <b>Brian Wheatman</b>, <a
+                            href="https://itshelenxu.github.io/">Helen Xu</a>, and Aydın Buluç</p>
                     <ul class="text-left">
                         <details>
                             <summary>
@@ -502,18 +478,16 @@
                         <ul class="text-left" style="display:inline-block;vertical-align:middle;padding-left:0">
 
                             <li>
-                                Presented at <a href="https://2021.sigmod.org/index.shtml"
-                                    onclick="getLink(https://2021.sigmod.org/index.shtml); return false;">SIGMOD
+                                Presented at <a href="https://2021.sigmod.org/index.shtml">SIGMOD
                                     2021</a>
                             </li>
                             <li>
                                 For a video of the talk, see <a
-                                    href="https://www.youtube.com/watch?v=O_affhnP_5Q&list=PL3xUNnH4TdbsfndCMn02BqAAgGB0z7cwq"
-                                    onclick="getLink(https://www.youtube.com/watch?v=O_affhnP_5Q&list=PL3xUNnH4TdbsfndCMn02BqAAgGB0z7cwq); return false;">here</a>
+                                    href="https://www.youtube.com/watch?v=O_affhnP_5Q&list=PL3xUNnH4TdbsfndCMn02BqAAgGB0z7cwq">here</a>
                             </li>
                             <li>
-                                The code can be found on github <a href="https://github.com/PASSIONLab/terrace"
-                                    onclick="getLink(https://github.com/PASSIONLab/terrace); return false;">https://github.com/PASSIONLab/terrace</a>
+                                The code can be found on github <a
+                                    href="https://github.com/PASSIONLab/terrace">https://github.com/PASSIONLab/terrace</a>
                             </li>
                         </ul>
                     </ul>
@@ -526,10 +500,11 @@
         <!-- Post Section -->
         <section id="post" class="container text-center">
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2><a href="https://ieeexplore.ieee.org/abstract/document/9502465"
-                            onclick="getLink(https://ieeexplore.ieee.org/abstract/document/9502465); return false;">RADICS:
+                <div class="col-lg-12 col-lg-offset-0">
+                    <h2><a href="https://ieeexplore.ieee.org/abstract/document/9502465">RADICS:
                             Runtime Assurance of Distributed Intelligent Control Systems</a></h2>
+                    <p><b>Brian Wheatman</b>, Jerry Chen, <a href="https://ep.jhu.edu/faculty/tamim-sookoor/">Tamim
+                            Sookoor</a>, and <a href="https://www.cs.jhu.edu/~yairamir/">Yair Amir</a></p>
                     <ul class="text-left">
                         <details>
                             <summary>
@@ -555,14 +530,13 @@
                         </details>
                         <br>
                         <ul class="text-left" style="display:inline-block;vertical-align:middle;padding-left:0">
-                            <li>Presented at <a href="https://dependablesecureml.github.io/index.html"
-                                    onclick="getLink(https://dependablesecureml.github.io/index.html); return false;">DSML
+                            <li>Presented at <a href="https://dependablesecureml.github.io/index.html">DSML
                                     2021</a></li>
-                            <li>For a video of the talk, see <a href="https://www.youtube.com/watch?v=Tc44H6ryxqc"
-                                    onclick="getLink(https://www.youtube.com/watch?v=Tc44H6ryxqc); return false;">here</a>
+                            <li>For a video of the talk, see <a
+                                    href="https://www.youtube.com/watch?v=Tc44H6ryxqc">here</a>
                             </li>
-                            <li>For more information see <a href="http://www.dsn.jhu.edu/radics/"
-                                    onclick="getLink(http://www.dsn.jhu.edu/radics/); return false;">http://www.dsn.jhu.edu/radics/</a>
+                            <li>For more information see <a
+                                    href="http://www.dsn.jhu.edu/radics/">http://www.dsn.jhu.edu/radics/</a>
                             </li>
                         </ul>
 
@@ -574,11 +548,11 @@
 
         <section id="post" class="container text-center">
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2><a href="https://epubs.siam.org/doi/abs/10.1137/1.9781611976472.3"
-                            onclick="getLink(https://epubs.siam.org/doi/abs/10.1137/1.9781611976472.3); return false;">A
+                <div class="col-lg-12 col-lg-offset-0">
+                    <h2><a href="https://epubs.siam.org/doi/abs/10.1137/1.9781611976472.3">A
                             Parallel Packed Memory Array to
                             Store Dynamic Graphs</a></h2>
+                    <p><b>Brian Wheatman</b> and <a href="https://itshelenxu.github.io/">Helen Xu</a></p>
                     <ul class="text-left">
                         <details>
                             <summary>
@@ -630,11 +604,9 @@
                         <br>
                         <ul class="text-left" style="display:inline-block;vertical-align:middle;padding-left:0">
 
-                            <li>Presented at <a href="https://www.siam.org/conferences/cm/conference/alenex21"
-                                    onclick="getLink(https://www.siam.org/conferences/cm/conference/alenex21); return false;">ALENEX
+                            <li>Presented at <a href="https://www.siam.org/conferences/cm/conference/alenex21">ALENEX
                                     2021</a></li>
-                            <li>For a video of the talk, see <a href="https://youtu.be/LJ2B7w-UyLw"
-                                    onclick="getLink(https://youtu.be/LJ2B7w-UyLw); return false;">here</a></li>
+                            <li>For a video of the talk, see <a href="https://youtu.be/LJ2B7w-UyLw">here</a></li>
                         </ul>
                     </ul>
                 </div>
@@ -645,11 +617,11 @@
         <!-- Post Section -->
         <section id="post" class="container text-center">
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2><a href="https://ieeexplore.ieee.org/abstract/document/9286243"
-                            onclick="getLink(https://ieeexplore.ieee.org/abstract/document/9286243); return false;">High-Throughput
+                <div class="col-lg-12 col-lg-offset-0">
+                    <h2><a href="https://ieeexplore.ieee.org/abstract/document/9286243">High-Throughput
                             Image Alignment for
                             Connectomics using Frugal Snap Judgments</a></h2>
+                    <p><a href="http://tfk.mit.edu/">Tim Kaler</a>, <b>Brian Wheatman</b>, and Sarah Wooders</p>
                     <ul class="text-left">
                         <details>
                             <summary>
@@ -684,11 +656,9 @@
                         </details>
                         <br>
                         <ul class="text-left" style="display:inline-block;vertical-align:middle;padding-left:0">
-                            <li> Presented as a <a href="https://dl.acm.org/doi/abs/10.1145/3293883.3301495"
-                                    onclick="getLink(https://dl.acm.org/doi/abs/10.1145/3293883.3301495); return false;">Poster</a>
+                            <li> Presented as a <a href="https://dl.acm.org/doi/abs/10.1145/3293883.3301495">Poster</a>
                                 at PPOPP 2019.</li>
-                            <li>Presented as a paper at <a href="http://www.ieee-hpec.org/"
-                                    onclick="getLink(http://www.ieee-hpec.org/); return false;">HPEC 2020</a>, where
+                            <li>Presented as a paper at <a href="http://www.ieee-hpec.org/">HPEC 2020</a>, where
                                 it
                                 won
                                 the
@@ -704,11 +674,11 @@
         <!-- Post Section -->
         <section id="post" class="container text-center">
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2><a href="https://ieeexplore.ieee.org/abstract/document/8547566"
-                            onclick="getLink(https://ieeexplore.ieee.org/abstract/document/8547566); return false;">Packed
+                <div class="col-lg-12 col-lg-offset-0">
+                    <h2><a href="https://ieeexplore.ieee.org/abstract/document/8547566">Packed
                             Compressed Sparse Row: A
                             Dynamic Graph Representation </a></h2>
+                    <p><b>Brian Wheatman</b> and <a href="https://itshelenxu.github.io/">Helen Xu</a></p>
                     <ul class="text-left">
                         <details>
                             <summary>
@@ -754,8 +724,7 @@
                         </details>
                         <br>
                         <ul class="text-left" style="display:inline-block;vertical-align:middle;padding-left:0">
-                            <li>Presented at <a href="http://www.ieee-hpec.org/2018/"
-                                    onclick="getLink(http://www.ieee-hpec.org/2018/); return false;">HPEC
+                            <li>Presented at <a href="http://www.ieee-hpec.org/2018/">HPEC
                                     2018</a></li>
                         </ul>
                     </ul>
@@ -770,11 +739,12 @@
         <!-- Post Section -->
         <section id="post" class="container text-center">
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
-                    <h2><a href="https://link.springer.com/chapter/10.1007/978-3-319-39931-7_19"
-                            onclick="getLink(https://link.springer.com/chapter/10.1007/978-3-319-39931-7_19); return false;">Electricity
+                <div class="col-lg-12 col-lg-offset-0">
+                    <h2><a href="https://link.springer.com/chapter/10.1007/978-3-319-39931-7_19">Electricity
                             Demand and
                             Population Dynamics Prediction from Mobile Phone Metadata </a></h2>
+                    <p><b>Brian Wheatman</b>, Alejandro Noriega and <a
+                            href="https://www.media.mit.edu/people/sandy/overview/">Alex Pentland</a></p>
                     <ul class="text-left">
                         <details>
                             <summary>
@@ -826,8 +796,7 @@
                         <br>
                         <ul class="text-left" style="display:inline-block;vertical-align:middle;padding-left:0">
                             <li>
-                                Presented at <a href="http://sbp-brims.org/2016/"
-                                    onclick="getLink(http://sbp-brims.org/2016/); return false;">SBP-BRiMS 2016</a>
+                                Presented at <a href="http://sbp-brims.org/2016/">SBP-BRiMS 2016</a>
                             </li>
                         </ul>
                     </ul>
@@ -841,7 +810,7 @@
 
         <section id="post" class="container text-center">
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
+                <div class="col-lg-12 col-lg-offset-0">
                     <h2>BYO: A Unified Framework for Benchmarking Large-Scale
                         Graph Containers</h2>
                     <ul class="text-left">
@@ -881,7 +850,7 @@
         </section>
         <section id="post" class="container text-center">
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2">
+                <div class="col-lg-12 col-lg-offset-0">
                     <h2>General Purpose, Memory-Efficient Data Structures</h2>
                     <ul class="text-left">
                         <p>
@@ -926,16 +895,14 @@
         <h2>Education</h2>
         <ul class="text-left" style="display:inline-block;vertical-align:middle;">
             <p>I am currently a PhD Student in Computer Science at Johns Hopkins
-                University advised by <a href="https://www.cs.jhu.edu/faculty/randal-burns/"
-                    onclick="getLink(https://www.cs.jhu.edu/faculty/randal-burns/); return false;">Randal
+                University advised by <a href="https://www.cs.jhu.edu/faculty/randal-burns/">Randal
                     Burns</a>. I received the Gordon
                 Croft Fellowship.
             </p>
             <p>I earned my Masters of Engineering from Massachusetts Institute of
                 Technology (MIT) in 2019,
                 working
-                with <a href="https://www.csail.mit.edu/person/charles-e-leiserson"
-                    onclick="getLink(https://www.csail.mit.edu/person/charles-e-leiserson); return false;">
+                with <a href="https://www.csail.mit.edu/person/charles-e-leiserson">
                     Charles E. Leiserson</a>.
 
             </p>
@@ -950,15 +917,12 @@
                 Society (HKN). I was the Lockheed Martin Undergraduate Research and
                 Innovation Scholar, under
                 the
-                supervision of <a href="https://www.csail.mit.edu/person/daniela-rus"
-                    onclick="getLink(https://www.csail.mit.edu/person/daniela-rus); return false;">Daniela
-                    Rus</a> and <a href="https://aeroastro.mit.edu/sertac-karaman"
-                    onclick="getLink(https://aeroastro.mit.edu/sertac-karaman); return false;">Sertac
+                supervision of <a href="https://www.csail.mit.edu/person/daniela-rus">Daniela
+                    Rus</a> and <a href="https://aeroastro.mit.edu/sertac-karaman">Sertac
                     Karaman</a>.</p>
             <hr>
             <p>Master's Thesis:</p>
-            <h4><a href="https://dspace.mit.edu/handle/1721.1/123023"
-                    onclick="getLink(https://dspace.mit.edu/handle/1721.1/123023); return false;">Image
+            <h4><a href="https://dspace.mit.edu/handle/1721.1/123023">Image
                     alignment and dynamic graph analytics : two case studies of how managing data movement
                     can make (parallel) code run fast</a></h4>
             <ul class="text-left">
@@ -990,8 +954,7 @@
             </ul>
             <hr>
             <p>For my undergraduate senior seminar paper in Discrete Math, I studied Anti-magic graphs.</p>
-            <h4><a href="https://brianwheatman.com/papers/Anti_magic.pdf"
-                    onclick="getLink(https://brianwheatman.com/papers/Anti_magic.pdf); return false;">Anti-magic
+            <h4><a href="https://brianwheatman.com/papers/Anti_magic.pdf">Anti-magic
                     and Edge Graceful Graphs</a>
             </h4>
 
@@ -1000,8 +963,7 @@
             <p>For my undergraduate senior research paper in Computer Science, I studied a variant of the Traveling
                 Salesman
                 Problem.</p>
-            <h4><a href="https://brianwheatman.com/papers/Tourist_Path_Optimization_Problem.pdf"
-                    onclick="getLink(https://brianwheatman.com/papers/Tourist_Path_Optimization_Problem.pdf); return false;">Tourist
+            <h4><a href="https://brianwheatman.com/papers/Tourist_Path_Optimization_Problem.pdf">Tourist
                     Path
                     Optimization
                     Problem</a></h4>
@@ -1019,33 +981,26 @@
             <p>I have worked with a variety of classes from my undergrad through my PhD:
             </p>
             <ul class="text-left" style="display:inline-block;vertical-align:middle;">
-                <li>Parallel Programming (JHU <a href="https://parallel.cs.jhu.edu/"
-                        onclick="getLink(https://parallel.cs.jhu.edu/); return false;">CS320/620</a>):
+                <li>Parallel Programming (JHU <a href="https://parallel.cs.jhu.edu/">CS320/620</a>):
                     Teaching
                     Assistant (TA) Fall 2023, Fall 2021, Course Assistant Fall 2022</li>
-                <li>Guest Lecture: <a href="https://github.com/wheatman/Vectorization_Notes"
-                        onclick="getLink(https://github.com/wheatman/Vectorization_Notes); return false;">SIMD and
+                <li>Guest Lecture: <a href="https://github.com/wheatman/Vectorization_Notes">SIMD and
                         Vectorization</a> for Scalable Parallel Algorithms and Data Structures (UMD <a
-                        href="https://www.cs.umd.edu/~laxman/paralg-s23.html"
-                        onclick="getLink(https://www.cs.umd.edu/~laxman/paralg-s23.html); return false;">CMSC858N</a>):
+                        href="https://www.cs.umd.edu/~laxman/paralg-s23.html">CMSC858N</a>):
                     Spring 2023</li>
-                <li>Intermediate Programming (JHU <a href="http://www.dsn.jhu.edu/courses/cs220/"
-                        onclick="getLink(http://www.dsn.jhu.edu/courses/cs220/); return false;">CS220</a>):
+                <li>Intermediate Programming (JHU <a href="http://www.dsn.jhu.edu/courses/cs220/">CS220</a>):
                     TA Fall 2020</li>
-                <li>Computation Structures (MIT <a href="https://6004.mit.edu"
-                        onclick="getLink(https://6004.mit.edu); return false;">
+                <li>Computation Structures (MIT <a href="https://6004.mit.edu">
                         6.004</a>): Head TA
                     Spring
                     2019, TA Spring 2018, Fall 2018</li>
-                <li>Advanced Undergraduate Research (MIT <a href="https://superurop.mit.edu/"
-                        onclick="getLink(https://superurop.mit.edu/); return false;">
+                <li>Advanced Undergraduate Research (MIT <a href="https://superurop.mit.edu/">
                         6.UAR</a>):
                     TA
                     Fall
                     2017
                 </li>
-                <li>Digital Communication Systems (MIT <a href="https://visor.mit.edu/6.02/f2020"
-                        onclick="getLink(https://visor.mit.edu/6.02/f2020); return false;">6.02</a>):
+                <li>Digital Communication Systems (MIT <a href="https://visor.mit.edu/6.02/f2020">6.02</a>):
                     Lab
                     Assistant Fall 2016</li>
                 <li>Algorithms (MIT 6.006 and 6.046): Tutoring and Grading 2015-2016
@@ -1062,11 +1017,16 @@
         <ul class="text-left" style="display:inline-block;vertical-align:middle;">
 
             <p>I organize and run a reading group for the PhD students in the systems groups at JHU.</p>
-            <p>I contribute to the <a href="https://www.opencilk.org/"
-                    onclick="getLink(https://www.opencilk.org/); return false;">OpenCilk</a> parallel programming
+            <p>I contribute to the <a href="https://www.opencilk.org/">OpenCilk</a> parallel programming
                 platform. </p>
 
-
+            <p>Committees served on </p>
+            <ul class="text-left" style="display:inline-block;vertical-align:middle;">
+                <li>ACM SIGPLAN Principles and Practice of Parallel Programming (PPoPP 2024)
+                    Artifact
+                    Evalutation </li>
+            </ul>
+            <br><br>
             <p>External Reviewer</p>
             <ul class="text-left" style="display:inline-block;vertical-align:middle;">
                 <li>European Symposium on Algorithms (ESA 2023)</li>
@@ -1104,13 +1064,14 @@
     <section id="CV" class="content-section text-center">
         <div class="resume-section">
             <div class="container">
-                <div class="col-lg-8 col-lg-offset-2">
+                <div class="col-lg-12 col-lg-offset-0">
                     <h2>View My CV</h2>
                     <ul class="text-left" style="display:inline-block;vertical-align:middle;">
                         <p>You can see my academic and professional experiences via the linked
                             CV.</p>
                     </ul>
-                    <a href="cv.pdf" class="btn btn-default btn-lg" onclick="getLink(cv.pdf); return false;">CV</a>
+                    <br>
+                    <a href="cv.pdf" class="btn btn-default btn-lg">CV</a>
 
                 </div>
             </div>
