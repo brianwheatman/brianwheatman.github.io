@@ -38,6 +38,36 @@
     </script>
 
 
+
+    <style>
+        .filterDiv {
+            display: none;
+        }
+
+        .fshow {
+            display: block;
+        }
+
+        /* Style the buttons */
+        .fbtn {
+            border: none;
+            outline: none;
+            padding: 12px 16px;
+            background-color: #595454;
+            cursor: pointer;
+        }
+
+        .fbtn:hover {
+            background-color: #a8a0a0;
+        }
+
+        .fbtn.clicked {
+            background-color: #c9c2c2;
+            color: rgb(5, 4, 4);
+        }
+    </style>
+
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -51,6 +81,7 @@
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
     <script src="js/bootstrap.js"></script>
+
 
     <!-- Navigation -->
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
@@ -157,9 +188,17 @@
     <section id="Publications" class="container content-section text-center">
         <h1><u>Publications and Presentations</u></h1>
         <hr>
+        <div id="myBtnContainer">
+            <button class="fbtn clicked" onclick="filterSelection('all')"> Show all</button>
+            <button class="fbtn" onclick="filterSelection('DS')"> Data Structures</button>
+            <button class="fbtn" onclick="filterSelection('graphs')"> Graphs</button>
+            <button class="fbtn" onclick="filterSelection('PMA')"> Packed Memory Arrays</button>
+            <button class="fbtn" onclick="filterSelection('others')"> Others</button>
+        </div>
 
         <section id="post" class="container text-center">
-            <div class="row">
+            <div class="row filterDiv DS graphs PMA">
+                <hr>
                 <div class="col-lg-12 col-lg-offset-0">
                     <h2><a href="https://dl.acm.org/doi/10.1145/3627535.3638492">CPMA: An Efficient
                             Batch-Parallel Compressed Set Without Pointers</a></h2>
@@ -210,11 +249,12 @@
                     </ul>
                 </div>
             </div>
-            <hr>
+
         </section>
 
         <section id="post" class="container text-center">
-            <div class="row">
+            <div class="row  filterDiv DS">
+                <hr>
                 <div class="col-lg-12 col-lg-offset-0">
                     <h2><a href="https://dl.acm.org/doi/10.14778/3611479.3611502">BP-tree:
                             Overcoming the Point-Range Operation Tradeoff for In-Memory B-trees</a></h2>
@@ -287,11 +327,12 @@
                     </ul>
                 </div>
             </div>
-            <hr>
+
         </section>
 
         <section id="post" class="container text-center">
-            <div class="row">
+            <div class="row  filterDiv DS PMA">
+                <hr>
                 <div class="col-lg-12 col-lg-offset-0">
                     <h2><a href="https://epubs.siam.org/doi/abs/10.1137/1.9781611977561.ch13">Optimizing
                             Search Layouts in Packed Memory Arrays</a></h2>
@@ -336,11 +377,11 @@
                     </ul>
                 </div>
             </div>
-            <hr>
         </section>
 
         <section id="post" class="container text-center">
-            <div class="row">
+            <div class="row  filterDiv DS graphs">
+                <hr>
                 <div class="col-lg-12 col-lg-offset-0">
                     <h2>So You Want to Make a Dynamic Graph Data Structure</h2>
                     <p><b>Brian Wheatman</b></p>
@@ -369,11 +410,11 @@
                     </ul>
                 </div>
             </div>
-            <hr>
         </section>
 
         <section id="post" class="container text-center">
-            <div class="row">
+            <div class="row  filterDiv DS graphs">
+                <hr>
                 <div class="col-lg-12 col-lg-offset-0">
                     <h2><a href="https://ieeexplore.ieee.org/abstract/document/9671836">Streaming
                             Sparse Graphs using Efficient Dynamic Sets</a></h2>
@@ -428,11 +469,11 @@
                     </ul>
                 </div>
             </div>
-            <hr>
         </section>
 
         <section id="post" class="container text-center">
-            <div class="row">
+            <div class="row  filterDiv DS graphs">
+                <hr>
                 <div class="col-lg-12 col-lg-offset-0">
                     <h2><a href="https://dl.acm.org/doi/10.1145/3448016.3457313">Terrace:
                             A
@@ -497,13 +538,13 @@
                     </ul>
                 </div>
             </div>
-            <hr>
         </section>
 
 
         <!-- Post Section -->
         <section id="post" class="container text-center">
-            <div class="row">
+            <div class="row  filterDiv others">
+                <hr>
                 <div class="col-lg-12 col-lg-offset-0">
                     <h2><a href="https://ieeexplore.ieee.org/abstract/document/9502465">RADICS:
                             Runtime Assurance of Distributed Intelligent Control Systems</a></h2>
@@ -547,11 +588,11 @@
                     </ul>
                 </div>
             </div>
-            <hr>
         </section>
 
         <section id="post" class="container text-center">
-            <div class="row">
+            <div class="row  filterDiv DS graphs PMA">
+                <hr>
                 <div class="col-lg-12 col-lg-offset-0">
                     <h2><a href="https://epubs.siam.org/doi/abs/10.1137/1.9781611976472.3">A
                             Parallel Packed Memory Array to
@@ -615,12 +656,12 @@
                     </ul>
                 </div>
             </div>
-            <hr>
         </section>
 
         <!-- Post Section -->
         <section id="post" class="container text-center">
-            <div class="row">
+            <div class="row filterDiv others">
+                <hr>
                 <div class="col-lg-12 col-lg-offset-0">
                     <h2><a href="https://ieeexplore.ieee.org/abstract/document/9286243">High-Throughput
                             Image Alignment for
@@ -673,12 +714,13 @@
                     </ul>
                 </div>
             </div>
-            <hr>
+
         </section>
 
         <!-- Post Section -->
         <section id="post" class="container text-center">
-            <div class="row">
+            <div class="row filterDiv DS graphs">
+                <hr>
                 <div class="col-lg-12 col-lg-offset-0">
                     <h2><a href="https://ieeexplore.ieee.org/abstract/document/8547566">Packed
                             Compressed Sparse Row: A
@@ -736,14 +778,14 @@
 
                 </div>
             </div>
-            <hr>
         </section>
 
 
 
         <!-- Post Section -->
         <section id="post" class="container text-center">
-            <div class="row">
+            <div class="row filterDiv others">
+                <hr>
                 <div class="col-lg-12 col-lg-offset-0">
                     <h2><a href="https://link.springer.com/chapter/10.1007/978-3-319-39931-7_19">Electricity
                             Demand and
@@ -811,6 +853,7 @@
     </section>
 
     <section id="Current" class="container content-section text-center">
+        <hr>
         <h1><u>Current Work</u></h1>
 
 
@@ -820,20 +863,30 @@
                     <h2><a href="https://arxiv.org/abs/2402.14118">Masked Matrix Multiplication for Emergent
                             Sparsity</a></h2>
                     <ul class="text-left">
-                        <p>
-                            Artificial intelligence workloads, especially transformer models, exhibit emergent sparsity
-                            in which computations perform selective sparse access to dense data. The workloads are
-                            inefficient on hardware designed for dense computations and do not map well onto sparse data
-                            representations. We build a vectorized and parallel matrix-multiplication system A × B = C
-                            that eliminates unnecessary computations and avoids branches based on a runtime evaluation
-                            of sparsity. We use a combination of dynamic code lookup to adapt to the specific sparsity
-                            encoded in the B matrix and preprocessing of sparsity maps of the A and B matrices to
-                            compute conditional branches once for the whole computation. For a wide range of sparsity,
-                            from 60% to 95% zeros, our implementation performs fewer instructions and increases
-                            performance when compared with Intel MKL's dense or sparse matrix multiply routines.
-                            Benefits can be as large as 2 times speedup and 4 times fewer instructions.
-                        </p>
-
+                        <details>
+                            <summary>
+                                <strong>Abstract</strong>
+                            </summary>
+                            <p>
+                                Artificial intelligence workloads, especially transformer models, exhibit emergent
+                                sparsity
+                                in which computations perform selective sparse access to dense data. The workloads are
+                                inefficient on hardware designed for dense computations and do not map well onto sparse
+                                data
+                                representations. We build a vectorized and parallel matrix-multiplication system A × B =
+                                C
+                                that eliminates unnecessary computations and avoids branches based on a runtime
+                                evaluation
+                                of sparsity. We use a combination of dynamic code lookup to adapt to the specific
+                                sparsity
+                                encoded in the B matrix and preprocessing of sparsity maps of the A and B matrices to
+                                compute conditional branches once for the whole computation. For a wide range of
+                                sparsity,
+                                from 60% to 95% zeros, our implementation performs fewer instructions and increases
+                                performance when compared with Intel MKL's dense or sparse matrix multiply routines.
+                                Benefits can be as large as 2 times speedup and 4 times fewer instructions.
+                            </p>
+                        </details>
                     </ul>
 
                 </div>
@@ -847,34 +900,49 @@
                     <h2>BYO: A Unified Framework for Benchmarking Large-Scale
                         Graph Containers</h2>
                     <ul class="text-left">
-                        <p>
-                            A fundamental building block in any graph algorithm is a graph container – a data structure
-                            used to represent the graph. Ideally, a graph container enables efficient access to the
-                            underlying graph and supports updating the graph efficiently. In this paper, we conduct an
-                            extensive empirical evaluation of graph containers designed to support running algorithms on
-                            large graphs. To our knowledge, this is the first apples-to-apples comparison of graph
-                            containers rather than overall systems, which include confounding factors such as
-                            differences in algorithm implementations and infrastructure.
-                        </p>
-                        <p>
-                            We measure the running time of 10 highly-optimized algorithms across over 20+ different
-                            containers and 10 graphs. Somewhat surprisingly, we find that the average algorithm running
-                            time does not differ much across containers, especially those that support dynamic updates.
-                            Specifically, a simple container based on an off-the-shelf B-tree is only 1.22× slower on
-                            average than a highly optimized static one. Moreover, we observe that simplifying a
-                            graph-container Application Programming Interface (API) to only a few simple functions
-                            incurs a mere 1.16× slowdown compared to a complete API. Finally, we also measure
-                            batch-insert throughput in dynamic-graph containers for a full picture of their performance.
-                        </p>
-                        <p>
-                            To perform the benchmarks, we introduce BYO, a unified framework that standardizes
-                            evaluations of graph-algorithm performance across different graph containers. BYO extends
-                            the Graph Based Benchmark Suite (Dhulipala et al. 18), a state-of-the-art graph algorithm
-                            benchmark, to easily plug into different dynamic graph containers and enable fair
-                            comparisons between them on a large suite of graph algorithms. While several graph algorithm
-                            benchmarks have been developed to date, to the best of our knowledge, BYO is the first
-                            system designed to benchmark graph containers.
-                        </p>
+                        <details>
+                            <summary>
+                                <strong>Abstract</strong>
+                            </summary>
+                            <p>
+                                A fundamental building block in any graph algorithm is a graph container – a data
+                                structure
+                                used to represent the graph. Ideally, a graph container enables efficient access to the
+                                underlying graph and supports updating the graph efficiently. In this paper, we conduct
+                                an
+                                extensive empirical evaluation of graph containers designed to support running
+                                algorithms on
+                                large graphs. To our knowledge, this is the first apples-to-apples comparison of graph
+                                containers rather than overall systems, which include confounding factors such as
+                                differences in algorithm implementations and infrastructure.
+                            </p>
+                            <p>
+                                We measure the running time of 10 highly-optimized algorithms across over 20+ different
+                                containers and 10 graphs. Somewhat surprisingly, we find that the average algorithm
+                                running
+                                time does not differ much across containers, especially those that support dynamic
+                                updates.
+                                Specifically, a simple container based on an off-the-shelf B-tree is only 1.22× slower
+                                on
+                                average than a highly optimized static one. Moreover, we observe that simplifying a
+                                graph-container Application Programming Interface (API) to only a few simple functions
+                                incurs a mere 1.16× slowdown compared to a complete API. Finally, we also measure
+                                batch-insert throughput in dynamic-graph containers for a full picture of their
+                                performance.
+                            </p>
+                            <p>
+                                To perform the benchmarks, we introduce BYO, a unified framework that standardizes
+                                evaluations of graph-algorithm performance across different graph containers. BYO
+                                extends
+                                the Graph Based Benchmark Suite (Dhulipala et al. 18), a state-of-the-art graph
+                                algorithm
+                                benchmark, to easily plug into different dynamic graph containers and enable fair
+                                comparisons between them on a large suite of graph algorithms. While several graph
+                                algorithm
+                                benchmarks have been developed to date, to the best of our knowledge, BYO is the first
+                                system designed to benchmark graph containers.
+                            </p>
+                        </details>
                     </ul>
 
                 </div>
@@ -886,30 +954,44 @@
                 <div class="col-lg-12 col-lg-offset-0">
                     <h2>General Purpose, Memory-Efficient Data Structures</h2>
                     <ul class="text-left">
-                        <p>
-                            My vision is to create a suite of data structures, which implement memory-efficient versions
-                            of common operations, so users can reap these benefits across many problems and scales
-                            without needing the technical expertise to understand and tune for the memory hierarchy.
+                        <details>
+                            <summary>
+                                <strong>Abstract</strong>
+                            </summary>
+                            <p>
+                                My vision is to create a suite of data structures, which implement memory-efficient
+                                versions
+                                of common operations, so users can reap these benefits across many problems and scales
+                                without needing the technical expertise to understand and tune for the memory hierarchy.
 
-                            The next steps are to continue to develop techniques for adapting structures dynamically to
-                            best suit the data pattern and problem structure, as well as move from dynamic graphs to
-                            more general structures, such as sets and matrices. Some specific examples are as follows:
-                        </p>
-                        <p>
-                            A graph library for storing the time history of a graph, where instead of being able to
-                            update a
-                            graph to store the current version in respect to changes over time, would instead store the
-                            complete history of the graph, so that any point in time can be efficiently queried.
-                            Furthermore, multiple different points in time will be able to be analyzed at the same time,
-                            sharing work and I/O between the different queries.
-                        </p>
-                        <p>
-                            A Dynamic Sparse Matrix Library called Concord, which will
-                            build off of the SSTGraph and adapt to efficiently store matrices of many different forms
-                            and enable both standard computation with separate output and inplace updates. Concord will
-                            take advantage of its dynamic structure, without having to perform rewrites or pre-calculate
-                            the matrix’s pattern. </p>
+                                The next steps are to continue to develop techniques for adapting structures dynamically
+                                to
+                                best suit the data pattern and problem structure, as well as move from dynamic graphs to
+                                more general structures, such as sets and matrices. Some specific examples are as
+                                follows:
+                            </p>
+                            <p>
+                                A graph library for storing the time history of a graph, where instead of being able to
+                                update a
+                                graph to store the current version in respect to changes over time, would instead store
+                                the
+                                complete history of the graph, so that any point in time can be efficiently queried.
+                                Furthermore, multiple different points in time will be able to be analyzed at the same
+                                time,
+                                sharing work and I/O between the different queries.
+                            </p>
+                            <p>
+                                A Dynamic Sparse Matrix Library called Concord, which will
+                                build off of the SSTGraph and adapt to efficiently store matrices of many different
+                                forms
+                                and enable both standard computation with separate output and inplace updates. Concord
+                                will
+                                take advantage of its dynamic structure, without having to perform rewrites or
+                                pre-calculate
+                                the matrix’s pattern. </p>
+                        </details>
                     </ul>
+
 
                 </div>
             </div>
@@ -1135,7 +1217,51 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="js/grayscale.js"></script>
+    <script>
+        filterSelection("all");
 
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("filterDiv");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+                RemoveClass(x[i], "fshow");
+                if (x[i].className.indexOf(c) > -1) AddClass(x[i], "fshow");
+            }
+        }
+
+        function AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
+            }
+        }
+
+        function RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("fbtn");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function () {
+                var current = document.getElementsByClassName("clicked");
+                current[0].className = current[0].className.replace("clicked", "");
+                this.className += " clicked";
+            });
+        }
+    </script>
 </body>
 
 </html>
