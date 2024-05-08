@@ -151,9 +151,7 @@
         <h2>About Brian</h2>
         <ul class="text-left" style="display:inline-block;vertical-align:middle;">
             <p>
-                I am PhD Student in Computer Science at Johns Hopkins University. I enjoy
-                devoting my time and
-                attention to a variety of activities and intellectual pursuits.
+                I am PhD Student in Computer Science at Johns Hopkins University.
                 I am fortunate to be advised by <a href="https://www.cs.jhu.edu/faculty/randal-burns/">Randal
                     Burns</a>.
             <p>
@@ -196,6 +194,115 @@
             <button class="fbtn" onclick="filterSelection('others')"> Others</button>
         </div>
 
+        
+        <section id="post" class="container text-center">
+            <div class="row filterDiv DS graphs ">
+                <hr>
+                <div class="col-lg-12 col-lg-offset-0">
+                    <h2>BYO: A Unified Framework for Benchmarking Large-Scale
+                        Graph Containers</h2>
+                    <p><b>Brian Wheatman</b>, Xiaojun Dong, Zheqi Shen,  <a href = "https://www.cs.umd.edu/~laxman/">Laxman Dhulipala</a>, <a
+                            href="https://research.google/people/jakub-%C5%82%C4%85cki/">Jakub Łącki</a>, <a href="https://prashantpandey.github.io/">Prashant Pandey</a>,
+                        and <a href="https://itshelenxu.github.io/">Helen Xu</a></p>
+                    <ul class="text-left">
+                        <details>
+                            <summary>
+                                <strong>Abstract</strong>
+                            </summary>
+                            <p>
+                                A fundamental building block in any graph algorithm is a graph container – a data
+                                structure
+                                used to represent the graph. Ideally, a graph container enables efficient access to the
+                                underlying graph and supports updating the graph efficiently. In this paper, we conduct
+                                an
+                                extensive empirical evaluation of graph containers designed to support running
+                                algorithms on
+                                large graphs. To our knowledge, this is the first apples-to-apples comparison of graph
+                                containers rather than overall systems, which include confounding factors such as
+                                differences in algorithm implementations and infrastructure.
+                            </p>
+                            <p>
+                                We measure the running time of 10 highly-optimized algorithms across over 20+ different
+                                containers and 10 graphs. Somewhat surprisingly, we find that the average algorithm
+                                running
+                                time does not differ much across containers, especially those that support dynamic
+                                updates.
+                                Specifically, a simple container based on an off-the-shelf B-tree is only 1.22× slower
+                                on
+                                average than a highly optimized static one. Moreover, we observe that simplifying a
+                                graph-container Application Programming Interface (API) to only a few simple functions
+                                incurs a mere 1.16× slowdown compared to a complete API. Finally, we also measure
+                                batch-insert throughput in dynamic-graph containers for a full picture of their
+                                performance.
+                            </p>
+                            <p>
+                                To perform the benchmarks, we introduce BYO, a unified framework that standardizes
+                                evaluations of graph-algorithm performance across different graph containers. BYO
+                                extends
+                                the Graph Based Benchmark Suite (Dhulipala et al. 18), a state-of-the-art graph
+                                algorithm
+                                benchmark, to easily plug into different dynamic graph containers and enable fair
+                                comparisons between them on a large suite of graph algorithms. While several graph
+                                algorithm
+                                benchmarks have been developed to date, to the best of our knowledge, BYO is the first
+                                system designed to benchmark graph containers.
+                            </p>
+                        </details>
+                        <br>
+                        <ul class="text-left" style="display:inline-block;vertical-align:middle;padding-left:0">
+
+                            <li>To be presented at Presented at <a href="https://vldb.org/2024/">VLDB 2024</a>
+                            </li>
+                            <li>
+                                The code can be found on github <a
+                                    href="https://github.com/wheatman/BYO">https://github.com/wheatman/BYO</a>
+                            </li>
+
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+
+        
+        <section id="post" class="container text-center">
+            <div class="row filterDiv others">
+                <hr>
+                <div class="col-lg-12 col-lg-offset-0">
+                    <h2>Speedcode: Software Performance Engineering
+                        Education via the Coding of Didactic Exercises</h2>
+                    <p><a href="http://tfk.mit.edu/">Tim Kaler</a>, <a href = "https://people.csail.mit.edu/xchen/">Xuhao Chen</a>, <b>Brian Wheatman</b>, <a href = "https://pmg.csail.mit.edu/~dcurtis/">Dorothy Curtis</a>, Bruce Hoppe, <a href = "https://neboat.mit.edu/">Tao B. Schardl</a>, and <a href = "https://people.csail.mit.edu/cel/">Charles E. Leiserson</a></p>
+                    <ul class="text-left">
+                        <details>
+                            <summary>
+                                <strong>Abstract</strong>
+                            </summary>
+                            <p>
+                                This paper introduces Speedcode, an online programming platform that aims to improve the accessibility of software performance-engineering education. At its core, Speedcode provides a platform that lets users gain hands-on experience in software performance engineering and parallel programming by completing short programming exercises.
+
+                            </p>
+                            <p>
+                                Speedcode challenges users to develop fast multicore solutions for short programming problems and evaluates their code’s performance and scalability in a quiesced cloud environment. Speedcode supports parallel programming using OpenCilk, a task-parallel computing platform that is open-source and easy to program, teach and use for research.
+
+                            </p>
+                            <p>
+                                Speedcode aims to reduce barriers to learning and teaching software performance engineering. It allows users to run and evaluate their code on modern multicore machines from their own computer without installing any software. This provides users an easy introduction to the topic, and enables teachers to more easily incorporate lessons on software performance engineering into their courses without incurring the onerous overhead of needing to setup computing environments for their students.
+                            </p>
+                        </details>
+                        <br>
+                        <ul class="text-left" style="display:inline-block;vertical-align:middle;padding-left:0">
+
+                            <li>To be presented at Presented at <a href="https://tcpp.cs.gsu.edu/curriculum/?q=edupar24">EduPar-24</a>, In conjuction with <a href = "https://www.ipdps.org/">IPDPS 2024</a>
+                            </li>
+
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+
         <section id="post" class="container text-center">
             <div class="row filterDiv DS graphs PMA">
                 <hr>
@@ -237,8 +344,8 @@
                         <br>
                         <ul class="text-left" style="display:inline-block;vertical-align:middle;padding-left:0">
 
-                            <li>To be presented at <a href="https://conf.researchr.org/home/PPoPP-2024">PPoPP
-                                    2024</a>
+                            <li>Presented at <a href="https://conf.researchr.org/home/PPoPP-2024">PPoPP
+                                    2024</a>, where it won Best Artifact Award
                             </li>
                             <li>
                                 The code can be found on github <a
@@ -894,61 +1001,7 @@
             <hr>
         </section>
 
-        <section id="post" class="container text-center">
-            <div class="row">
-                <div class="col-lg-12 col-lg-offset-0">
-                    <h2>BYO: A Unified Framework for Benchmarking Large-Scale
-                        Graph Containers</h2>
-                    <ul class="text-left">
-                        <details>
-                            <summary>
-                                <strong>Abstract</strong>
-                            </summary>
-                            <p>
-                                A fundamental building block in any graph algorithm is a graph container – a data
-                                structure
-                                used to represent the graph. Ideally, a graph container enables efficient access to the
-                                underlying graph and supports updating the graph efficiently. In this paper, we conduct
-                                an
-                                extensive empirical evaluation of graph containers designed to support running
-                                algorithms on
-                                large graphs. To our knowledge, this is the first apples-to-apples comparison of graph
-                                containers rather than overall systems, which include confounding factors such as
-                                differences in algorithm implementations and infrastructure.
-                            </p>
-                            <p>
-                                We measure the running time of 10 highly-optimized algorithms across over 20+ different
-                                containers and 10 graphs. Somewhat surprisingly, we find that the average algorithm
-                                running
-                                time does not differ much across containers, especially those that support dynamic
-                                updates.
-                                Specifically, a simple container based on an off-the-shelf B-tree is only 1.22× slower
-                                on
-                                average than a highly optimized static one. Moreover, we observe that simplifying a
-                                graph-container Application Programming Interface (API) to only a few simple functions
-                                incurs a mere 1.16× slowdown compared to a complete API. Finally, we also measure
-                                batch-insert throughput in dynamic-graph containers for a full picture of their
-                                performance.
-                            </p>
-                            <p>
-                                To perform the benchmarks, we introduce BYO, a unified framework that standardizes
-                                evaluations of graph-algorithm performance across different graph containers. BYO
-                                extends
-                                the Graph Based Benchmark Suite (Dhulipala et al. 18), a state-of-the-art graph
-                                algorithm
-                                benchmark, to easily plug into different dynamic graph containers and enable fair
-                                comparisons between them on a large suite of graph algorithms. While several graph
-                                algorithm
-                                benchmarks have been developed to date, to the best of our knowledge, BYO is the first
-                                system designed to benchmark graph containers.
-                            </p>
-                        </details>
-                    </ul>
 
-                </div>
-            </div>
-            <hr>
-        </section>
         <section id="post" class="container text-center">
             <div class="row">
                 <div class="col-lg-12 col-lg-offset-0">
@@ -1141,9 +1194,10 @@
 
             <p>Committees served on </p>
             <ul class="text-left" style="display:inline-block;vertical-align:middle;">
+                <li>Highlights of Parallel Computing (HOPC 2024) Program Committee </li>
                 <li>ACM SIGPLAN Principles and Practice of Parallel Programming (PPoPP 2024)
                     Artifact
-                    Evalutation </li>
+                    Evalutation Committee</li>
             </ul>
             <br><br>
             <p>External Reviewer</p>
