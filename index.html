@@ -107,6 +107,9 @@
                         <a class="page-scroll" href="#Publications">Publications</a>
                     </li>
                     <li>
+                        <a class="page-scroll" href="#Invited Talks">Invited Talks</a>
+                    </li>
+                    <li>
                         <a class="page-scroll" href="#Current">Current Work</a>
                     </li>
                     <li>
@@ -184,7 +187,7 @@
     </section>
 
     <section id="Publications" class="container content-section text-center">
-        <h1><u>Publications and Presentations</u></h1>
+        <h1><u>Publications</u></h1>
         <hr>
         <div id="myBtnContainer">
             <button class="fbtn clicked" onclick="filterSelection('all')"> Show all</button>
@@ -422,6 +425,9 @@
 
                             <li>Presented at <a href="https://vldb.org/2023/">VLDB 2023</a>
                             </li>
+                            <li>Presented as a Poster at <a href="https://ucrparlay.github.io/hopc24/">Highlights
+                                of Parallel Computing 2024</a> at SPAA 2024
+                        </li>
                             <li>
                                 For a video of the talk, see <a href="https://youtu.be/d5lcKfhdiHY">here</a>
                             </li>
@@ -479,38 +485,9 @@
                             <li>Presented at <a href="https://www.siam.org/conferences/cm/conference/alenex23">SIAM
                                     ALENEX 2023</a>
                             </li>
-
-                        </ul>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <section id="post" class="container text-center">
-            <div class="row  filterDiv DS graphs">
-                <hr>
-                <div class="col-lg-12 col-lg-offset-0">
-                    <h2>So You Want to Make a Dynamic Graph Data Structure</h2>
-                    <p><b>Brian Wheatman</b></p>
-                    <ul class="text-left">
-                        <details>
-                            <summary>
-                                <strong>Abstract</strong>
-                            </summary>
-                            <p>
-                                This talk discusses dynamic graph data structures and what to consider when designing
-                                new ones. It breaks the task of designing graph data structures into creating structures
-                                that can support a few key operations efficiently. The focus is on how different use
-                                cases, which can cause different data patterns and access patterns, can influence the
-                                design of these structures and how to exploit these differences to maximize performance.
-                            </p>
-
-                        </details>
-                        <br>
-                        <ul class="text-left" style="display:inline-block;vertical-align:middle;padding-left:0">
-
-                            <li>Invited talk at <a href="https://paralg.github.io/largescalegraphs/">Workshop
-                                    on Large-Scale Graph Processing (SPAA 2022)</a>
+                            <li>
+                                The code can be found on github <a
+                                    href="https://github.com/wheatman/Packed-Memory-Array">https://github.com/wheatman/Packed-Memory-Array</a>
                             </li>
 
                         </ul>
@@ -518,6 +495,7 @@
                 </div>
             </div>
         </section>
+
 
         <section id="post" class="container text-center">
             <div class="row  filterDiv DS graphs">
@@ -562,7 +540,7 @@
                                     BigData 2021</a>
                             </li>
                             <li>Presented as a Poster at <a href="https://ucrparlay.github.io/hopc23/cfp/">Highlights
-                                    of Parallel Computing 2023</a>
+                                    of Parallel Computing 2023</a> at SPAA 2023
                             </li>
                             <li>
                                 For a video of the talk, see <a href="https://youtu.be/02kgqE8T0qQ">here</a>
@@ -959,6 +937,104 @@
         </section>
     </section>
 
+    <section id="Invited Talks" class="container content-section text-center">
+        <h1><u>Invited Talks</u></h1>
+
+        <section id="post" class="container text-center">
+            <div class="row ">
+                <hr>
+                <div class="col-lg-12 col-lg-offset-0">
+                    <h2>Recent Improvements to Packed Memory Arrays</h2>
+                    <p><b>Brian Wheatman</b></p>
+                    <ul class="text-left">
+                        <details>
+                            <summary>
+                                <strong>Abstract</strong>
+                            </summary>
+                            <p>
+                                A Packed Memory Array (PMA) is a dynamic data structure that stores N elements in O(N) space.  It supports reasonably efficient updates (inserts and deletes) and extremely efficient scans.  However, traditional PMAs are theoretically (and often empirically) dominated by B-Trees in many situations.  This talk will present recent advancements that enable PMAs to surpass B-Trees in various scenarios, positioning them as a superior choice for ordered sets.
+                            </p>
+                            <p>
+                                First, we will discuss optimizations to searching in a PMA, showing how PMAs can asymptotically match and empirically outperform B-Trees.  Then we will review improvements to updating a PMA with improvements in serial insert as well as a new parallel batch insert algorithm for PMAs. Lastly, we will explore techniques that reduce the space usage for PMAs, which both decrease the memory usage and increase the throughput of many operations due to the decreased memory bandwidth. 
+                            </p>
+                        </details>
+                        <br>
+                        <ul class="text-left" style="display:inline-block;vertical-align:middle;padding-left:0">
+
+                            <li>Invited talk at <a href="https://sites.gatech.edu/spaa24datastr/">Workshop on Recent Advances in Parallel and Concurrent Data Structures</a> at SPAA 2024
+                            </li>
+
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="post" class="container text-center">
+            <div class="row ">
+                <hr>
+                <div class="col-lg-12 col-lg-offset-0">
+                    <h2>Ordered Sets: An Evolution of Memory Optimized Data Structures</h2>
+                    <p><b>Brian Wheatman</b></p>
+                    <ul class="text-left">
+                        <details>
+                            <summary>
+                                <strong>Abstract</strong>
+                            </summary>
+                            <p>
+                                Ordered sets are a fundamental building block used all over computer science.  We will review the different approaches used to implement ordered sets over the years with a focus on practical performance.  Then we will turn to Packed Memory Arrays, evaluate their strengths and weaknesses.  My research overcomes these limitations in search and insert performance and allows the packed memory array to outperform other approaches on modern highly parallel architectures.
+                            </p>
+
+                        </details>
+                        <br>
+                        <ul class="text-left" style="display:inline-block;vertical-align:middle;padding-left:0">
+
+                            <li>Invited <a href = "http://cs-www.uchicago.edu/events/event/brian-wheatman-john-hopkins-ordered-sets-an-evolution-of-memory-optimized-data-structures/">talk</a> at University of Chicago 
+                            </li>
+
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="post" class="container text-center">
+            <div class="row ">
+                <hr>
+                <div class="col-lg-12 col-lg-offset-0">
+                    <h2>So You Want to Make a Dynamic Graph Data Structure</h2>
+                    <p><b>Brian Wheatman</b></p>
+                    <ul class="text-left">
+                        <details>
+                            <summary>
+                                <strong>Abstract</strong>
+                            </summary>
+                            <p>
+                                This talk discusses dynamic graph data structures and what to consider when designing
+                                new ones. It breaks the task of designing graph data structures into creating structures
+                                that can support a few key operations efficiently. The focus is on how different use
+                                cases, which can cause different data patterns and access patterns, can influence the
+                                design of these structures and how to exploit these differences to maximize performance.
+                            </p>
+
+                        </details>
+                        <br>
+                        <ul class="text-left" style="display:inline-block;vertical-align:middle;padding-left:0">
+
+                            <li>Invited talk at <a href="https://paralg.github.io/largescalegraphs/">Workshop
+                                    on Large-Scale Graph Processing</a> as SPAA 2022
+                            </li>
+
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+
+    </section>
+
     <section id="Current" class="container content-section text-center">
         <hr>
         <h1><u>Current Work</u></h1>
@@ -1157,7 +1233,7 @@
                     Teaching
                     Assistant (TA) Fall 2023, Fall 2021, Course Assistant Fall 2022</li>
                 <li>Guest Lecture: <a href="https://github.com/wheatman/Vectorization_Notes">SIMD and
-                        Vectorization</a> for Scalable Parallel Algorithms and Data Structures (UMD <a
+                        Vectorization</a> for Scalable Parallel Algorithms and Data Structures at University of Maryland (UMD <a
                         href="https://www.cs.umd.edu/~laxman/paralg-s23.html">CMSC858N</a>):
                     Spring 2023</li>
                 <li>Intermediate Programming (JHU <a href="http://www.dsn.jhu.edu/courses/cs220/">CS220</a>):
