@@ -139,7 +139,7 @@
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
                         <h1 class="brand-heading">Brian Wheatman</h1>
-                        <p class="intro-text">A PhD student in Computer Science.</p>
+                        <p class="intro-text">A Computer Science Researcher.</p>
                         <a href="#about" class="btn btn-circle page-scroll">
                             <em class="fa fa-angle-double-down animated"></em>
                         </a>
@@ -197,15 +197,85 @@
             <button class="fbtn" onclick="filterSelection('others')"> Others</button>
         </div>
 
-        
+        <section id="post" class="container text-center">
+            <div class="row filterDiv DS graphs PMA">
+                <hr>
+                <div class="col-lg-12 col-lg-offset-0">
+                    <h2>Batch-Parallel Compressed Sparse Row:
+                        A Locality-Optimized Dynamic-Graph
+                        Representation</h2>
+                    <p><b>Brian Wheatman</b>, <a href="https://randalburns.github.io/">Randal Burns</a>,
+                        and <a href="https://itshelenxu.github.io/">Helen Xu</a></p>
+                    <ul class="text-left">
+                        <details>
+                            <summary>
+                                <strong>Abstract</strong>
+                            </summary>
+                            <p>
+                                The default data structure for storing sparse graphs is Compressed Sparse Row
+                                (CSR), which enables efficient algorithms but is not designed to accommodate
+                                changes to the graph. Since many real-world graphs are dynamic (i.e., they
+                                change over time), there has been significant work towards developing
+                                dynamic-graph data structures that can support fast algorithms as well as
+                                updates to the graph.
+                            </p>
+                            <p>
+                                This paper introduces Batch-Parallel Compressed Sparse Row
+                                (BP-CSR), a batch-parallel data structure optimized for storing
+                                and processing dynamic graphs based on the Packed Memory Array (PMA). At a high level,
+                                Batch-Parallel Compressed
+                                Sparse Row extends Packed Compressed Sparse Row (PCSR,
+                                HPEC ’18), a serial dynamic-graph data structure built on
+                                a PMA. However, since the original PCSR runs only on one
+                                thread, it cannot take advantage of the parallelism available in
+                                multithreaded machines. In contrast, Batch-Parallel Compressed
+                                Sparse Row is built on the batch-parallel Packed Memory
+                                Array data structure (PPoPP ’24) and can support fast parallel
+                                algorithms and updates.
+                            </p>
+                            <p>
+                                The empirical evaluation demonstrates that Batch-Parallel
+                                Compressed Sparse Row supports fast parallel updates with
+                                minimal cost to algorithm performance. Specifically, Batch-
+                                Parallel Compressed Sparse Row performs up to 420 million
+                                inserts per second. Across a suite of 10 graph algorithms and
+                                10 input graphs, Batch-Parallel Compressed Sparse Row incurs
+                                1.05× slowdown on average and about 1.5× slowdown at most
+                                compared to Compressed Sparse Row (CSR), a classical static
+                                graph representation. Furthermore, the empirical results show
+                                that Batch-Parallel Compressed Sparse Row outperforms existing
+                                tree-based and PMA-based dynamic-graph data structures on
+                                both algorithms and updates.
+                            </p>
+                        </details>
+                        <br>
+                        <ul class="text-left" style="display:inline-block;vertical-align:middle;padding-left:0">
+
+                            <li>To be presented at <a href="https://ieee-hpec.org/">HPEC 2024</a>
+                            </li>
+                            <li>
+                                The code can be found on github as part of the PMA library <a
+                                    href="https://github.com/wheatman/Packed-Memory-Array">https://github.com/wheatman/Packed-Memory-Array</a>
+                            </li>
+
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+
+
         <section id="post" class="container text-center">
             <div class="row filterDiv DS graphs ">
                 <hr>
                 <div class="col-lg-12 col-lg-offset-0">
-                    <h2>BYO: A Unified Framework for Benchmarking Large-Scale
-                        Graph Containers</h2>
-                    <p><b>Brian Wheatman</b>, Xiaojun Dong, Zheqi Shen,  <a href = "https://www.cs.umd.edu/~laxman/">Laxman Dhulipala</a>, <a
-                            href="https://research.google/people/jakub-%C5%82%C4%85cki/">Jakub Łącki</a>, <a href="https://prashantpandey.github.io/">Prashant Pandey</a>,
+                    <h2><a href="https://dl.acm.org/doi/10.14778/3665844.3665859">BYO: A Unified Framework for
+                            Benchmarking Large-Scale
+                            Graph Containers</a></h2>
+                    <p><b>Brian Wheatman</b>, Xiaojun Dong, Zheqi Shen, <a href="https://www.cs.umd.edu/~laxman/">Laxman
+                            Dhulipala</a>, <a href="https://research.google/people/jakub-%C5%82%C4%85cki/">Jakub
+                            Łącki</a>, <a href="https://prashantpandey.github.io/">Prashant Pandey</a>,
                         and <a href="https://itshelenxu.github.io/">Helen Xu</a></p>
                     <ul class="text-left">
                         <details>
@@ -254,7 +324,7 @@
                         <br>
                         <ul class="text-left" style="display:inline-block;vertical-align:middle;padding-left:0">
 
-                            <li>To be presented at <a href="https://vldb.org/2024/">VLDB 2024</a>
+                            <li>Presented at <a href="https://vldb.org/2024/">VLDB 2024</a>
                             </li>
                             <li>
                                 The code can be found on github <a
@@ -268,35 +338,52 @@
 
         </section>
 
-        
+
         <section id="post" class="container text-center">
             <div class="row filterDiv others">
                 <hr>
                 <div class="col-lg-12 col-lg-offset-0">
-                    <h2><a href="https://tcpp.cs.gsu.edu/curriculum/sites/default/files/EduPar-09-EduPar___SpeedCode.cameraready.pdf">Speedcode: Software Performance Engineering
-                        Education via the Coding of Didactic Exercises</a></h2>
-                    <p><a href="http://tfk.mit.edu/">Tim Kaler</a>, <a href = "https://people.csail.mit.edu/xchen/">Xuhao Chen</a>, <b>Brian Wheatman</b>, <a href = "https://pmg.csail.mit.edu/~dcurtis/">Dorothy Curtis</a>, Bruce Hoppe, <a href = "https://neboat.mit.edu/">Tao B. Schardl</a>, and <a href = "https://people.csail.mit.edu/cel/">Charles E. Leiserson</a></p>
+                    <h2><a
+                            href="https://tcpp.cs.gsu.edu/curriculum/sites/default/files/EduPar-09-EduPar___SpeedCode.cameraready.pdf">Speedcode:
+                            Software Performance Engineering
+                            Education via the Coding of Didactic Exercises</a></h2>
+                    <p><a href="http://tfk.mit.edu/">Tim Kaler</a>, <a href="https://people.csail.mit.edu/xchen/">Xuhao
+                            Chen</a>, <b>Brian Wheatman</b>, <a href="https://pmg.csail.mit.edu/~dcurtis/">Dorothy
+                            Curtis</a>, Bruce Hoppe, <a href="https://neboat.mit.edu/">Tao B. Schardl</a>, and <a
+                            href="https://people.csail.mit.edu/cel/">Charles E. Leiserson</a></p>
                     <ul class="text-left">
                         <details>
                             <summary>
                                 <strong>Abstract</strong>
                             </summary>
                             <p>
-                                This paper introduces Speedcode, an online programming platform that aims to improve the accessibility of software performance-engineering education. At its core, Speedcode provides a platform that lets users gain hands-on experience in software performance engineering and parallel programming by completing short programming exercises.
+                                This paper introduces Speedcode, an online programming platform that aims to improve the
+                                accessibility of software performance-engineering education. At its core, Speedcode
+                                provides a platform that lets users gain hands-on experience in software performance
+                                engineering and parallel programming by completing short programming exercises.
 
                             </p>
                             <p>
-                                Speedcode challenges users to develop fast multicore solutions for short programming problems and evaluates their code’s performance and scalability in a quiesced cloud environment. Speedcode supports parallel programming using OpenCilk, a task-parallel computing platform that is open-source and easy to program, teach and use for research.
+                                Speedcode challenges users to develop fast multicore solutions for short programming
+                                problems and evaluates their code’s performance and scalability in a quiesced cloud
+                                environment. Speedcode supports parallel programming using OpenCilk, a task-parallel
+                                computing platform that is open-source and easy to program, teach and use for research.
 
                             </p>
                             <p>
-                                Speedcode aims to reduce barriers to learning and teaching software performance engineering. It allows users to run and evaluate their code on modern multicore machines from their own computer without installing any software. This provides users an easy introduction to the topic, and enables teachers to more easily incorporate lessons on software performance engineering into their courses without incurring the onerous overhead of needing to setup computing environments for their students.
+                                Speedcode aims to reduce barriers to learning and teaching software performance
+                                engineering. It allows users to run and evaluate their code on modern multicore machines
+                                from their own computer without installing any software. This provides users an easy
+                                introduction to the topic, and enables teachers to more easily incorporate lessons on
+                                software performance engineering into their courses without incurring the onerous
+                                overhead of needing to setup computing environments for their students.
                             </p>
                         </details>
                         <br>
                         <ul class="text-left" style="display:inline-block;vertical-align:middle;padding-left:0">
 
-                            <li>Presented at <a href="https://tcpp.cs.gsu.edu/curriculum/?q=edupar24">EduPar-24</a>, in conjuction with <a href = "https://www.ipdps.org/">IPDPS 2024</a>
+                            <li>Presented at <a href="https://tcpp.cs.gsu.edu/curriculum/?q=edupar24">EduPar-24</a>, in
+                                conjuction with <a href="https://www.ipdps.org/">IPDPS 2024</a>
                             </li>
 
                         </ul>
@@ -426,8 +513,8 @@
                             <li>Presented at <a href="https://vldb.org/2023/">VLDB 2023</a>
                             </li>
                             <li>Presented as a Poster at <a href="https://ucrparlay.github.io/hopc24/">Highlights
-                                of Parallel Computing 2024</a> at SPAA 2024
-                        </li>
+                                    of Parallel Computing 2024</a> at SPAA 2024
+                            </li>
                             <li>
                                 For a video of the talk, see <a href="https://youtu.be/d5lcKfhdiHY">here</a>
                             </li>
@@ -945,25 +1032,36 @@
                 <hr>
                 <div class="col-lg-12 col-lg-offset-0">
                     <h2>Recent Improvements to Packed Memory Arrays</h2>
-                    <p><b>Brian Wheatman</b></p>
                     <ul class="text-left">
                         <details>
                             <summary>
                                 <strong>Abstract</strong>
                             </summary>
                             <p>
-                                A Packed Memory Array (PMA) is a dynamic data structure that stores N elements in O(N) space.  It supports reasonably efficient updates (inserts and deletes) and extremely efficient scans.  However, traditional PMAs are theoretically (and often empirically) dominated by B-Trees in many situations.  This talk will present recent advancements that enable PMAs to surpass B-Trees in various scenarios, positioning them as a superior choice for ordered sets.
+                                A Packed Memory Array (PMA) is a dynamic data structure that stores N elements in O(N)
+                                space. It supports reasonably efficient updates (inserts and deletes) and extremely
+                                efficient scans. However, traditional PMAs are theoretically (and often empirically)
+                                dominated by B-Trees in many situations. This talk will present recent advancements that
+                                enable PMAs to surpass B-Trees in various scenarios, positioning them as a superior
+                                choice for ordered sets.
                             </p>
                             <p>
-                                First, we will discuss optimizations to searching in a PMA, showing how PMAs can asymptotically match and empirically outperform B-Trees.  Then we will review improvements to updating a PMA with improvements in serial insert as well as a new parallel batch insert algorithm for PMAs. Lastly, we will explore techniques that reduce the space usage for PMAs, which both decrease the memory usage and increase the throughput of many operations due to the decreased memory bandwidth. 
+                                First, we will discuss optimizations to searching in a PMA, showing how PMAs can
+                                asymptotically match and empirically outperform B-Trees. Then we will review
+                                improvements to updating a PMA with improvements in serial insert as well as a new
+                                parallel batch insert algorithm for PMAs. Lastly, we will explore techniques that reduce
+                                the space usage for PMAs, which both decrease the memory usage and increase the
+                                throughput of many operations due to the decreased memory bandwidth.
                             </p>
                         </details>
                         <br>
                         <ul class="text-left" style="display:inline-block;vertical-align:middle;padding-left:0">
 
-                            <li>Invited talk at <a href="https://sites.gatech.edu/spaa24datastr/">Workshop on Recent Advances in Parallel and Concurrent Data Structures</a> at SPAA 2024
-                            </li> 
-                            <li>For a video of the talk, see <a href="https://www.youtube.com/watch?v=SHOqZYVvEvY">here</a></li>
+                            <li>Invited talk at <a href="https://sites.gatech.edu/spaa24datastr/">Workshop on Recent
+                                    Advances in Parallel and Concurrent Data Structures</a> at SPAA 2024
+                            </li>
+                            <li>For a video of the talk, see <a
+                                    href="https://www.youtube.com/watch?v=SHOqZYVvEvY">here</a></li>
 
                         </ul>
                     </ul>
@@ -977,21 +1075,27 @@
                 <hr>
                 <div class="col-lg-12 col-lg-offset-0">
                     <h2>Ordered Sets: An Evolution of Memory Optimized Data Structures</h2>
-                    <p><b>Brian Wheatman</b></p>
                     <ul class="text-left">
                         <details>
                             <summary>
                                 <strong>Abstract</strong>
                             </summary>
                             <p>
-                                Ordered sets are a fundamental building block used all over computer science.  We will review the different approaches used to implement ordered sets over the years with a focus on practical performance.  Then we will turn to Packed Memory Arrays, evaluate their strengths and weaknesses.  My research overcomes these limitations in search and insert performance and allows the packed memory array to outperform other approaches on modern highly parallel architectures.
+                                Ordered sets are a fundamental building block used all over computer science. We will
+                                review the different approaches used to implement ordered sets over the years with a
+                                focus on practical performance. Then we will turn to Packed Memory Arrays, evaluate
+                                their strengths and weaknesses. My research overcomes these limitations in search and
+                                insert performance and allows the packed memory array to outperform other approaches on
+                                modern highly parallel architectures.
                             </p>
 
                         </details>
                         <br>
                         <ul class="text-left" style="display:inline-block;vertical-align:middle;padding-left:0">
 
-                            <li>Invited <a href = "http://cs-www.uchicago.edu/events/event/brian-wheatman-john-hopkins-ordered-sets-an-evolution-of-memory-optimized-data-structures/">talk</a> at University of Chicago 
+                            <li>Invited <a
+                                    href="http://cs-www.uchicago.edu/events/event/brian-wheatman-john-hopkins-ordered-sets-an-evolution-of-memory-optimized-data-structures/">talk</a>
+                                at University of Chicago
                             </li>
 
                         </ul>
@@ -1005,7 +1109,6 @@
                 <hr>
                 <div class="col-lg-12 col-lg-offset-0">
                     <h2>So You Want to Make a Dynamic Graph Data Structure</h2>
-                    <p><b>Brian Wheatman</b></p>
                     <ul class="text-left">
                         <details>
                             <summary>
@@ -1026,6 +1129,33 @@
                             <li>Invited talk at <a href="https://paralg.github.io/largescalegraphs/">Workshop
                                     on Large-Scale Graph Processing</a> as SPAA 2022
                             </li>
+
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="post" class="container text-center">
+            <div class="row ">
+                <hr>
+                <div class="col-lg-12 col-lg-offset-0">
+                    <h2>Guest Lectures</h2>
+                    <ul class="text-left">
+                        <ul class="text-left" style="display:inline-block;vertical-align:middle;padding-left:0">
+
+                            <li><a href="https://github.com/wheatman/Vectorization_Notes">SIMD and
+                                    Vectorization</a> for HPC Tools and Applications (Georgia Tech <a
+                                    href="https://sites.gatech.edu/cse6230spring24/">CSE 6230</a>):
+                                Spring 2024 (<a
+                                    href="https://www.youtube.com/watch?v=hSzYRgc5PYY&ab_channel=GTCSEHPCCourseVideos">video</a>)
+                            </li>
+
+                            <li><a href="https://github.com/wheatman/Vectorization_Notes">SIMD and
+                                    Vectorization</a> for Scalable Parallel Algorithms and Data Structures at University
+                                of Maryland
+                                (UMD <a href="https://www.cs.umd.edu/~laxman/paralg-s23.html">CMSC858N</a>):
+                                Spring 2023</li>
 
                         </ul>
                     </ul>
@@ -1226,17 +1356,9 @@
             <p>I have worked with a variety of classes from my undergrad through my PhD:
             </p>
             <ul class="text-left" style="display:inline-block;vertical-align:middle;">
-                <li>Guest Lecture: <a href="https://github.com/wheatman/Vectorization_Notes">SIMD and
-                        Vectorization</a> for HPC Tools and Applications (Georgia Tech <a
-                        href="https://sites.gatech.edu/cse6230spring24/">CSE 6230</a>):
-                    Spring 2024 (<a href = "https://www.youtube.com/watch?v=hSzYRgc5PYY&ab_channel=GTCSEHPCCourseVideos">video</a>)</li>
                 <li>Parallel Programming (JHU <a href="https://parallel.cs.jhu.edu/">CS320/620</a>):
                     Teaching
                     Assistant (TA) Fall 2023, Fall 2021, Course Assistant Fall 2022</li>
-                <li>Guest Lecture: <a href="https://github.com/wheatman/Vectorization_Notes">SIMD and
-                        Vectorization</a> for Scalable Parallel Algorithms and Data Structures at University of Maryland (UMD <a
-                        href="https://www.cs.umd.edu/~laxman/paralg-s23.html">CMSC858N</a>):
-                    Spring 2023</li>
                 <li>Intermediate Programming (JHU <a href="http://www.dsn.jhu.edu/courses/cs220/">CS220</a>):
                     TA Fall 2020</li>
                 <li>Computation Structures (MIT <a href="https://6004.mit.edu">
@@ -1265,7 +1387,7 @@
         <h2>Service</h2>
         <ul class="text-left" style="display:inline-block;vertical-align:middle;">
 
-            <p>I organize and run a reading group for the PhD students in the systems groups at JHU.</p>
+            <p>I organized and ran a reading group for the PhD students in the systems groups at JHU.</p>
             <p>I contribute to the <a href="https://www.opencilk.org/">OpenCilk</a> parallel programming
                 platform. </p>
 
