@@ -205,9 +205,10 @@
             <div class="row filterDiv DS graphs PMA">
                 <hr>
                 <div class="col-lg-12 col-lg-offset-0">
-                    <h2>Batch-Parallel Compressed Sparse Row:
-                        A Locality-Optimized Dynamic-Graph
-                        Representation</h2>
+                    <h2><a href="https://ieee-hpec.org/wp-content/uploads/2024/09/102.pdf">Batch-Parallel Compressed
+                            Sparse Row:
+                            A Locality-Optimized Dynamic-Graph
+                            Representation</a></h2>
                     <p><b>Brian Wheatman</b>, <a href="https://randalburns.github.io/">Randal Burns</a>,
                         and <a href="https://itshelenxu.github.io/">Helen Xu</a></p>
                     <ul class="text-left">
@@ -1301,52 +1302,110 @@
                     Rus</a> and <a href="https://aeroastro.mit.edu/sertac-karaman">Sertac
                     Karaman</a>.</p>
             <hr>
-            <p>Master's Thesis:</p>
-            <h4><a href="https://dspace.mit.edu/handle/1721.1/123023">Image
-                    alignment and dynamic graph analytics : two case studies of how managing data movement
-                    can make (parallel) code run fast</a></h4>
-            <ul class="text-left">
-                <details>
-                    <summary>
-                        <strong>Abstract</strong>
-                    </summary>
-                    High performance applications are becoming increasingly resource hungry. We want to
-                    solve more complex problems and use more data to get higher quality results. However,
-                    the more data we store, the slower it is to access any piece. This effect is seen
-                    directly in the memory hierarchy. We can access our caches faster than our memory, which
-                    is faster than reading our disk, which is still faster than going across the network.
-                    This means that when processing large data sets, we can spend a large portion of our
-                    time simply in data movement. However, there is much we can do to optimize our programs
-                    to exploit our memory systems, so that we do not incur performance degradation as our
-                    datasets grow. I show how the careful design of data structures and algorithms allow us
-                    to scale to much larger datasets without impacting performance due to the cost of data
-                    movement. I demonstrate the impact of these designs with two case studies. The first
-                    examines large-scale image alignment, where I describe how to align a petabyte scale set
-                    of images in memory on a single machine and match the performance of current cluster
-                    solutions. I achieve .6 - .8 TB/hr on a medium-sized multicore and linear scalability on
-                    hundreds of nodes in a shared supercomputing cluster. The second case study explores
-                    dynamic graph analytics, where I describe the design of a new data structure for storing
-                    dynamic graphs that matches the performance of standard, static formats and enables high
-                    performance, dynamic operations achieving millions of updates per second.
-                    </p>
-                </details>
+            <h4>PhD's Dissertation:<h4>
+                    <h4><a href="https://jscholarship.library.jhu.edu/items/708c4813-7f32-4ade-865e-fd9976827949">Cache
+                            and
+                            Memory Optimized Data Structures for High Performance Applications</a></h4>
+                    <ul class="text-left">
+                        <details>
+                            <summary>
+                                <strong>Abstract</strong>
+                            </summary>
+                            <p>
+                                As modern data and compute infrastructure expands, designing data structures that
+                                maximize
+                                performance becomes increasingly crucial for enabling complex analyses on ever-larger
+                                datasets.
+                                There has been an increasing divergence between compute and memory performance on
+                                processors,
+                                also known as the processor-memory gap. This gap creates a conflict, especially with the
+                                highly
+                                dynamic nature of modern datasets. Maximizing memory performance often requires packing
+                                data
+                                tightly together, which, by its very nature, makes updating that data more difficult.
+                            </p>
 
-            </ul>
-            <hr>
-            <p>For my undergraduate senior seminar paper in Discrete Math, I studied Anti-magic graphs.</p>
-            <h4><a href="https://brianwheatman.com/papers/Anti_magic.pdf">Anti-magic
-                    and Edge Graceful Graphs</a>
-            </h4>
+                            <p>
+                                This thesis demonstrates that focusing on data layout can lead to the design of new data
+                                structures that overcome the traditional tradeoff between dynamism and memory locality,
+                                resulting in improved performance in both analytics and updates. The research
+                                encompasses
+                                several intersecting lines of work, presenting improvements to various data structures.
+                                These
+                                improvements either enhance the locality of existing data structures to increase their
+                                analytic
+                                capabilities or increase the updateability of tightly packed data structures.
+                            </p>
 
-            <hr>
+                            <p>
+                                The focus is on foundational data structures such as sets, graphs, and key-value stores,
+                                which
+                                are fundamental building blocks in other systems. Through various artifacts, this thesis
+                                illustrates how prioritizing locality can improve all aspects of data structures,
+                                including
+                                point queries, range queries, point updates, and batch updates. Additionally, the
+                                research
+                                highlights related improvements, such as size optimizations and methods to increase
+                                parallelism
+                                on modern large multicore machines. One of the primary data structures examined is the
+                                Packed
+                                Memory Array, which had mainly been used in theoretical contexts in prior work.
+                                Throughout this
+                                thesis, the Packed Memory Array, with the theoretical and practical improvements
+                                described, is
+                                shown to outperform best practices in many practical situations.
+                            </p>
+                        </details>
 
-            <p>For my undergraduate senior research paper in Computer Science, I studied a variant of the Traveling
-                Salesman
-                Problem.</p>
-            <h4><a href="https://brianwheatman.com/papers/Tourist_Path_Optimization_Problem.pdf">Tourist
-                    Path
-                    Optimization
-                    Problem</a></h4>
+                    </ul>
+                    <hr>
+                    <h4>Master's Thesis:</h4>
+                    <h4><a href="https://dspace.mit.edu/handle/1721.1/123023">Image
+                            alignment and dynamic graph analytics : two case studies of how managing data movement
+                            can make (parallel) code run fast</a></h4>
+                    <ul class="text-left">
+                        <details>
+                            <summary>
+                                <strong>Abstract</strong>
+                            </summary>
+                            High performance applications are becoming increasingly resource hungry. We want to
+                            solve more complex problems and use more data to get higher quality results. However,
+                            the more data we store, the slower it is to access any piece. This effect is seen
+                            directly in the memory hierarchy. We can access our caches faster than our memory, which
+                            is faster than reading our disk, which is still faster than going across the network.
+                            This means that when processing large data sets, we can spend a large portion of our
+                            time simply in data movement. However, there is much we can do to optimize our programs
+                            to exploit our memory systems, so that we do not incur performance degradation as our
+                            datasets grow. I show how the careful design of data structures and algorithms allow us
+                            to scale to much larger datasets without impacting performance due to the cost of data
+                            movement. I demonstrate the impact of these designs with two case studies. The first
+                            examines large-scale image alignment, where I describe how to align a petabyte scale set
+                            of images in memory on a single machine and match the performance of current cluster
+                            solutions. I achieve .6 - .8 TB/hr on a medium-sized multicore and linear scalability on
+                            hundreds of nodes in a shared supercomputing cluster. The second case study explores
+                            dynamic graph analytics, where I describe the design of a new data structure for storing
+                            dynamic graphs that matches the performance of standard, static formats and enables high
+                            performance, dynamic operations achieving millions of updates per second.
+                            </p>
+                        </details>
+
+                    </ul>
+                    <hr>
+                    <p>For my undergraduate senior seminar paper in Discrete Math, I studied Anti-magic graphs.</p>
+                    <h4><a href="https://brianwheatman.com/papers/Anti_magic.pdf">Anti-magic
+                            and Edge Graceful Graphs</a>
+                    </h4>
+
+                    <hr>
+
+                    <p>For my undergraduate senior research paper in Computer Science, I studied a variant of the
+                        Traveling
+                        Salesman
+                        Problem.</p>
+                    <h4><a href="https://brianwheatman.com/papers/Tourist_Path_Optimization_Problem.pdf">Tourist
+                            Path
+                            Optimization
+                            Problem</a></h4>
 
 
         </ul>
