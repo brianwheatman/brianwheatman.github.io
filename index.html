@@ -139,7 +139,7 @@
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
                         <h1 class="brand-heading">Brian Wheatman</h1>
-                        <p class="intro-text">A Computer Science Researcher.</p>
+                        <p class="intro-text">Computer Scientist and Software Engineer.</p>
                         <a href="#about" class="btn btn-circle page-scroll">
                             <em class="fa fa-angle-double-down animated"></em>
                         </a>
@@ -154,13 +154,19 @@
         <h2>About Brian</h2>
         <ul class="text-left" style="display:inline-block;vertical-align:middle;">
             <p>
-                I am a Postdoctoral researcher in Computer Science at the University of Chicago working with <a
-                    href="https://cs.uchicago.edu/people/andrew-a-chien/">Andrew A. Chien</a>.
+                I am a software engineer currently working at <a href="https://www.jumptrading.com/">Jump Trading</a>.
+                Previously, I was a researcher in
+                computer science studying parallel and high performance applications, focusing on data structure and
+                algorithm design</a>.
+            </p>
+
             <p>
                 I completed my PhD with <a href="https://www.cs.jhu.edu/faculty/randal-burns/">Randal
                     Burns</a> at Johns Hopkins University in the topic of <em>Cache and Memory Optimized Data Structures
                     for High Performance
                     Applications</em>.
+                Following my PhD, I worked as Postdoctoral researcher in Computer Science at the University of Chicago
+                working with <a href="https://cs.uchicago.edu/people/andrew-a-chien/">Andrew A. Chien</a>.
             <p>
                 My research interests include:
             <ul class="text-left" style="display:inline-block;vertical-align:middle;">
@@ -202,10 +208,152 @@
         </div>
 
         <section id="post" class="container text-center">
+            <div class="row filterDiv graphs">
+                <hr>
+                <div class="col-lg-12 col-lg-offset-0">
+                    <h2><a href="https://ieeexplore.ieee.org/abstract/document/11196373">Scalable Graph Algorithms on
+                            Distributed UpDown Accelerators</a></h2>
+                    <b>Brian Wheatman</b> and <a href="https://cs.uchicago.edu/people/andrew-a-chien/">Andrew A.
+                        Chien</a>
+                    </p>
+                    <ul class="text-left">
+                        <details>
+                            <summary>
+                                <strong>Abstract</strong>
+                            </summary>
+                            <p>
+                                Graphs are a fundamental tool for representing and analyzing relationships in data, with
+                                applications spanning social networks, the web, and the biological sciences. As the
+                                volume of data continues to grow, so too do the size and complexity of the graphs we
+                                must process. Extracting insights from these massive graphs requires scalable,
+                                high-performance algorithmsWhile many graph algorithms exhibit substantial parallelism,
+                                it is often extremely fine-grained—just a few instructions—making it difficult to
+                                exploit efficiently on conventional architectures. In this work, we demonstrate how to
+                                restructure graph algorithms to run efficiently on UpDown, a scalable, programmable
+                                accelerator designed specifically for fine-grained parallelism. UpDown enables scaling
+                                graph processing algorithms to systems with millions of concurrent hardware
+                                threadsThrough detailed simulation of UpDown systems with up to one million cores, we
+                                show that our approach achieves over 100,000× parallel speedup and absolute performance
+                                that outperforms the best reported distributed systems in terms of power efficiency. At
+                                the same time, our load-balanced approach retains strong performance at smaller scales,
+                                outperforming optimized multicore implementations under similar power budgets—all using
+                                a single, unified implementation.
+                            </p>
+
+                        </details>
+                        <br>
+                        <ul class="text-left" style="display:inline-block;vertical-align:middle;padding-left:0">
+
+                            <li>Presented at <a href="https://ieee-hpec.org/">HPEC 2025</a>
+                            </li>
+
+
+                        </ul>
+
+
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="post" class="container text-center">
+            <div class="row filterDiv DS">
+                <hr>
+                <div class="col-lg-12 col-lg-offset-0">
+                    <h2><a href="https://arxiv.org/abs/2507.21492">Bridging Cache-Friendliness and Concurrency: A
+                            Locality-Optimized In-Memory B-Skiplist</a></h2>
+                    <p>Yicong Luo, Senhe Hao, <b>Brian Wheatman</b>, <a
+                            href="https://prashantpandey.github.io/">Prashant Pandey</a>,
+                        and <a href="https://itshelenxu.github.io/">Helen Xu</a></p>
+                    <ul class="text-left">
+                        <details>
+                            <summary>
+                                <strong>Abstract</strong>
+                            </summary>
+                            <p>
+                                Skiplists are widely used for in-memory indexing in many key-value stores, such as
+                                RocksDB and LevelDB, due to their ease of implementation and simple concurrency control
+                                mechanisms. However, traditional skiplists suffer from poor cache locality, as they
+                                store only a single element per node, leaving performance on the table. Minimizing
+                                last-level cache misses is key to maximizing in-memory index performance, making high
+                                cache locality essential. In this paper, we present a practical concurrent B-skiplist
+                                that enhances cache locality and performance while preserving the simplicity of
+                                traditional skiplist structures and concurrency control schemes. Our key contributions
+                                include a top-down, single-pass insertion algorithm for B-skiplists and a corresponding
+                                simple and efficient top-down concurrency control scheme. On 128 threads, the proposed
+                                concurrent B-skiplist achieves between 2x-9x higher throughput compared to
+                                state-of-the-art concurrent skiplist implementations, including Facebook's concurrent
+                                skiplist from Folly and the Java ConcurrentSkipListMap. Furthermore, we find that the
+                                B-skiplist achieves competitive (0.9x-1.7x) throughput on point workloads compared to
+                                state-of-the-art cache-optimized tree-based indices (e.g., Masstree). For a more
+                                complete picture of the performance, we also measure the latency of skiplist and
+                                tree-based indices and find that the B-skiplist achieves between 3.5x-103x lower 99%
+                                latency compared to other concurrent skiplists and between 0.85x-64x lower 99% latency
+                                compared to tree-based indices on point workloads with inserts.
+                            </p>
+
+                        </details>
+                        <br>
+                        <ul class="text-left" style="display:inline-block;vertical-align:middle;padding-left:0">
+
+                            <li>Presented at <a href="https://icpp2025.sdsc.edu/">ICPP 2025</a>
+                            </li>
+                            <li>
+                                The code can be found on github <a
+                                    href="https://github.com/Ratbuyer/bskip_artifact">https://github.com/Ratbuyer/bskip_artifact</a>
+                            </li>
+
+                        </ul>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="post" class="container text-center">
+            <div class="row filterDiv graphs">
+                <hr>
+                <div class="col-lg-12 col-lg-offset-0">
+                    <h2><a href="https://arxiv.org/abs/2507.00949">How Fast Can Graph Computations Go on Fine-grained
+                            Parallel Architectures</a></h2>
+                    <p>Yuqing Wang, Charles Colley, <b>Brian Wheatman</b>, Jiya Su, <a
+                            href="https://www.cs.purdue.edu/homes/dgleich/">David Gleich</a>, and <a
+                            href="https://cs.uchicago.edu/people/andrew-a-chien/">Andrew A. Chien</a>
+                    </p>
+                    <ul class="text-left">
+                        <details>
+                            <summary>
+                                <strong>Abstract</strong>
+                            </summary>
+                            <p>
+                                Large-scale graph problems are of critical and growing importance and historically
+                                parallel architectures have provided little support. In the spirit of co-design, we
+                                explore the question, How fast can graph computing go on a fine-grained architecture? We
+                                explore the possibilities of an architecture optimized for fine-grained parallelism,
+                                natural programming, and the irregularity and skew found in real-world graphs. Using two
+                                graph benchmarks, PageRank (PR) and Breadth-First Search (BFS), we evaluate a
+                                Fine-Grained Graph architecture, UpDown, to explore what performance codesign can
+                                achieve. To demonstrate programmability, we wrote five variants of these algorithms.
+                                Simulations of up to 256 nodes (524,288 lanes) and projections to 16,384 nodes (33M
+                                lanes) show the UpDown system can achieve 637K GTEPS PR and 989K GTEPS BFS on RMAT,
+                                exceeding the best prior results by 5x and 100x respectively.
+                            </p>
+
+                        </details>
+                        <br>
+
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="post" class="container text-center">
             <div class="row filterDiv DS graphs PMA">
                 <hr>
                 <div class="col-lg-12 col-lg-offset-0">
-                    <h2><a href="https://brianwheatman.com/papers/batch_pcsr.pdf">Batch-Parallel Compressed
+                    <h2><a href="https://ieeexplore.ieee.org/abstract/document/10938461">Batch-Parallel Compressed
                             Sparse Row:
                             A Locality-Optimized Dynamic-Graph
                             Representation</a></h2>
@@ -1484,7 +1632,8 @@
     <section id="professional" class="container content-section text-center">
         <h2>Professional Experience</h2>
         <ul class="text-left" style="display:inline-block;vertical-align:middle;">
-            <p>I have completed multiple Software and Data Engineering internships:</p>
+            <p>I am currently a Software Engineer working for Jump Trading.</p>
+            <p>During my education, I completed multiple software and data engineering internships:</p>
             <ul class="text-left" style="display:inline-block;vertical-align:middle;">
                 <li> Lawrence Berkeley National Laboratory: Summer 2022</li>
                 <li> Google: Summers 2017, 2018, 2019, 2020, 2021, 2023</li>
@@ -1517,7 +1666,7 @@
     <!-- Footer -->
     <footer>
         <div class="container text-center">
-            <p>Copyright &copy; Brian Wheatman 2024</p>
+            <p>Copyright &copy; Brian Wheatman 2025</p>
         </div>
     </footer>
 
